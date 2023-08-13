@@ -20,28 +20,39 @@ import Footer from './components/Footer.Vue';
 
 <template>
   <div>
+    <div class="header">
+      <Header></Header>
+    </div>
 
-    <Header></Header>
 
-    <main>
-      <router-view class="router-view" v-slot="{ Component }">
-        <Transition name="page-opacity" mode="out-in">
-          <component :is="Component"/>
-        </Transition>
-      </router-view>
-    </main>
+      <main>
+        <router-view class="router-view" v-slot="{ Component }">
+          <Transition name="page-opacity" mode="out-in">
+            <component :is="Component"/>
+          </Transition>
+        </router-view>
+      </main>
 
-    <Footer></Footer>
+
+    <!-- <Footer></Footer> -->
 
   </div>
 </template>
 
 <style scoped lang="scss">
+  .header {
+    height: 56px;
+  }
+
+  .main {
+
+  }
+
   main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 500px;
+    height: calc(100vh - 56px);
   }
 
   .page-opacity-enter-active,
