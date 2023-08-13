@@ -36,7 +36,7 @@ const router = createRouter({
 });
 
 router.beforeEach((to) => {
-    document.title = to.meta?.title ? 'DeliveBoo - ' + to.meta.title : 'DeliveBoo';
+    document.title = to.meta?.title ? 'Portfolio - ' + to.meta.title : 'Portfolio';
 });
 
 export { router };
