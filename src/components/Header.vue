@@ -1,12 +1,25 @@
 <script>
+
+import { store } from '../store.js';
     export default {
         name: 'Header',
 
         data() {
             return {
-
+                store,
             }
         },
+
+        methods : {
+            changeVisual() {
+                console.log('ciao')
+                if (this.store.visual == 1) {
+                    this.store.visual = 2
+                } else {
+                    this.store.visual = 1
+                }
+            }
+        }
     }
 </script>
 
@@ -35,9 +48,12 @@
                             Contact
                         </router-link>
                     </li>
-                    <!-- <li class="nav-item">
-                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                    </li> -->
+                    <li class="nav-item" v-on:click="changeVisual">
+                        <a class="nav-link">Vista</a>
+                    </li>
+                    <li class="nav-item" v-bind:on-click="changeVisual">
+                        <a class="nav-link disabled" aria-disabled="true">Vista</a>
+                    </li>
                 </ul>
                 </div>
             </div>
