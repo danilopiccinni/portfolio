@@ -20,7 +20,7 @@ import Footer from './components/Footer.Vue';
 
 <template>
   <div>
-    <div class="header">
+    <div class="header bg-dark">
       <Header></Header>
     </div>
 
@@ -42,6 +42,7 @@ import Footer from './components/Footer.Vue';
 <style scoped lang="scss">
   .header {
     height: 56px;
+
   }
 
   .main {
