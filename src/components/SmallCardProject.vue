@@ -30,7 +30,7 @@
 
 <template>
     <div class="project rounded" :class="onOffSelectEffect == true ? 'animate__animated animate__bounceOut' : 'animate__animated animate__rollIn'">
-        <router-link :to="{ name: 'singleProjects' , params : {title : project.title}}" @mouseover="effecthover = true" v-on:click="selectProject(project) , onOffSelectEffect=true" class="nav-link" href="#">
+        <router-link :to="{ name: 'singleProjects' , params : {title : project.title}}" v-on:click="selectProject(project) , onOffSelectEffect=true" class="nav-link" href="#">
             <div class=" cont-cover  rounded" :style="{ backgroundImage : `url(${project.cover})` }">
                 <div class="details-project container">
                         <!-- <h2 class="bg-dark text-center text-light rounded-bottom ">
@@ -53,6 +53,7 @@
     transition: all 0.3s;
     &:hover {
 
+   
             zoom: 1;
             z-index: 5;
 
