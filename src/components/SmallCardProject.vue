@@ -9,8 +9,6 @@
                 store,
 
                 onOffSelectEffect : false,
-
-                effecthover : false,
             }
         },
 

@@ -14,6 +14,8 @@
         data() {
             return {
 
+                active : null,
+
                 images : ['../../public/img/1.jpeg',
                         '../../public/img/2.jpeg',
                         '../../public/img/3.jpeg',
@@ -304,14 +306,22 @@
 
         </div>
 
-        <div v-else-if="store.visual == 2" class="cont-projects-visual-2 d-flex bg-dark gap-4">
-            <div v-for="project,index in projects"  class="col-11 col-lg-5 col-xl-5 col-xxl-3">  
+        <div v-else-if="store.visual == 2" class="cont-projects-visual-2 d-flex bg-dark gap-4" > 
+            <div v-for="project,index in projects"  class="col-11 col-lg-5 col-xl-5 col-xxl-3 cont-small-card" @mouseover="active=index" @mouseleave="active=null" :style="index == active || active==null ? { opacity: 1}: {opacity : 0.5}">  
                 <SmallCardProject :project="projects[index]"></SmallCardProject>
             </div>
         </div>
 </template>
 
 <style scoped lang="scss">
+
+.cont-small-card {
+    transition: 1s;
+
+    &:hover {
+        transform: scale(105%);
+    }
+}
 
 .cont-projects-visual-1{
 
