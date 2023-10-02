@@ -25,8 +25,8 @@
 <template>
     <div class="project">
         <!-- <div class="large-card  cont-cover h-100 " :style="{ backgroundImage : `url(${project.cover})` }"> -->
-            <div class="large-card cont-cover h-100 " :style="{ backgroundImage : `url(${project.cover})` }">
-                <div class="thumbs  d-flex align-items-center justify-content-center">
+            <div class="large-card cont-cover h-100 " :style="{ backgroundImage : `url(${project.cover})` }" >
+                <div class="thumbs  d-flex align-items-center justify-content-center rounded animate__animated animate__fadeInDown">
                     <div :id="'carouselExampleDark' + project.slug" class="carousel carousel-dark slide w-100">
   
                             <!-- <div class="carousel-indicators p-2 bg-dark">
@@ -60,19 +60,19 @@
                                     <p>Some representative placeholder content for the second slide.</p> -->
                                 </div>
                             </div>
-                        3</div>
+                        </div>
 
-                        <button class="carousel-control-prev bg-dark" type="button" :data-bs-target="'#carouselExampleDark' + project.slug" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <button class="carousel-control-prev" type="button" :data-bs-target="'#carouselExampleDark' + project.slug" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon carousel-button rounded" aria-hidden="true"></span>
                             <span class="visually-hidden">Previous</span>
                         </button>
-                        <button class="carousel-control-next bg-dark" type="button" :data-bs-target="'#carouselExampleDark' + project.slug" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <button class="carousel-control-next " type="button" :data-bs-target="'#carouselExampleDark' + project.slug" data-bs-slide="next">
+                            <span class="carousel-control-next-icon carousel-button rounded" aria-hidden="true"></span>
                             <span class="visually-hidden">Next</span>
                         </button>
                     </div>
                 </div>
-                <div class="details-project d-flex flex-column container ">
+                <div class="details-project d-flex flex-column container animate__animated animate__fadeInUp">
                 <span class="text-light info animate__animated animate__zoomInLeft animate__slower animate__infinite "><i class="fa-solid fa-hand-point-right fs-2"></i><i class="fa-solid fa-circle-info"></i> </span>
                 <h1 class="title">
                     {{project.title}}
@@ -110,10 +110,20 @@
 
 <style scoped lang="scss">
 
+.carousel-button {
+    opacity: 0.4;
 
+    background-color: gray;
+
+    -webkit-box-shadow: 0px 0px 10px 8px #000000;
+    -moz-box-shadow: 0px 0px 10px 8px #000000;
+    -o-box-shadow: 0px 0px 10px 8px #000000;
+    box-shadow: 0px 0px 10px 8px #000000;
+
+}
 
     img {
-        padding-top: 65px;
+
         object-position: top ;
         object-fit: contain;
     }
@@ -148,12 +158,14 @@
         overflow: hidden;
 
         color: white;
-        background-color: rgba(0, 0, 0, 0.914);
+        background-color: rgba(10, 10, 10, 0.914);
 
-        -webkit-box-shadow: 0px 0px 70px 100px rgba(0, 0, 0, 0.914);
-        -moz-box-shadow: 0px 0px 70px 100px rgba(0, 0, 0, 0.914);
-        -o-box-shadow: 0px 0px 70px 100px rgba(0, 0, 0, 0.914);
-        box-shadow: 0px 0px 70px 100px rgba(0, 0, 0, 0.914);
+        -webkit-box-shadow: 0px 0px 70px 100px rgba(10, 10, 10, 0.914);
+        -moz-box-shadow: 0px 0px 70px 100px rgba(10, 10, 10, 0.914);
+        -o-box-shadow: 0px 0px 70px 100px rgba(10, 10, 10, 0.914);
+        box-shadow: 0px 0px 70px 100px rgba(10, 10, 10, 0.914);
+
+        
 
         transition: all 2s;
 
@@ -166,38 +178,39 @@
             top: 0px;
 
             overflow: hidden;
+
+
+        }
+
+        &:hover .carousel-button {
+            opacity: 1;
         }
     }
 
     .details-project {
+
+        padding-bottom: 80px;
    
         color: white;
-        background-color: rgba(0, 0, 0, 0.914);
+        background-color: rgba(10, 10, 10, 0.914);
 
-        -webkit-box-shadow: 0px 0px 70px 100px rgba(0, 0, 0, 0.914);
-        -moz-box-shadow: 0px 0px 70px 100px rgba(0, 0, 0, 0.914);
-        -o-box-shadow: 0px 0px 70px 100px rgba(0, 0, 0, 0.914);
-        box-shadow: 0px 0px 70px 100px rgba(0, 0, 0, 0.914);
+        -webkit-box-shadow: 0px 0px 70px 100px rgba(10, 10, 10, 0.914);
+        -moz-box-shadow: 0px 0px 70px 100px rgba(10, 10, 10, 0.914);
+        -o-box-shadow: 0px 0px 70px 100px rgba(10, 10, 10, 0.914);
+        box-shadow: 0px 0px 70px 100px rgba(10, 10, 10, 0.914);
 
 
         
         position: absolute;
         bottom: 0px;
         right: 0px;
-        max-width: 50%;
-        max-height: 30%;
+        max-width: 35%;
+        max-height: 25%;
         min-height: 150px;
 
         transition: all 2.5s;
         
-
-        .description,
-        .repo,
-        .details{
-            display: none;
-        }
-
- 
+    
 
         &:hover {
             max-width: 70%;
@@ -214,13 +227,7 @@
             & * {
                 display: block;
             }
-
-            & .description,
-            .repo,
-            .details{
-                display: block;
-
-            }
         }
+
     }
 </style>

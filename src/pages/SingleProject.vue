@@ -19,13 +19,22 @@
 
 <template>
     <div>
-        <h1>{{ project.title }}</h1>
+
+        <img :src="project.cover" alt="">
+        <!-- <h1>{{ project.title }}</h1>
         <p>
             {{ project.description }}
-        </p>
+        </p> -->
     </div>
 </template>
 
 <style scoped lang="scss">
 
+    img {
+        width: 100%;
+        max-height: 100vh;
+        object-position: top center;
+        object-fit: cover;
+
+    }
 </style>

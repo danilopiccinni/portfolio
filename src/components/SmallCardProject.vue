@@ -7,6 +7,10 @@
         data() {
             return {
                 store,
+
+                onOffSelectEffect : false,
+
+                effecthover : false,
             }
         },
 
@@ -17,20 +21,21 @@
         methods : {
             selectProject(project) {  
                 this.store.selectedProject = project
-                this.store.name ='suca'
-            }
+
+            },
+
         }
     }
 </script>
 
 <template>
-    <div class=" project rounded">
-        <router-link :to="{ name: 'singleProjects' , params : {title : project.title}}" v-on:click="selectProject(project)" class="nav-link" href="#">
+    <div class="project rounded" :class="onOffSelectEffect == true ? 'animate__animated animate__bounceOut' : 'animate__animated animate__rollIn'">
+        <router-link :to="{ name: 'singleProjects' , params : {title : project.title}}" @mouseover="effecthover = true" v-on:click="selectProject(project) , onOffSelectEffect=true" class="nav-link" href="#">
             <div class=" cont-cover  rounded" :style="{ backgroundImage : `url(${project.cover})` }">
                 <div class="details-project container">
-                        <h2 class="bg-dark text-center text-light rounded-bottom">
+                        <!-- <h2 class="bg-dark text-center text-light rounded-bottom ">
                             {{project.title}}
-                        </h2>
+                        </h2> -->
                     </div>
             </div>
         </router-link>
@@ -47,14 +52,19 @@
 
     transition: all 0.3s;
     &:hover {
-            transform: scale(103%);
+
+            zoom: 1;
             z-index: 5;
 
             -webkit-box-shadow: 0px 0px 10px 4px #ffffff;
             -moz-box-shadow: 0px 0px 10px 4px #ffffff;
             -o-box-shadow: 0px 0px 10px 4px #ffffff;
             box-shadow: 0px 0px 10px 4px #ffffff;
+
+
         }
+
+
 }
 
    .cont-cover {
