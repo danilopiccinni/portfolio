@@ -39,27 +39,4 @@ import Jumbo from '../components/Jumbo.vue';
 
 <style scoped lang="scss">
 
-    .cont-carousel3d {
-        z-index: 100;
-    }
-
-    .jumbo {
-        background-image: url('../../public/img/premium_photo.avif');
-        background-repeat: no-repeat;
-        background-size: 100%;
-    }
-
-    // img {
-    //     position: relative;
-    // }
-
-    // .inner-jumbo {
-    //     position: absolute;
-    //     left: 0;
-    //     top: 50%;
-
-    //     background-color: rgba(0, 0, 0, 0.843);
-    // }
-
-
 </style>

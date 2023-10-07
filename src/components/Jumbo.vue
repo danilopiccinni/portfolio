@@ -58,9 +58,5 @@ img {
 
             height: 100vh;
             max-height: 600px;
-
-            // background-image: url('../../public/img/premium_photo.avif');
-            // background-repeat: no-repeat;
-            // background-size: 100%;
         }
 </style>
