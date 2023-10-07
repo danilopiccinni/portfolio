@@ -46,46 +46,36 @@ import { store } from '../store.js';
 </script>
 
 <template>
-    <div class="container">
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid text-center">
-                <a class="navbar-brand" href="#">LOGO DP</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse z-3 text-center" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <router-link :to="{ name: 'home' }" class="nav-link" >
-                                Home
-                            </router-link>
-                        </li>
-                        <li class="nav-item">
-                            <router-link :to="{ name: 'projects' }" class="nav-link" >
-                                Projects
-                            </router-link>
-                        </li>
-                        <li class="nav-item">
-                            <router-link :to="{ name: 'contact' }" class="nav-link" >
-                                Contact
-                            </router-link>
-                        </li>
-                    </ul>
-                </div>
+    <div class="container h-100">
+        <div class="h-100 d-flex justify-content-between align-items-center">
+            <div class="d-flex col-1">
+                <a class="navbar-brand" href="#">DP</a>
+            </div>
 
-
-                <div class="container d-flex justify-content-center align-items-center">
-                    <div class="one-quarter" id="switch">
-                        <input v-model="store.checked" type="checkbox" class="checkbox" id="chk" />
-                        <label class="label" for="chk">
-                            <i class="fas fa-moon"></i>
-                            <i class="fas fa-sun"></i>
-                            <div class="ball"></div>
-                        </label>
-                    </div>
-                </div>
-                
-
+            <div class="h-100">
+                <ul class="h-100 navbar-nav d-flex flex-row align-items-end gap-3">
+                    <li class="nav-item h-100 align-self-end">
+                        <router-link :to="{ name: 'home' }" class="nav-link text-center" >
+                            <i class="fa-solid fa-house-chimney"></i>
+                            <span class="d-none d-md-block">Home</span>
+                        </router-link>
+                    </li>
+                    <li class="nav-item h-100 align-self-end">
+                        <router-link :to="{ name: 'projects' }" class="nav-link text-center" >
+                            <i class="fa-solid fa-diagram-project"></i>
+                            <span class="d-none d-md-block">Projects</span>
+                        </router-link>
+                    </li>
+                    <li class="nav-item h-100 align-self-end">
+                        <router-link :to="{ name: 'contact' }" class="nav-link text-center" >
+                            <i class="fa-regular fa-comments"></i>
+                            <span class="d-none d-md-block">Contact</span>
+                        </router-link>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="d-flex gap-2 col-1">
                 <div v-if="pageControl()" class="btn-group dropstart border">
                     <button type="button" class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-theme="dark" data-bs-toggle="dropdown" aria-expanded="false">
                         <span class="visually-hidden">Toggle Dropdown</span>
@@ -98,53 +88,82 @@ import { store } from '../store.js';
                         <li><a class="dropdown-item" v-on:click="changeVisual2">Griglia</a></li>
                     </ul>
                 </div>
+                <div class="container d-flex justify-content-end align-items-center">
+                    <div class="one-quarter" id="switch">
+                        <input v-model="store.checked" type="checkbox" class="checkbox" id="chk" />
+                        <label class="label" for="chk">
+                            <i class="fas fa-moon"></i>
+                            <i class="fas fa-sun"></i>
+                            <div class="ball"></div>
+                        </label>
+                    </div>
+                </div>
             </div>
-        </nav>
+
+        </div>
     </div>
 </template>
 
 <style scoped lang="scss">
+
+    i {
+        font-size: 50px;
+    }
+
+
     .checkbox {
-	opacity: 0;
-	position: absolute;
-}
+        opacity: 0;
+        position: absolute;
+    }
 
-.label {
-	background-color: #111;
-	border-radius: 50px;
-	cursor: pointer;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding: 5px;
-	position: relative;
-	height: 26px;
-	width: 50px;
-	transform: scale(1.5);
-}
+    .label {
+        background-color: rgb(255, 255, 255);
+        border-radius: 50px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5px;
+        position: relative;
+        height: 18px;
+        width: 35px;
+        transform: scale(1.5);
 
-.label .ball {
-	background-color: #fff;
-	border-radius: 50%;
-	position: absolute;
-	top: 2px;
-	left: 2px;
-	height: 22px;
-	width: 22px;
-	transform: translateX(0px);
-	transition: transform 0.2s linear;
-}
+        transition: 1s;
+    }
 
-.checkbox:checked + .label .ball {
-	transform: translateX(24px);
-}
+    .label .ball {
+        background-color: #f39c12;
+        border-radius: 50%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 18px;
+        width: 18px;
+        transform: translateX(0px);
+        transition: transform 0.2s linear;
+    }
+
+    .checkbox:checked + .label .ball {
+        transform: translateX(18px);
+        background-color: #1d12f3;
+
+    }
+
+        .checkbox:checked + .label {
+
+        background-color: #050505;
+
+    }
 
 
-.fa-moon {
-	color: #f1c40f;
-}
+    .fa-moon {
+        font-size: 0.7em;
+        color: #f1c40f;
+    }
 
-.fa-sun {
-	color: #f39c12;
-}
+    .fa-sun {
+        font-size: 0.7em;
+        color: #f39c12;
+    }
 </style>
