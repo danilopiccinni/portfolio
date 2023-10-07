@@ -1,19 +1,21 @@
 <script>
+import { store } from '../store'
+
     export default {
         name: 'Contact',
 
         data() {
             return {
-
+                store
             }
         }
     }
 </script>
 
 <template>
-    <div class="container-fluid">
+    <div class="container-fluid" :class="store.checked ? 'bg-light text-dark' : 'bg-dark text-light'">
         <!--Section: Contact v.2-->
-        <section class="mb-4">
+        <section class="mb-4" >
         
         <!--Section heading-->
         <h2 class="h1-responsive font-weight-bold text-center my-4">Contact me</h2>
