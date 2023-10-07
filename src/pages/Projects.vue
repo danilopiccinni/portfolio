@@ -445,7 +445,7 @@
 
     </div>
 
-    <div v-else-if="store.visual == 2" class="visual-2 d-flex bg-dark gap-4" > 
+    <div v-else-if="store.visual == 2" class="visual-2 d-flex gap-4" > 
 
         <div v-for="project,index in projects"  class="col-11 col-lg-5 col-xl-5 col-xxl-3 small-card-project" @mouseover="active=index" @mouseleave="active=null" :style="index == active || active==null ? { opacity: 1}: {opacity : 0.5}">  
             <SmallCardProject :project="projects[index]"></SmallCardProject>

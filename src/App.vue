@@ -2,12 +2,13 @@
   import { def } from '@vue/shared';
 import Header from './components/Header.vue';
 import Footer from './components/Footer.Vue';
+import { store } from './store.js';
 
   export default {
 
     data() {
       return {
-
+        store,
       }
     },
 
@@ -19,8 +20,8 @@ import Footer from './components/Footer.Vue';
 </script>
 
 <template>
-  <div>
-    <div class="header bg-dark">
+  <div :class="store.checked ? 'bg-light text-dark' : 'bg-dark text-light'">
+    <div class="header">
       <Header></Header>
     </div>
 

@@ -6,4 +6,6 @@ export const store = reactive({
 
     visual : 2,
 
+    checked : false,
+
 });

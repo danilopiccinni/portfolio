@@ -85,6 +85,7 @@ import 'animate.css';
 
 <style scoped lang="scss">
         .section-full-screen {
+            background-color: #b1b1b1;
         // background-color: #f6f6f6;
 
         .column-1{

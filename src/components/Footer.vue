@@ -11,7 +11,7 @@
 <template>
     <div>
         <!-- Footer -->
-        <footer class="text-center text-lg-start bg-dark text-light">
+        <footer class="text-center text-lg-start">
         <!-- Section: Social media -->
         <section class="d-flex flex-column align-items-center justify-content-center justify-content-lg-between p-4 border-bottom">
             <!-- Left -->

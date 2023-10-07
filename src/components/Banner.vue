@@ -1,10 +1,12 @@
 <script>
+import { store } from '../store'
+
   export default {
     name : 'Banner',
 
     data() {
       return {
-
+        store
       }
     },
 
@@ -16,7 +18,7 @@
             <div class="__container">
                 <div class="row ps-5 ps-sm-0">
                     <div class="cont-sx col-8">
-                        <strong class="text-dark">
+                        <strong :class="store.checked ? 'text-light' : 'text-dark'">
                             100% AL
                             <br>
                             CASO TUO
