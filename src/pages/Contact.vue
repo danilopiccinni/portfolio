@@ -45,18 +45,18 @@ import { store } from '../store'
         <h2 class="h1-responsive font-weight-bold text-center my-4">Contact me</h2>
             <div class="form-container">
      
-                <form class="form" ref="form" @submit.prevent="sendMail">
-                    <div class="form-group">
-                        <input name="from_name" placeholder="il tuo nome" type="text" :value="inputFieldReset" required> 
+                <form class="form col-12 container" ref="form" @submit.prevent="sendMail">
+                    <div class="form-group ">
+                        <input class="col-12" name="from_name" placeholder="il tuo nome" type="text" :value="inputFieldReset" required> 
                     </div>
                     <div class="form-group">
-                        <input name="email" placeholder="la tua mail" type="email" :value="inputFieldReset" required>
+                        <input class="col-12" name="email" placeholder="la tua mail" type="email" :value="inputFieldReset" required>
                     </div>
                     <div class="form-group">
-                        <input name="subject" placeholder="oggetto" type="text" :value="inputFieldReset" required>
+                        <input class="col-12" name="subject" placeholder="oggetto" type="text" :value="inputFieldReset" required>
                     </div>
                     <div class="form-group">
-                        <textarea class="text-area" name="message" placeholder="messaggio" type="text" :value="inputFieldReset" required></textarea>
+                        <textarea class="text-area col-12" name="message" placeholder="messaggio" type="text" :value="inputFieldReset" required></textarea>
                     </div>
                     <div class="form-group">
                         <button class="submit" type="submit" name="send">Invia</button>
@@ -91,7 +91,7 @@ import { store } from '../store'
         border-radius: 10px;
         padding: 10px;
         background-color: #797979; 
-        width: 500px;
+
         }
 
         .form-group {
@@ -102,13 +102,13 @@ import { store } from '../store'
         padding: 10px 10px 10px 10px;
         border: none;
         border-radius: 10px;
-        width: 400px;
+
         outline: none;
         }
 
         .text-area {
         height: 150px;
-        width: 400px;
+
         border: none;
         border-radius: 10px;
         padding: 10px;
