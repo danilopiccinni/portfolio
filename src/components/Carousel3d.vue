@@ -41,9 +41,9 @@ export default {
                     <div class="plane nine">
                         <img src="../../public/img/kisspng-github-social-media-computer-icons-logo-android-5b348490ab20f1.548940641530168464701.png" alt="">
                     </div>
-                    <div class="plane ten">
-                        <img src="../../public/img/icons8-visual-studio-code-2019-480.png" alt="">
-                    </div>
+                </div>
+                <div class="plane ten">
+                    <img src="../../public/img/icons8-visual-studio-code-2019-480.png" alt="">
                 </div>
             </div>
         </div>
@@ -62,6 +62,9 @@ export default {
     border-radius: 12px;
     -webkit-perspective: 800;
     -webkit-perspective-origin: 50% 225px;
+
+    transform: translateY(-50%) translateX(0%);
+
 
 
 
@@ -82,7 +85,9 @@ export default {
 
             -webkit-animation: spin 15s infinite linear;
 
-            rotate: 2 1 1 -15deg;
+            rotate: 2 1 0 -30deg;
+
+
         }
     }
 }
@@ -92,37 +97,41 @@ export default {
 }
 
 .cube>.one {
-    -webkit-transform: translateZ(150px);
+    -webkit-transform: translateZ(200px);
 }
 
 .cube>.two {
-    -webkit-transform: rotateY(40deg) translateZ(150px);
+    -webkit-transform: rotateY(40deg) translateZ(200px);
 }
 .cube>.three {
-    -webkit-transform: rotateY(80deg) translateZ(150px);
+    -webkit-transform: rotateY(80deg) translateZ(200px);
 }
 .cube>.four {
-    -webkit-transform: rotateY(120deg) translateZ(150px);
+    -webkit-transform: rotateY(120deg) translateZ(200px);
 }
 
 .cube>.five {
-    -webkit-transform: rotateY(160deg) translateZ(150px);
+    -webkit-transform: rotateY(160deg) translateZ(200px);
 }
 
 .cube>.six {
-    -webkit-transform: rotateY(200deg) translateZ(150px);
+    -webkit-transform: rotateY(200deg) translateZ(200px);
 }
 
 .cube>.seven {
-    -webkit-transform: rotateY(240deg) translateZ(150px);
+    -webkit-transform: rotateY(240deg) translateZ(200px);
 }
 
 .cube>.eight {
-    -webkit-transform: rotateY(280deg) translateZ(150px);
+    -webkit-transform: rotateY(280deg) translateZ(200px);
 }
 
 .cube>.nine {
-    -webkit-transform: rotateY(320deg) translateZ(150px);
+    -webkit-transform: rotateY(320deg) translateZ(200px);
+}
+
+.ten {
+    transform: translateY(-100%);
 }
 
 .plane {
@@ -146,6 +155,44 @@ export default {
         width: 100%;
     }
 }
+
+@media only screen and (max-width: 992px) {
+    .cube>.one {
+    -webkit-transform: translateZ(170px);
+}
+
+.cube>.two {
+    -webkit-transform: rotateY(40deg) translateZ(170px);
+}
+.cube>.three {
+    -webkit-transform: rotateY(80deg) translateZ(170px);
+}
+.cube>.four {
+    -webkit-transform: rotateY(120deg) translateZ(170px);
+}
+
+.cube>.five {
+    -webkit-transform: rotateY(160deg) translateZ(170px);
+}
+
+.cube>.six {
+    -webkit-transform: rotateY(200deg) translateZ(170px);
+}
+
+.cube>.seven {
+    -webkit-transform: rotateY(240deg) translateZ(170px);
+}
+
+.cube>.eight {
+    -webkit-transform: rotateY(280deg) translateZ(170px);
+}
+
+.cube>.nine {
+    -webkit-transform: rotateY(320deg) translateZ(170px);
+}
+}
+
+
 @keyframes spin {
     0% {
         -webkit-transform: rotateY(0);
