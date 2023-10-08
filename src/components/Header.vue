@@ -12,8 +12,8 @@ import { store } from '../store.js';
 
         methods :  {
 
-            pageControl() {
-                if (this.$route.name == 'projects') {
+            pageControl(name) {
+                if (this.$route.name == name) {
                     return true
                 } else {
                     return false
@@ -54,7 +54,7 @@ import { store } from '../store.js';
 
             <div class="h-100">
                 <ul class="h-100 navbar-nav d-flex flex-row align-items-end gap-3">
-                    <li class="nav-item h-100 align-self-end">
+                    <li class="nav-item h-100 align-self-end" :class="pageControl()" >
                         <router-link :to="{ name: 'home' }" class="nav-link text-center" >
                             <i class="fa-solid fa-house-chimney"></i>
                             <span class="d-none d-md-block">Home</span>
@@ -76,7 +76,7 @@ import { store } from '../store.js';
             </div>
             
             <div class="d-flex gap-2 col-1">
-                <div v-if="pageControl()" class="btn-group dropstart border">
+                <div v-if="pageControl('projects')" class="btn-group dropstart border">
                     <button type="button" class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-theme="dark" data-bs-toggle="dropdown" aria-expanded="false">
                         <span class="visually-hidden">Toggle Dropdown</span>
                     </button>
@@ -106,8 +106,31 @@ import { store } from '../store.js';
 
 <style scoped lang="scss">
 
+    .router-link-active{
+        background-color: white;
+        transform: translateY(30%);
+        transition: 0.5s linear;
+
+
+        z-index: 50;
+
+
+    }
+    a {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        transition: 0.5s;
+        padding: 0 30px;
+        border-radius: 50% 50% 0 0;
+
+        &:hover {
+            background-color: white;
+        }
+    }
+
     i {
-        font-size: 50px;
+        font-size: 1.2em;
     }
 
 

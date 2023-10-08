@@ -85,12 +85,14 @@ import { store } from './store.js';
     top: 0;
     left: 0;
     width: 100%;
-    height: 100px;
+    height: 60px;
     z-index: 100;
+
+    overflow: hidden;
 
     transition: top 0.5s ease;
 
-    border: 1px solid grey;
+   
     background-color: grey;
     -webkit-border-bottom-right-radius: 50px;
     -webkit-border-bottom-left-radius: 50px;
