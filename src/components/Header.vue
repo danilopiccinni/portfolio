@@ -23,25 +23,9 @@ import { store } from '../store.js';
                 }
             },
 
-            nextVisual() {
-                if(this.store.visual == 2) {
-                    this.store.visual = 1
-                } else {
-                    this.store.visual += 1
-                }
-            },
+ 
 
-            changeVisual1() {
-                console.log('ciao')
-                this.store.visual = 1
-            },
 
-            changeVisual2() {
-                this.store.visual = 2
-            },
-            console() {
-                this.console.log('ciao')
-            }
         },
     }
 
@@ -49,7 +33,7 @@ import { store } from '../store.js';
 </script>
 
 <template>
-    <div class="container h-100">
+    <div class="container h-100 nav-bar">
         <div class="h-100 d-flex justify-content-between align-items-center">
             <div class="d-flex col-1">
                 <a class="navbar-brand" href="#">DP</a>
@@ -63,10 +47,11 @@ import { store } from '../store.js';
                             <span class="d-none d-md-block">Home</span>
                         </router-link>
                     </li>
-                    <li class="nav-item h-100 align-self-end">
+                    <li class="nav-item h-100 align-self-end cont-switcher">
                         <router-link :to="{ name: 'projects' }" class="nav-link text-center" @mouseover="hover = true , nameHover = 'projects'" @mouseleave="hover = false , nameHover = ''" :class="pageControl('projects') ? store.checked ? 'bg-light' : 'bg-dark' : ''  ,  hover && nameHover == 'projects' ? store.checked ? 'bg-light' : 'bg-dark' : ''">
                             <i class="fa-solid fa-diagram-project"></i>
                             <span class="d-none d-md-block">Projects</span>
+
                         </router-link>
                     </li>
                     <li class="nav-item h-100 align-self-end">
@@ -78,19 +63,8 @@ import { store } from '../store.js';
                 </ul>
             </div>
             
-            <div class="d-flex gap-2 col-1">
-                <div v-if="pageControl('projects')" class="btn-group dropstart border">
-                    <button type="button" class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-theme="dark" data-bs-toggle="dropdown" aria-expanded="false">
-                        <span class="visually-hidden">Toggle Dropdown</span>
-                    </button>
-                    <button v-on:click="nextVisual" class="btn btn-sm btn-secondary" type="button">
-                        Vista
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" v-on:click="changeVisual1">Singolo full screen</a></li>
-                        <li><a class="dropdown-item" v-on:click="changeVisual2">Griglia</a></li>
-                    </ul>
-                </div>
+            <div class="d-flex gap-2 col-1 flex-wrap">
+
                 <div class="container d-flex justify-content-end align-items-center">
                     <div class="one-quarter" id="switch">
                         <input v-model="store.checked" type="checkbox" class="checkbox" id="chk" />

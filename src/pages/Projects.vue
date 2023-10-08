@@ -430,7 +430,32 @@
         methods : {
             selectProject(project) {  
                 this.store.selectedProject = project
-            }
+            },
+
+            pageControl(name) {
+                if (this.$route.name == name) {
+                    return true
+                } else {
+                    return false
+                }
+            },
+
+            nextVisual() {
+                if(this.store.visual == 2) {
+                    this.store.visual = 1
+                } else {
+                    this.store.visual += 1
+                }
+            },
+
+            changeVisual1() {
+                console.log('ciao')
+                this.store.visual = 1
+            },
+
+            changeVisual2() {
+                this.store.visual = 2
+            },
         },
 
     }
@@ -438,20 +463,32 @@
 
 <template>
     <div class="projects">
+
         <div v-if="store.visual == 1" class="visual-1">
-    
             <div v-for="project,index in projects"  class="card-project">  
                 <CardProject :project="projects[index]"></CardProject>
             </div>
-    
         </div>
+
     
         <div v-else-if="store.visual == 2" class="visual-2 d-flex gap-4" :class="store.checked ? 'bg-light text-dark' : 'bg-dark text-light'" > 
-    
             <div v-for="project,index in projects"  class="col-11 col-lg-5 col-xl-5 col-xxl-3 small-card-project" @mouseover="active=index" @mouseleave="active=null" :style="index == active || active==null ? { opacity: 1}: {opacity : 0.5}">  
                 <SmallCardProject :project="projects[index]"></SmallCardProject>
             </div>
-    
+        </div>
+
+
+        <div id="visual-switcher" v-if="pageControl('projects')" class="btn-group dropstart d-flex" :class="store.checked ? 'bg-light' : 'bg-dark'">
+            <button v-on:click="nextVisual" class="btn btn-sinistro" :class="store.checked ? 'text-dark' : 'text-light'" type="button">
+                Vista
+            </button>
+            <button type="button" class="btn btn-destro dropdown-toggle dropdown-toggle-split" :class="store.checked ? 'text-dark' : 'text-light'" data-bs-theme="dark" data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="visually-hidden">Toggle Dropdown</span>
+            </button>
+            <ul class="dropdown-menu" :class="store.checked ? 'bg-light' : 'bg-dark'">
+                <li><a class="dropdown-item" :class="store.checked ? '' : 'text-light'" v-on:click="changeVisual1">Singolo full screen</a></li>
+                <li><a class="dropdown-item" :class="store.checked ? '' : 'text-light'"  v-on:click="changeVisual2">Griglia</a></li>
+            </ul>
         </div>
 
     </div>
@@ -459,10 +496,55 @@
 
 <style scoped lang="scss">
 
-.projects {
+#visual-switcher {
+
+    position: absolute;
+    width: 25%;
+    top: 60px;
+    right: 50%;
+
+    transform: translateX(50%);
+
+    border: 1px gray solid;
+    border-radius:  0 0 50px 50px;
+
+    opacity: 0.8;
+
+    transition: 0.5s;
+
+    &:hover {
+        opacity: 1;
+    }
 
 
+    .btn-sinistro {
+        border-radius:  0 0 0 50px ;
 
+
+    }
+
+    .btn-destro {
+        border-radius:  0 0 50px 0;
+    }
+
+    li {
+        cursor: pointer;
+
+        a {
+
+            transition: 0.5s;
+
+             &:hover {
+
+                background-color: black;
+                color: white;
+                opacity: 1;
+
+                text-shadow: #e0e0e0 1px 1px 0;
+            }
+
+        }
+    }
 }
 
 .visual-1{
@@ -486,6 +568,15 @@
         height: 100%;
 
         scroll-snap-align: start;
+
+        position: relative;
+
+        .visual-switcher {
+
+            position: absolute;
+            top: 50%;
+            right: 50%;
+            }
 
         div {
             height: 100%;
