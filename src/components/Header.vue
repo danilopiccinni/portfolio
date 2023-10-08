@@ -7,6 +7,9 @@ import { store } from '../store.js';
         data() {
             return {
                 store,
+
+                hover : false,
+                nameHover : '',
             }
         },
 
@@ -54,20 +57,20 @@ import { store } from '../store.js';
 
             <div class="h-100">
                 <ul class="h-100 navbar-nav d-flex flex-row align-items-end gap-3">
-                    <li class="nav-item h-100 align-self-end" :class="pageControl()" >
-                        <router-link :to="{ name: 'home' }" class="nav-link text-center" >
+                    <li class="nav-item h-100 align-self-end">
+                        <router-link :to="{ name: 'home' }" class="nav-link text-center" @mouseover="hover = true, nameHover = 'home'" @mouseleave="hover = false, nameHover = ''" :class="pageControl('home') ? store.checked ? 'bg-light' : 'bg-dark' : '' ,  hover && nameHover == 'home' ? store.checked ? 'bg-light' : 'bg-dark' : ''">
                             <i class="fa-solid fa-house-chimney"></i>
                             <span class="d-none d-md-block">Home</span>
                         </router-link>
                     </li>
                     <li class="nav-item h-100 align-self-end">
-                        <router-link :to="{ name: 'projects' }" class="nav-link text-center" >
+                        <router-link :to="{ name: 'projects' }" class="nav-link text-center" @mouseover="hover = true , nameHover = 'projects'" @mouseleave="hover = false , nameHover = ''" :class="pageControl('projects') ? store.checked ? 'bg-light' : 'bg-dark' : ''  ,  hover && nameHover == 'projects' ? store.checked ? 'bg-light' : 'bg-dark' : ''">
                             <i class="fa-solid fa-diagram-project"></i>
                             <span class="d-none d-md-block">Projects</span>
                         </router-link>
                     </li>
                     <li class="nav-item h-100 align-self-end">
-                        <router-link :to="{ name: 'contact' }" class="nav-link text-center" >
+                        <router-link :to="{ name: 'contact' }" class="nav-link text-center" @mouseover="hover = true , nameHover = 'contact'" @mouseleave="hover = false , nameHover = ''" :class="pageControl('contact')  ? store.checked ? 'bg-light' : 'bg-dark' : ''  ,  hover && nameHover == 'contact' ? store.checked ? 'bg-light' : 'bg-dark' : ''">
                             <i class="fa-regular fa-comments"></i>
                             <span class="d-none d-md-block">Contact</span>
                         </router-link>
@@ -107,14 +110,10 @@ import { store } from '../store.js';
 <style scoped lang="scss">
 
     .router-link-active{
-        background-color: white;
         transform: translateY(30%);
-        transition: 0.5s linear;
-
+        transition: 400ms ease all;
 
         z-index: 50;
-
-
     }
     a {
         height: 100%;
@@ -123,10 +122,6 @@ import { store } from '../store.js';
         transition: 0.5s;
         padding: 0 30px;
         border-radius: 50% 50% 0 0;
-
-        &:hover {
-            background-color: white;
-        }
     }
 
     i {
