@@ -437,18 +437,21 @@
 </script>
 
 <template>
-    <div v-if="store.visual == 1" class="visual-1">
-
-        <div v-for="project,index in projects"  class="card-project">  
-            <CardProject :project="projects[index]"></CardProject>
+    <div class="projects">
+        <div v-if="store.visual == 1" class="visual-1">
+    
+            <div v-for="project,index in projects"  class="card-project">  
+                <CardProject :project="projects[index]"></CardProject>
+            </div>
+    
         </div>
-
-    </div>
-
-    <div v-else-if="store.visual == 2" class="visual-2 d-flex gap-4" :class="store.checked ? 'bg-light text-dark' : 'bg-dark text-light'" > 
-
-        <div v-for="project,index in projects"  class="col-11 col-lg-5 col-xl-5 col-xxl-3 small-card-project" @mouseover="active=index" @mouseleave="active=null" :style="index == active || active==null ? { opacity: 1}: {opacity : 0.5}">  
-            <SmallCardProject :project="projects[index]"></SmallCardProject>
+    
+        <div v-else-if="store.visual == 2" class="visual-2 d-flex gap-4" :class="store.checked ? 'bg-light text-dark' : 'bg-dark text-light'" > 
+    
+            <div v-for="project,index in projects"  class="col-11 col-lg-5 col-xl-5 col-xxl-3 small-card-project" @mouseover="active=index" @mouseleave="active=null" :style="index == active || active==null ? { opacity: 1}: {opacity : 0.5}">  
+                <SmallCardProject :project="projects[index]"></SmallCardProject>
+            </div>
+    
         </div>
 
     </div>
@@ -456,11 +459,15 @@
 
 <style scoped lang="scss">
 
+.projects {
 
+
+
+}
 
 .visual-1{
 
-    height: 100%;
+
     width: 100%;
     
     margin: auto;
@@ -468,6 +475,9 @@
     overflow-x: hidden;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
+
+    height: calc(100vh);
+
 
     .card-project{
 
@@ -491,6 +501,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+
+    padding-top: 120px;
+    height: 100%;
+
 
     .small-card-project {
         transition: 1s;

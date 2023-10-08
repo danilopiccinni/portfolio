@@ -9,19 +9,47 @@ import { store } from './store.js';
     data() {
       return {
         store,
+
+        isNavbarHidden: false,
+        prevScrollY: 0,
       }
     },
 
     components: {
       Header,
       Footer,
-    }
+    },
+
+    methods : {
+    handleScroll() {
+        const currentScrollY = window.scrollY;
+        
+        if (currentScrollY > this.prevScrollY) {
+          // Scroll verso il basso
+          this.isNavbarHidden = true;
+        } else {
+          // Scroll verso l'alto
+          this.isNavbarHidden = false;
+        }
+        
+        this.prevScrollY = currentScrollY;
+      }
+    },
+
+    mounted() {
+      window.addEventListener("scroll", this.handleScroll);
+    },
+
+    beforeDestroy() {
+      window.removeEventListener("scroll", this.handleScroll);
+    },
+
   }
 </script>
 
 <template>
-  <div :class="store.checked ? 'bg-light text-dark' : 'bg-dark text-light'">
-    <div class="header">
+  <div class="cont-header" @scroll="saluto()" :class="store.checked ? 'bg-light text-dark' : 'bg-dark text-light'">
+    <div class="header" :class="{ 'navbar-hidden': isNavbarHidden }">
       <Header></Header>
     </div>
 
@@ -41,20 +69,47 @@ import { store } from './store.js';
 </template>
 
 <style scoped lang="scss">
+
+  body {
+    position: relative;
+  } 
+
+  main {
+
+
+
+  }
+
   .header {
-    height: 56px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    z-index: 100;
 
+    transition: top 0.5s ease;
+
+    border: 1px solid grey;
+    background-color: grey;
+    -webkit-border-bottom-right-radius: 50px;
+    -webkit-border-bottom-left-radius: 50px;
+    -moz-border-radius-bottomright: 50px;
+    -moz-border-radius-bottomleft: 50px;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
   }
 
-  .main {
-
+  .navbar-hidden {
+  top: -100px; /* Nascondi la barra di navigazione fuori dallo schermo */
   }
+
 
   main {
     // display: flex;
     // justify-content: center;
     // align-items: center;
-    height: calc(100vh - 56px);
+    height: calc(100vh - 100px);
   }
 
   .page-opacity-enter-active,

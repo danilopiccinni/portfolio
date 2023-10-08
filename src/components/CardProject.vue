@@ -122,7 +122,7 @@
         
         .cont-carouselThumbsDark {
             position: absolute;
-            top: 0px;
+            top: 100px;
             left: 0px;
     
             min-width: 200px;

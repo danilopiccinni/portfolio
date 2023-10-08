@@ -114,5 +114,9 @@ import { store } from '../store'
 
 <style scoped lang="scss">
 
+    .container-fluid {
+        padding-top: 100px;
+        padding-bottom: 5px;
 
+    }
 </style>

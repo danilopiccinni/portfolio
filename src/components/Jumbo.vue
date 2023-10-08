@@ -56,7 +56,7 @@ export default {
 
 <template>
     <div class="">
-        <div class="jumbo my-5">
+        <div class="jumbo">
             <!-- <img src="../../public/img/premium_photo.avif" alt="asdasdaasasasdasdsa" class="w-100"> -->
             <div class="inner-jumbo container d-flex flex-column-reverse flex-md-row">
                 <div class="col-12 col-md-6 d-flex flex-column-reverse flex-md-column justify-content-center align-items-center ">
@@ -110,7 +110,7 @@ img {
             justify-content: center;
             align-items: center;
 
-            height: 100%;
+            height: 100vh;
 
             .error {
                 border: 2px solid red;
