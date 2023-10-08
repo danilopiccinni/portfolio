@@ -10,8 +10,6 @@ import { store } from './store.js';
       return {
         store,
 
-        isNavbarHidden: false,
-        prevScrollY: 0,
       }
     },
 
@@ -20,20 +18,20 @@ import { store } from './store.js';
       Footer,
     },
 
-    methods : {
-    handleScroll() {
-        const currentScrollY = window.scrollY;
-        
-        if (currentScrollY > this.prevScrollY) {
-          // Scroll verso il basso
-          this.isNavbarHidden = true;
-        } else {
-          // Scroll verso l'alto
-          this.isNavbarHidden = false;
-        }
-        
-        this.prevScrollY = currentScrollY;
-      }
+      methods : {
+        handleScroll() {
+            const currentScrollY = window.scrollY;
+            
+            if (currentScrollY > this.store.prevScrollY) {
+              // Scroll verso il basso
+              this.store.isNavbarHidden = true;
+            } else {
+              // Scroll verso l'alto
+              this.store.isNavbarHidden = false;
+            }
+            
+            this.store.prevScrollY = currentScrollY;
+          }
     },
 
     mounted() {
@@ -49,7 +47,7 @@ import { store } from './store.js';
 
 <template>
   <div class="cont-header" @scroll="saluto()" :class="store.checked ? 'bg-light text-dark' : 'bg-dark text-light'">
-    <div class="header" :class="{ 'navbar-hidden': isNavbarHidden }">
+    <div class="header" :class="{ 'navbar-hidden': store.isNavbarHidden }">
       <Header></Header>
     </div>
 

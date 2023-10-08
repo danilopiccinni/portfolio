@@ -8,4 +8,7 @@ export const store = reactive({
 
     checked : false,
 
+    isNavbarHidden: false,
+    prevScrollY: 0,
+
 });

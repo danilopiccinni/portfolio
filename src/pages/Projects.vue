@@ -456,7 +456,11 @@
             changeVisual2() {
                 this.store.visual = 2
             },
+
+
         },
+
+
 
     }
 </script>
@@ -478,7 +482,7 @@
         </div>
 
 
-        <div id="visual-switcher" v-if="pageControl('projects')" class="btn-group dropstart d-flex" :class="store.checked ? 'bg-light' : 'bg-dark'">
+        <div id="visual-switcher" v-if="pageControl('projects')" class="btn-group dropstart d-flex " :class="store.checked ? 'bg-light' : 'bg-dark' , { 'top-0': store.isNavbarHidden }">
             <button v-on:click="nextVisual" class="btn btn-sinistro" :class="store.checked ? 'text-dark' : 'text-light'" type="button">
                 Vista
             </button>
@@ -496,9 +500,11 @@
 
 <style scoped lang="scss">
 
+
+
 #visual-switcher {
 
-    position: absolute;
+    position: fixed;
     width: 25%;
     top: 60px;
     right: 50%;
@@ -508,9 +514,10 @@
     border: 1px gray solid;
     border-radius:  0 0 50px 50px;
 
-    opacity: 0.8;
+    opacity: 0.5;
 
     transition: 0.5s;
+
 
     &:hover {
         opacity: 1;
