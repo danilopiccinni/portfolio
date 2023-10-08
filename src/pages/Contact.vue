@@ -1,14 +1,39 @@
 <script>
+import emailjs from 'emailjs-com';
+import {ref} from 'vue';
 import { store } from '../store'
 
     export default {
         name: 'Contact',
 
+        setup() {
+            const form = ref(null);
+            const inputFieldReset = ref(null);
+
+            const sendMail = () => {
+                emailjs.sendForm('Contact-Portfolio', 'e-mail-di-contatto', form.value, 'h2vNzYANbMDbOOC1n')
+                .then(() => {
+                    alert('inviato')
+
+                }, (error) => {
+                    alert('non inviato')
+                }); 
+            }
+
+            return {
+                form,
+                inputFieldReset,
+                sendMail
+            }
+        },
+
         data() {
             return {
-                store
+                store,
             }
-        }
+        },
+
+
     }
 </script>
 
@@ -16,96 +41,28 @@ import { store } from '../store'
     <div class="container-fluid" :class="store.checked ? 'bg-light text-dark' : 'bg-dark text-light'">
         <!--Section: Contact v.2-->
         <section class="mb-4" >
-        
         <!--Section heading-->
         <h2 class="h1-responsive font-weight-bold text-center my-4">Contact me</h2>
-        <!--Section description-->
-        <p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within
-            a matter of hours to help you.</p>
-        
-        <div class="row flex-column align-items-center gap-5">
-        
-            <!--Grid column-->
-            <div class="col-md-9 mb-md-0 mb-5">
-                <form id="contact-form" name="contact-form" action="mail.php" method="POST">
-        
-                    <!--Grid row-->
-                    <div class="row">
-        
-                        <!--Grid column-->
-                        <div class="col-md-6">
-                            <div class="md-form mb-0">
-                                <input type="text" id="name" name="name" class="form-control">
-                                <label for="name" class="">Your name</label>
-                            </div>
-                        </div>
-                        <!--Grid column-->
-        
-                        <!--Grid column-->
-                        <div class="col-md-6">
-                            <div class="md-form mb-0">
-                                <input type="text" id="email" name="email" class="form-control">
-                                <label for="email" class="">Your email</label>
-                            </div>
-                        </div>
-                        <!--Grid column-->
-        
+            <div class="form-container">
+     
+                <form class="form" ref="form" @submit.prevent="sendMail">
+                    <div class="form-group">
+                        <input name="from_name" placeholder="il tuo nome" type="text" :value="inputFieldReset" required> 
                     </div>
-                    <!--Grid row-->
-        
-                    <!--Grid row-->
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="md-form mb-0">
-                                <input type="text" id="subject" name="subject" class="form-control">
-                                <label for="subject" class="">Subject</label>
-                            </div>
-                        </div>
+                    <div class="form-group">
+                        <input name="email" placeholder="la tua mail" type="email" :value="inputFieldReset" required>
                     </div>
-                    <!--Grid row-->
-        
-                    <!--Grid row-->
-                    <div class="row">
-        
-                        <!--Grid column-->
-                        <div class="col-md-12">
-        
-                            <div class="md-form">
-                                <textarea type="text" id="message" name="message" rows="10" class="form-control md-textarea"></textarea>
-                                <label for="message">Your message</label>
-                            </div>
-        
-                        </div>
+                    <div class="form-group">
+                        <input name="subject" placeholder="oggetto" type="text" :value="inputFieldReset" required>
                     </div>
-                    <!--Grid row-->
-        
+                    <div class="form-group">
+                        <textarea class="text-area" name="message" placeholder="messaggio" type="text" :value="inputFieldReset" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button class="submit" type="submit" name="send">Invia</button>
+                    </div>
                 </form>
-        
-                <div class="text-center text-md-left">
-                    <a class="btn btn-secondary" onclick="document.getElementById('contact-form').submit();">Send</a>
-                </div>
-                <div class="status"></div>
             </div>
-            <!--Grid column-->
-        
-            <!--Grid column-->
-            <div class="d-flex flex-column align-items-center justify-content-between">
-                <div class="d-flex flex-column align-items-center">
-                    <i class="fas fa-map-marker-alt fa-2x"></i>
-                    <p>Unterwilrain 50, 6014 Luzern, CH</p>
-                </div>
-                <div class="d-flex flex-column justifiy-content-center align-items-center">
-                    <i class="fas fa-phone fa-2x"></i>
-                    <p>+41 76 204 85 51</p>
-                </div>
-                <div class="d-flex flex-column justifiy-content-center align-items-center">
-                    <i class="fas fa-envelope fa-2x"></i>
-                    <p>danilopwebdev@gmail.com</p>
-                </div>
-
-            </div>
-        
-        </div>
         
         </section>
 
@@ -117,6 +74,52 @@ import { store } from '../store'
     .container-fluid {
         padding-top: 100px;
         padding-bottom: 5px;
-
     }
+
+    p {
+        font-size: 30px;
+        padding: 10px;
+        font-weight: bold;
+        }
+
+        .form-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 50px auto;
+        border-radius: 10px;
+        padding: 10px;
+        background-color: #797979; 
+        width: 500px;
+        }
+
+        .form-group {
+        padding: 15px;
+        }
+
+        .form-group input {
+        padding: 10px 10px 10px 10px;
+        border: none;
+        border-radius: 10px;
+        width: 400px;
+        outline: none;
+        }
+
+        .text-area {
+        height: 150px;
+        width: 400px;
+        border: none;
+        border-radius: 10px;
+        padding: 10px;
+        outline: none;
+        }
+
+        .form-group .submit {
+        border: none;
+        border-radius:5px;
+        height: 40px;
+        width: 70px ;
+        }
+
 </style>
