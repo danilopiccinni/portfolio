@@ -63,11 +63,7 @@ export default {
     -webkit-perspective: 800;
     -webkit-perspective-origin: 50% 225px;
 
-    transform: translateY(-50%) translateX(0%);
-
-
-
-
+    transform: translateY(-50%);
 
     #stage {
         -webkit-transition: -webkit-transform 2s;
@@ -86,8 +82,6 @@ export default {
             -webkit-animation: spin 15s infinite linear;
 
             rotate: 2 1 0 -30deg;
-
-
         }
     }
 }
@@ -97,37 +91,37 @@ export default {
 }
 
 .cube>.one {
-    -webkit-transform: translateZ(200px);
+    -webkit-transform: translateZ(230px);
 }
 
 .cube>.two {
-    -webkit-transform: rotateY(40deg) translateZ(200px);
+    -webkit-transform: rotateY(40deg) translateZ(230px);
 }
 .cube>.three {
-    -webkit-transform: rotateY(80deg) translateZ(200px);
+    -webkit-transform: rotateY(80deg) translateZ(230px);
 }
 .cube>.four {
-    -webkit-transform: rotateY(120deg) translateZ(200px);
+    -webkit-transform: rotateY(120deg) translateZ(230px);
 }
 
 .cube>.five {
-    -webkit-transform: rotateY(160deg) translateZ(200px);
+    -webkit-transform: rotateY(160deg) translateZ(230px);
 }
 
 .cube>.six {
-    -webkit-transform: rotateY(200deg) translateZ(200px);
+    -webkit-transform: rotateY(200deg) translateZ(230px);
 }
 
 .cube>.seven {
-    -webkit-transform: rotateY(240deg) translateZ(200px);
+    -webkit-transform: rotateY(240deg) translateZ(230px);
 }
 
 .cube>.eight {
-    -webkit-transform: rotateY(280deg) translateZ(200px);
+    -webkit-transform: rotateY(280deg) translateZ(230px);
 }
 
 .cube>.nine {
-    -webkit-transform: rotateY(320deg) translateZ(200px);
+    -webkit-transform: rotateY(320deg) translateZ(230px);
 }
 
 .ten {
@@ -151,45 +145,48 @@ export default {
     -webkit-transition: -webkit-transform 2s , opacity 2s;
     -webkit-backface-visibility: hidden;
 
+
+
     img {
         width: 100%;
     }
 }
 
 @media only screen and (max-width: 992px) {
+
     .cube>.one {
-    -webkit-transform: translateZ(170px);
-}
+        -webkit-transform: translateZ(170px);
+    }
 
-.cube>.two {
-    -webkit-transform: rotateY(40deg) translateZ(170px);
-}
-.cube>.three {
-    -webkit-transform: rotateY(80deg) translateZ(170px);
-}
-.cube>.four {
-    -webkit-transform: rotateY(120deg) translateZ(170px);
-}
+    .cube>.two {
+        -webkit-transform: rotateY(40deg) translateZ(170px);
+    }
+    .cube>.three {
+        -webkit-transform: rotateY(80deg) translateZ(170px);
+    }
+    .cube>.four {
+        -webkit-transform: rotateY(120deg) translateZ(170px);
+    }
 
-.cube>.five {
-    -webkit-transform: rotateY(160deg) translateZ(170px);
-}
+    .cube>.five {
+        -webkit-transform: rotateY(160deg) translateZ(170px);
+    }
 
-.cube>.six {
-    -webkit-transform: rotateY(200deg) translateZ(170px);
-}
+    .cube>.six {
+        -webkit-transform: rotateY(200deg) translateZ(170px);
+    }
 
-.cube>.seven {
-    -webkit-transform: rotateY(240deg) translateZ(170px);
-}
+    .cube>.seven {
+        -webkit-transform: rotateY(240deg) translateZ(170px);
+    }
 
-.cube>.eight {
-    -webkit-transform: rotateY(280deg) translateZ(170px);
-}
+    .cube>.eight {
+        -webkit-transform: rotateY(280deg) translateZ(170px);
+    }
 
-.cube>.nine {
-    -webkit-transform: rotateY(320deg) translateZ(170px);
-}
+    .cube>.nine {
+        -webkit-transform: rotateY(320deg) translateZ(170px);
+    }
 }
 
 
