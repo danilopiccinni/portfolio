@@ -152,7 +152,44 @@ export default {
     }
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 471px) {
+
+.cube>.one {
+    -webkit-transform: translateZ(170px);
+}
+
+.cube>.two {
+    -webkit-transform: rotateY(40deg) translateZ(170px);
+}
+.cube>.three {
+    -webkit-transform: rotateY(80deg) translateZ(170px);
+}
+.cube>.four {
+    -webkit-transform: rotateY(120deg) translateZ(170px);
+}
+
+.cube>.five {
+    -webkit-transform: rotateY(160deg) translateZ(170px);
+}
+
+.cube>.six {
+    -webkit-transform: rotateY(200deg) translateZ(170px);
+}
+
+.cube>.seven {
+    -webkit-transform: rotateY(240deg) translateZ(170px);
+}
+
+.cube>.eight {
+    -webkit-transform: rotateY(280deg) translateZ(170px);
+}
+
+.cube>.nine {
+    -webkit-transform: rotateY(320deg) translateZ(170px);
+}
+}
+
+@media only screen and (min-width : 768px)and (max-width: 992px) {
 
     .cube>.one {
         -webkit-transform: translateZ(170px);

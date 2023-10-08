@@ -58,7 +58,7 @@ export default {
     <div class="">
         <div class="jumbo">
             <!-- <img src="../../public/img/premium_photo.avif" alt="asdasdaasasasdasdsa" class="w-100"> -->
-            <div class="inner-jumbo container d-flex flex-column-reverse flex-md-row">
+            <div class="inner-jumbo container py-3 d-flex flex-column-reverse flex-md-row">
                 <div class="col-12 col-md-6 d-flex flex-column-reverse flex-md-column justify-content-center align-items-center ">
                     <div >
                         <h1 class="align-self-start">Hi, I'm Danilo</h1>
@@ -105,21 +105,29 @@ img {
     object-fit: contain;
     object-position: 80%;
 }
-        .jumbo {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+.jumbo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-            height: 100vh;
+    height: 100vh;
 
-            .error {
-                border: 2px solid red;
-            }
+    .error {
+        border: 2px solid red;
+    }
 
-            .no-err {
-                border: none;
-            }
+    .no-err {
+        border: none;
+    }
 
-        }
+}
 
+@media  screen and (max-width: 768px) {
+    .jumbo {
+    padding-top: 100px;
+    height: calc(100% - 100px);
+
+
+}
+}
 </style>
