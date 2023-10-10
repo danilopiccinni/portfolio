@@ -140,7 +140,7 @@
                         repo :  'repo-MaxCoach-tech',
                         type: {
                             name: 'tipologia',
-                            color: 'blue'
+                            color: 'green'
                         },
                         technologies : [
                             {
@@ -181,7 +181,7 @@
                         repo :  'repo-netflix-tech',
                         type: {
                             name: 'FrontEnd',
-                            color: 'blue'
+                            color: 'yellow'
                         },
                         technologies : [
                             {
@@ -222,7 +222,7 @@
                         repo :  'repo-netflix-tech',
                         type: {
                             name: 'FrontEnd',
-                            color: 'blue'
+                            color: 'purple'
                         },
                         technologies : [
                             {
@@ -456,12 +456,7 @@
             changeVisual2() {
                 this.store.visual = 2
             },
-
-
         },
-
-
-
     }
 </script>
 

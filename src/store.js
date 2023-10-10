@@ -4,11 +4,15 @@ export const store = reactive({
 
     selectedProject: {},
 
-    visual : 2,
+    visual : 1,
 
     checked : false,
 
     isNavbarHidden: false,
     prevScrollY: 0,
+
+    offTimer : false,
+
+    switcherTutorial : true,
 
 });
