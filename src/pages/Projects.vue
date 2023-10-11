@@ -471,8 +471,8 @@
 
     
         <div v-else-if="store.visual == 2" class="visual-2 d-flex gap-4" :class="store.checked ? 'bg-light text-dark' : 'bg-dark text-light'" > 
-            <div v-for="project,index in projects"  class="col-11 col-lg-5 col-xl-5 col-xxl-3 small-card-project" @mouseover="active=index" @mouseleave="active=null" :style="index == active || active==null ? { opacity: 1}: {opacity : 0.5}">  
-                <SmallCardProject :project="projects[index]"></SmallCardProject>
+            <div v-for="project,index in projects" class="small-card-project col-11 col-lg-5 col-xl-5 col-xxl-3" @mouseover="active=index" @mouseleave="active=null" :style="index == active || active==null ? { opacity: 1}: {opacity : 0.5}">  
+                <SmallCardProject :project="projects[index]" :index='index'></SmallCardProject>
             </div>
         </div>
 
@@ -598,8 +598,11 @@
     padding-top: 120px;
     height: 100%;
 
+    overflow: hidden;
+
 
     .small-card-project {
+
         transition: 1s;
 
         &:hover {

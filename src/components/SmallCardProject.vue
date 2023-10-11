@@ -11,11 +11,13 @@
                 onOffSelectEffect : false,
 
                 isLeave : false,
+
             }
         },
 
         props : {
             project : Object,
+            index: Number,
         },
 
         methods : {
@@ -29,7 +31,7 @@
 </script>
 
 <template>
-    <div class="project rounded" :class="onOffSelectEffect == true ? 'animate__animated animate__bounceOut' : 'animate__animated animate__rollIn'">
+    <div :style="{'--i': (`0.${index}` * 5)}" class="project rounded" :class="onOffSelectEffect == true ? 'animate__animated animate__bounceOut' : ' animate__animated animate__fadeInRight'">
         <router-link :to="{ name: 'singleProjects' , params : {title : project.title}}" @mouseleave="isLeave = true" @mouseover="isLeave = false" v-on:click="selectProject(project) , onOffSelectEffect=true" class="nav-link" href="#">
             <div class=" cont-cover  rounded" :style="{ backgroundImage : `url(${project.cover})` }">
                 <div class="cont-details" :style="isLeave ? {opacity : 0} : ''">
@@ -71,6 +73,11 @@
     box-shadow: 5px 5px 10px 0px #000000;
 
     transition: all 0.3s;
+
+    -webkit-animation-delay: calc(1s * var(--i));
+    animation-delay: calc(1s * var(--i));
+    -webkit-animation-delay: calc(var(--animate-delay) * var(--i));
+    animation-delay: calc(var(--animate-delay) * var(--i));
 
 
     &:hover {
