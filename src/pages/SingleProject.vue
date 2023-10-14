@@ -19,22 +19,15 @@
 
 <template>
     <div>
-
-        <img :src="project.cover" alt="">
-        <!-- <h1>{{ project.title }}</h1>
-        <p>
-            {{ project.description }}
-        </p> -->
+        <iframe src="https://tiny-profiterole-07944e.netlify.app" frameborder="0" ></iframe>
     </div>
 </template>
 
 <style scoped lang="scss">
 
-    img {
+    iframe {
         width: 100%;
-        max-height: 100vh;
-        object-position: top center;
-        object-fit: cover;
-
+        height: 100vh;
     }
+
 </style>
