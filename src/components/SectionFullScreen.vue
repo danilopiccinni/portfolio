@@ -14,7 +14,7 @@ import 'animate.css';
 
 <template>
 
-    <div class="section-full-screen py-5" @mouseover="animationOn=true" @mouseleave="animationOn=false">
+    <div class="section-full-screen text-light " @mouseover="animationOn=true" @mouseleave="animationOn=false">
 
         <div class="d-flex justify-content-center flex-column flex-sm-row">
             <div class="col-4 column-1 column d-none d-lg-block">
@@ -85,8 +85,8 @@ import 'animate.css';
 
 <style scoped lang="scss">
         .section-full-screen {
-            background-color: #b1b1b1;
-        // background-color: #f6f6f6;
+            background: linear-gradient(16deg, rgba(2,0,36,1) 0%, rgba(48,9,121,1) 35%, rgba(0,212,255,1) 100%);
+
 
         .column-1{
             overflow: hidden;
@@ -98,7 +98,7 @@ import 'animate.css';
         }
 
         .column-2 {
-            border-right: 1px solid black;
+            border-right: 1px solid rgb(255, 255, 255);
 
             h3{
                 padding-top: 15px;

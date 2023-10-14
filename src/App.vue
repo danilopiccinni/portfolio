@@ -44,13 +44,13 @@ import { store } from './store.js';
 </script>
 
 <template>
-  <div class="cont-header" @scroll="saluto()" :class="store.checked ? 'bg-light text-dark' : 'bg-dark text-light'">
+  <div  >
     <div class="header" :class="{ 'navbar-hidden': store.isNavbarHidden }">
       <Header></Header>
     </div>
 
 
-      <main>
+      <main :class="store.checked ? 'bg-light' : 'bg-dark'">
         <router-view class="router-view" v-slot="{ Component }">
           <Transition name="page-opacity" mode="out-in">
             <component :is="Component"/>
@@ -65,13 +65,8 @@ import { store } from './store.js';
 
   body {
     position: relative;
+
   } 
-
-  main {
-
-
-
-  }
 
   .header {
     position: fixed;
@@ -86,7 +81,7 @@ import { store } from './store.js';
     transition: top 0.5s ease;
 
    
-    background-color: grey;
+    background: linear-gradient(16deg, rgba(2,0,36,1) 0%, rgba(48,9,121,1) 35%, rgba(0,212,255,1) 100%);
     -webkit-border-bottom-right-radius: 50px;
     -webkit-border-bottom-left-radius: 50px;
     -moz-border-radius-bottomright: 50px;
@@ -104,7 +99,7 @@ import { store } from './store.js';
     // display: flex;
     // justify-content: center;
     // align-items: center;
-    height: calc(100vh - 100px);
+    height: calc(100vh);
   }
 
   .page-opacity-enter-active,

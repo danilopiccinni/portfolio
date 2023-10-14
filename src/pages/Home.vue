@@ -1,9 +1,11 @@
 <script>
+
 import Banner from '../components/Banner.vue';
 import SectionFullScreen from '../components/SectionFullScreen.vue';
 import Footer from '../components/Footer.vue';
 import Jumbo from '../components/Jumbo.vue';
 import { store } from '../store';
+import TheThreeCardsVue from '../components/TheThreeCards.vue';
     export default {
 
         name: 'Home',
@@ -20,7 +22,9 @@ import { store } from '../store';
             Jumbo,
             SectionFullScreen,
             Banner,
-            Footer
+            Footer,
+            TheThreeCardsVue,
+
         },
     } 
 </script>
@@ -29,6 +33,10 @@ import { store } from '../store';
     <div :class="store.checked ? 'bg-light text-dark' : 'bg-dark text-light'">
 
         <Jumbo></Jumbo>
+
+        <div class="p-5 p-md-0">
+            <TheThreeCardsVue></TheThreeCardsVue>
+        </div>
 
         <SectionFullScreen></SectionFullScreen>
 

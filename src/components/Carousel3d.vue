@@ -42,9 +42,9 @@ export default {
                         <img src="../../public/img/kisspng-github-social-media-computer-icons-logo-android-5b348490ab20f1.548940641530168464701.png" alt="">
                     </div>
                 </div>
-                <div class="plane ten">
+                <!-- <div class="plane ten">
                     <img src="../../public/img/icons8-visual-studio-code-2019-480.png" alt="">
-                </div>
+                </div> -->
             </div>
         </div>
     </div>

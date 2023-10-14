@@ -508,6 +508,7 @@
 
     border: 1px gray solid;
     border-radius:  0 0 50px 50px;
+    border-top: 0;
 
     opacity: 0.5;
 

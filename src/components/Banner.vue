@@ -38,7 +38,7 @@ import { store } from '../store'
 
 <style scoped lang="scss">
       .banner {
-        background-color: #b1b1b1;
+        background: linear-gradient(16deg, rgba(2,0,36,1) 0%, rgba(48,9,121,1) 35%, rgba(0,212,255,1) 100%);
 
 
         .__container {

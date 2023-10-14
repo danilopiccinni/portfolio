@@ -13,7 +13,7 @@
         <!-- Footer -->
         <footer class="text-center text-lg-start">
         <!-- Section: Social media -->
-        <section class="d-flex flex-column align-items-center justify-content-center justify-content-lg-between p-4 border-bottom">
+        <section class="social text-light d-flex flex-column align-items-center justify-content-center justify-content-lg-between p-4 border-bottom">
             <!-- Left -->
             <div class="me-5 d-none d-lg-block">
             <span>Get connected with us on social networks:</span>
@@ -71,13 +71,12 @@
                 <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
                 <!-- Links -->
                 <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-                <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+                <p><i class="fas fa-home me-3"></i> Luzern, Luzern 6014, CH</p>
                 <p>
                     <i class="fas fa-envelope me-3"></i>
-                    info@example.com
+                    danilopwebdev@gmail.com
                 </p>
-                <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
-                <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+                <p><i class="fas fa-phone me-3"></i> +41 76 204 85 51</p>
                 </div>
                 <!-- Grid column -->
             </div>
@@ -87,9 +86,9 @@
         <!-- Section: Links  -->
 
         <!-- Copyright -->
-        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+        <div class="copyright text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
             © 2021 Copyright:
-            <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+            <a class="text-reset fw-bold" href="">polo.com</a>
         </div>
         <!-- Copyright -->
         </footer>
@@ -97,4 +96,14 @@
     </div>
 </template>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+
+    .copyright {
+        background: linear-gradient(16deg, rgba(2,0,36,1) 0%, rgba(48,9,121,1) 35%, rgba(0,212,255,1) 100%);
+        color: white;
+    }
+
+    .social {
+        background: linear-gradient(16deg, rgba(2,0,36,1) 0%, rgba(48,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    }
+</style>

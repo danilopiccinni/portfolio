@@ -40,22 +40,22 @@ import { store } from '../store.js';
             </div>
 
             <div class="h-100">
-                <ul class="h-100 navbar-nav d-flex flex-row align-items-end gap-3">
+                <ul class="h-100 navbar-nav d-flex flex-row align-items-end gap-1 gap-md-3">
                     <li class="nav-item h-100 align-self-end">
-                        <router-link :to="{ name: 'home' }" class="nav-link text-center" @mouseover="hover = true, nameHover = 'home'" @mouseleave="hover = false, nameHover = ''" :class="pageControl('home') ? store.checked ? 'bg-light' : 'bg-dark' : '' ,  hover && nameHover == 'home' ? store.checked ? 'bg-light' : 'bg-dark' : ''">
+                        <router-link :to="{ name: 'home' }" class="nav-link text-center" @mouseover="hover = true, nameHover = 'home'" @mouseleave="hover = false, nameHover = ''" :class="pageControl('home') ? store.checked ? 'bg-light text-dark' : 'bg-dark' : '' ,  hover && nameHover == 'home' ? store.checked ? 'bg-light text-dark' : 'bg-dark' : ''">
                             <i class="fa-solid fa-house-chimney"></i>
                             <span class="d-none d-md-block">Home</span>
                         </router-link>
                     </li>
                     <li class="nav-item h-100 align-self-end cont-switcher">
-                        <router-link :to="{ name: 'projects' }" class="nav-link text-center" @mouseover="hover = true , nameHover = 'projects'" @mouseleave="hover = false , nameHover = ''" :class="pageControl('projects') ? store.checked ? 'bg-light' : 'bg-dark' : ''  ,  hover && nameHover == 'projects' ? store.checked ? 'bg-light' : 'bg-dark' : ''">
+                        <router-link :to="{ name: 'projects' }" class="nav-link text-center" @mouseover="hover = true , nameHover = 'projects'" @mouseleave="hover = false , nameHover = ''" :class="pageControl('projects') ? store.checked ? 'bg-light text-dark' : 'bg-dark' : ''  ,  hover && nameHover == 'projects' ? store.checked ? 'bg-light text-dark' : 'bg-dark' : ''">
                             <i class="fa-solid fa-diagram-project"></i>
                             <span class="d-none d-md-block">Projects</span>
 
                         </router-link>
                     </li>
                     <li class="nav-item h-100 align-self-end">
-                        <router-link :to="{ name: 'contact' }" class="nav-link text-center" @mouseover="hover = true , nameHover = 'contact'" @mouseleave="hover = false , nameHover = ''" :class="pageControl('contact')  ? store.checked ? 'bg-light' : 'bg-dark' : ''  ,  hover && nameHover == 'contact' ? store.checked ? 'bg-light' : 'bg-dark' : ''">
+                        <router-link :to="{ name: 'contact' }" class="nav-link text-center" @mouseover="hover = true , nameHover = 'contact'" @mouseleave="hover = false , nameHover = ''" :class="pageControl('contact')  ? store.checked ? 'bg-light text-dark' : 'bg-dark' : ''  ,  hover && nameHover == 'contact' ? store.checked ? 'bg-light text-dark' : 'bg-dark' : ''">
                             <i class="fa-regular fa-comments"></i>
                             <span class="d-none d-md-block">Contact</span>
                         </router-link>
@@ -83,6 +83,10 @@ import { store } from '../store.js';
 
 <style scoped lang="scss">
 
+.nav-bar {
+    color: white;
+}
+
     .router-link-active{
         transform: translateY(30%);
         transition: 400ms ease all;
@@ -101,8 +105,7 @@ import { store } from '../store.js';
     i {
         font-size: 1.2em;
     }
-
-
+    
     .checkbox {
         opacity: 0;
         position: absolute;
@@ -157,5 +160,16 @@ import { store } from '../store.js';
     .fa-sun {
         font-size: 0.7em;
         color: #f39c12;
+    }
+
+
+    @media  screen and (max-width: 400px) {
+        a {
+            padding: 0 20px;
+        }
+
+        i {
+            font-size: 1.2em;
+        }
     }
 </style>
