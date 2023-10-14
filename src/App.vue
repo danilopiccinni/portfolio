@@ -1,7 +1,6 @@
 <script>
   import { def } from '@vue/shared';
 import Header from './components/Header.vue';
-import Footer from './components/Footer.Vue';
 import { store } from './store.js';
 
   export default {
@@ -15,7 +14,6 @@ import { store } from './store.js';
 
     components: {
       Header,
-      Footer,
     },
 
       methods : {
@@ -59,9 +57,6 @@ import { store } from './store.js';
           </Transition>
         </router-view>
       </main>
-
-
-    <!-- <Footer></Footer> -->
 
   </div>
 </template>
