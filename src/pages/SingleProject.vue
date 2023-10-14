@@ -19,7 +19,7 @@
 
 <template>
     <div>
-        <iframe src="https://tiny-profiterole-07944e.netlify.app" frameborder="0" ></iframe>
+        <iframe src="https://yu-gi-ho-danilop.netlify.app" frameborder="0" ></iframe>
     </div>
 </template>
 
