@@ -1,80 +1,111 @@
 <script>
 import 'animate.css';
-  export default {
+export default {
     name : 'SectionFullScreen',
 
     data() {
-      return {
-        animationOn: false,
-      }
-    },
+        return {
+            animationOn: false,
 
-  }
+            column1: 'https://fastly.picsum.photos/id/2/5000/3333.jpg?hmac=_KDkqQVttXw_nM-RyJfLImIbafFrqLsuGO5YuHqD-qQ',
+
+            column2: [
+                    {
+                        title: 'Titolo in Grassetto',
+                        text: 'un po di testo per prendere misure'
+                    },
+                    {
+                        title: 'Titolo in Grassetto',
+                        text: 'un po di testo per prendere misure'
+                    },
+                    {
+                        title: 'Titolo in Grassetto',
+                        text: 'un po di testo per prendere misure'
+                    },
+                    {
+                        title: 'Titolo in Grassetto',
+                        text: 'un po di testo per prendere misure'
+                    },
+
+            ],
+
+            column3: [
+                    {
+                        title: 'Titolo in Grassetto',
+                        text: 'elit. Odit, ea. Quidem voluptatem nesciunt porro molestias illum, accusamus quibusdam minus eos beatae architecto in doloremque dolorem fuga distinctio quisquam adipisci reprehenderit.'
+                    },
+                    {
+                        title: 'Titolo in Grassetto',
+                        text: 'elit. Odit, ea. Quidem voluptatem nesciunt porro molestias illum, accusamus quibusdam minus eos beatae architecto in doloremque dolorem fuga distinctio quisquam adipisci reprehenderit.'
+                    },
+                    {
+                        title: 'Titolo in Grassetto',
+                        text: 'elit. Odit, ea. Quidem voluptatem nesciunt porro molestias illum, accusamus quibusdam minus eos beatae architecto in doloremque dolorem fuga distinctio quisquam adipisci reprehenderit.'
+                    },
+                    {
+                        title: 'Titolo in Grassetto',
+                        text: 'elit. Odit, ea. Quidem voluptatem nesciunt porro molestias illum, accusamus quibusdam minus eos beatae architecto in doloremque dolorem fuga distinctio quisquam adipisci reprehenderit.'
+                    },
+            ]
+        }
+    },
+    mounted() {
+        window.addEventListener("scroll", this.handleScroll);
+    },
+    methods: {
+        handleScroll() {
+            const section1 = this.$refs.section1;
+
+
+            const windowHeight = window.innerHeight;
+            const scrollPosition = window.scrollY;
+
+            // Verifica quando l'utente entra in Section 1
+            if (scrollPosition + 300 >= (section1.offsetTop) && scrollPosition + 300 < section1.offsetTop + section1.clientHeight) {
+                this.animationOn = true
+            }
+        }
+    },
+    beforeDestroy() {
+        window.removeEventListener("scroll", this.handleScroll);
+    }
+};
+
 </script>
 
 <template>
 
-    <div class="section-full-screen text-light " @mouseover="animationOn=true" @mouseleave="animationOn=false">
+    <div ref="section1" class="section-full-screen text-light">
 
-        <div class="d-flex justify-content-center flex-column flex-sm-row">
-            <div class="col-4 column-1 column d-none d-lg-block">
-                <img src="https://fastly.picsum.photos/id/2/5000/3333.jpg?hmac=_KDkqQVttXw_nM-RyJfLImIbafFrqLsuGO5YuHqD-qQ" class="img-fluid" alt="...">
+        <div class="d-flex justify-content-center flex-column flex-md-row">
+            <div class="col-12 col-lg-4 column-1 column d-none d-lg-block">
+                <img :src="column1" class="img-fluid" alt="...">
             </div>
-            <div class="column-2  col-12  col-sm-4 text-end">
+            <div class="column-2 col-12 col-md-6 col-lg-4 text-center text-md-end">
                 <div>
-                    <h3>Titolo delle liste</h3>
+                    <h3 class="p-3">Titolo delle liste</h3>
                 </div>
                 <div class="cont-list">
-                    <ul>
-
-                        <li :class="animationOn==true ? 'animate__animated animate__fadeInDownBig': ''">
-                            <span>UN TITOLO IN GRASSETTO </span>
-                            <span>un po di testo per prendere misure</span> 
+                    <ul class="d-flex flex-column p-0  gap-1 gap-lg-5">
+                        <li v-for="row, index in column2" class="d-flex flex-column justify-content-center align-items-md-end pe-lg-5" :class="animationOn==true ? 'animate__animated animate__fadeInLeft': ''" :style="{'--j': (`0.${index}` * 4)}">
+                            <span>{{row.title}}</span>
+                            <span>{{row.text}}</span> 
                         </li>
-                        <li :class="animationOn==true ? 'animate__animated animate__fadeInDown': '' ">
-                            <span>UN TITOLO IN GRASSETTO </span>
-                            <span>un po di testo per prendere misure</span> 
-                        </li>
-                        <li :class="animationOn==true ? 'animate__animated animate__fadeInLeft': '' ">
-                            <span>UN TITOLO IN GRASSETTO </span>
-                            <span>un po di testo per prendere misure</span> 
-                        </li>
-                        <li :class="animationOn==true ? 'animate__animated animate__fadeInUp': '' ">
-                            <span>UN TITOLO IN GRASSETTO </span>
-                            <span>un po di testo per prendere misure</span> 
-                        </li>
-
                     </ul>
                 </div>
             </div>
-            <div class="column-3 col-12 col-sm-4 column">
+            <div class="column-3 col-12 col-md-6 col-lg-4 column text-center text-md-start">
                 <div>
-                    <h3>Perche scegliermi</h3>
+                    <h3 class="p-3">Perche scegliermi</h3>
                 </div>
                 <div class="cont-list" >
-                    <ul  :class="animationOn==true ? 'animate__animated animate__fadeInRight ' : ''"  >
-                        <li :class="animationOn==true ? 'animate__animated animate__fadeInLeft ' : ''" class="animate__animated animate__fadeInLeft">
-                            <strong>1</strong>
-                            <span>UN TITOLO IN GRASSETTO </span>
-                            <span> elit. Odit, ea. Quidem voluptatem nesciunt porro molestias illum, accusamus quibusdam minus eos beatae architecto in doloremque dolorem fuga distinctio quisquam adipisci reprehenderit.</span> 
-                        </li>
-                        <li class="animate__animated animate__fadeInLeft">
-                            <strong>2</strong>
-                            <span>UN TITOLO IN GRASSETTO </span>
-                            <span> elit. Odit, ea. Quidem voluptatem nesciunt porro molestias illum, accusamus quibusdam minus eos beatae architecto in doloremque dolorem fuga distinctio quisquam adipisci reprehenderit.</span> 
-                        </li>
-                        <li class="animate__animated animate__fadeInLeft">
-                            <strong>3</strong>
-                            <span>UN TITOLO IN GRASSETTO </span>
-                            <span>. Odit, ea. Quidem voluptatem nesciunt porro molestias illum, accusamus quibusdam minus eos beatae architecto in doloremque dolorem fuga distinctio quisquam adipisci reprehenderit.</span> 
-                        </li>
-                        <li class="animate__animated animate__fadeInLeft">
-                            <strong>4</strong>
-                            <span>UN TITOLO IN GRASSETTO </span>
-                            <span> elit. Odit, ea. Quidem voluptatem nesciunt porro molestias illum, accusamus quibusdam minus eos beatae architecto in doloremque dolorem fuga distinctio quisquam adipisci reprehenderit.</span> 
+                    <ul class="d-flex flex-column p-0 gap-5">
+                        <li v-for="row,index in column3" class="d-flex flex-column justify-content-center ps-lg-5" :class="animationOn==true ? 'animate__animated animate__fadeInRight ' : '' " :style="{'--k': (`0.${index}` * 4)}">
+                            <strong>{{index + 1}}</strong>
+                            <span>{{row.title}}</span>
+                            <span>{{row.text}}</span> 
                         </li>
                     </ul>
-
                 </div>
             </div>
         </div>
@@ -85,6 +116,7 @@ import 'animate.css';
 
 <style scoped lang="scss">
         .section-full-screen {
+
             background: linear-gradient(16deg, rgba(2,0,36,1) 0%, rgba(48,9,121,1) 35%, rgba(0,212,255,1) 100%);
 
 
@@ -101,38 +133,32 @@ import 'animate.css';
             border-right: 1px solid rgb(255, 255, 255);
 
             h3{
-                padding-top: 15px;
-                padding-right: 15px;
-                margin-bottom: 50px;
+
             }
 
             .cont-list {
                 height: 80%;
                 ul {
                     height: 100%;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
-                    gap: 50px;
 
-                    padding-right: 15px;
-                    padding-bottom: 5px;
         
                     li {
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
+                        min-height: 150px;
+
                         list-style-type: none;
+
                         overflow: hidden;
+
                         position: relative;
 
-                        padding: 50px 10px;
+                        -webkit-animation-delay: calc(1s * var(--j));
+                        animation-delay: calc(1s * var(--j));
+                        -webkit-animation-delay: calc(var(--animate-delay) * var(--j));
+                        animation-delay: calc(var(--animate-delay) * var(--j));
 
                         &:hover {
                             cursor: pointer;
                         }
-
-
 
                         span{
                             z-index: 1;
@@ -153,38 +179,29 @@ import 'animate.css';
                         &:hover::after{
                         left: 0%;
                         }
-
                     }
                 }
-
             }
         }
 
         .column-3{
             border-left: 1px solid black;
 
-            h3{
-                padding-top: 15px;
-                padding-left: 15px;
-                margin-bottom: 50px;
-            }
-
             .cont-list {
                 height: 80%;
                 ul {
                     height: 100%;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
-                    gap: 50px;
-
-                    padding-left: 15px;
-                    padding-right: 0;
                     
                     li {
-                        display: flex;
-                        flex-direction: column;
+                        max-width: 80%;
+                        min-height: 150px;
+
                         list-style-type: none;
+
+                        -webkit-animation-delay: calc(1s * var(--k));
+                        animation-delay: calc(1s * var(--k));
+                        -webkit-animation-delay: calc(var(--animate-delay) * var(--k));
+                        animation-delay: calc(var(--animate-delay) * var(--k));
                     }
                 }
             }
