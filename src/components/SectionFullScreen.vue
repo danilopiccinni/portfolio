@@ -81,26 +81,26 @@ export default {
             <div class="col-12 col-lg-4 column-1 column d-none d-lg-block">
                 <img :src="column1" class="img-fluid" alt="...">
             </div>
-            <div class="column-2 col-12 col-md-6 col-lg-4 text-center text-md-end">
+            <div class="column-2 d-flex flex-column col-12 col-md-6 col-lg-4 ">
                 <div>
-                    <h3 class="p-3">Titolo delle liste</h3>
+                    <h3 class="py-3 text-end pe-1 pe-md-5">Titolo delle liste</h3>
                 </div>
-                <div class="cont-list">
-                    <ul class="d-flex flex-column p-0  gap-1 gap-lg-5">
-                        <li v-for="row, index in column2" class="d-flex flex-column justify-content-center align-items-md-end pe-lg-5" :class="animationOn==true ? 'animate__animated animate__fadeInLeft': ''" :style="{'--j': (`0.${index}` * 4)}">
+                <div class="cont-list flex-grow-1">
+                    <ul class="d-flex flex-column justify-content-around gap-2 p-0 pb-5 m-0">
+                        <li v-for="row, index in column2" class="d-flex flex-column justify-content-center align-items-end pe-1 pe-md-5 py-5 p-md-0" :class="animationOn==true ? 'animate__animated animate__fadeInLeft': ''" :style="{'--j': (`0.${index}` * 4)}">
                             <span>{{row.title}}</span>
                             <span>{{row.text}}</span> 
                         </li>
                     </ul>
                 </div>
             </div>
-            <div class="column-3 col-12 col-md-6 col-lg-4 column text-center text-md-start">
+            <div class="column-3 d-flex flex-column ps-1 ps-md-5 col-12 col-md-6 col-lg-4">
                 <div>
-                    <h3 class="p-3">Perche scegliermi</h3>
+                    <h3 class="py-3">Perche scegliermi</h3>
                 </div>
-                <div class="cont-list" >
-                    <ul class="d-flex flex-column p-0 gap-5">
-                        <li v-for="row,index in column3" class="d-flex flex-column justify-content-center ps-lg-5" :class="animationOn==true ? 'animate__animated animate__fadeInRight ' : '' " :style="{'--k': (`0.${index}` * 4)}">
+                <div class="cont-list">
+                    <ul class="d-flex flex-column justify-content-around gap-2 p-0 pb-5 pe-2 m-0">
+                        <li v-for="row,index in column3" class="d-flex flex-column justify-content-center" :class="animationOn==true ? 'animate__animated animate__fadeInRight ' : '' " :style="{'--k': (`0.${index}` * 4)}">
                             <strong>{{index + 1}}</strong>
                             <span>{{row.title}}</span>
                             <span>{{row.text}}</span> 
@@ -116,34 +116,25 @@ export default {
 
 <style scoped lang="scss">
         .section-full-screen {
-
-            background: linear-gradient(16deg, rgba(2,0,36,1) 0%, rgba(48,9,121,1) 35%, rgba(0,212,255,1) 100%);
-
-
-        .column-1{
             overflow: hidden;
+            background: linear-gradient(16deg, rgba(2,0,36,1) 0%, rgba(48,9,121,1) 35%, rgba(0,212,255,1) 100%);
+        .column-1{
+
             img {
                 height: 100%;
                 object-fit: cover;
-    
             }
         }
 
         .column-2 {
             border-right: 1px solid rgb(255, 255, 255);
-
-            h3{
-
-            }
-
             .cont-list {
-                height: 80%;
+
                 ul {
                     height: 100%;
 
-        
                     li {
-                        min-height: 150px;
+                        min-height: 20%;
 
                         list-style-type: none;
 
@@ -186,15 +177,15 @@ export default {
 
         .column-3{
             border-left: 1px solid black;
+            height: 100%;
 
             .cont-list {
-                height: 80%;
+
                 ul {
                     height: 100%;
                     
                     li {
-                        max-width: 80%;
-                        min-height: 150px;
+                        min-height: 25%;
 
                         list-style-type: none;
 
@@ -207,5 +198,4 @@ export default {
             }
         }
     }
-
 </style>  
