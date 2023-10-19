@@ -38,9 +38,9 @@ import { store } from '../store'
 </script>
 
 <template>
-    <div class="container-fluid" :class="store.checked ? 'bg-light text-dark' : 'bg-dark text-light'">
+    <div :class="store.checked ? 'bg-light text-dark' : 'bg-dark text-light'">
         <!--Section: Contact v.2-->
-        <section class="mb-4" >
+        <section class="mb-4 container-fluid" >
         <!--Section heading-->
         <h2 class="h1-responsive font-weight-bold text-center my-4">Contact me</h2>
             <div class="form-container">
