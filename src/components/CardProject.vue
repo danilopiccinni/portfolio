@@ -232,6 +232,8 @@
             left: 0;
             top: 0;
 
+            color: white;
+
             width: 100vw;
             height: 100vH;
 
