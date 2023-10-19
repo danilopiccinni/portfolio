@@ -12,7 +12,7 @@ import { store } from '../store';
 <template>
     <div>
       <div class="container">
-        <div class="cards mb-5 pb-5 d-flex justify-content-around gap-5 flex-wrap">
+        <div class="cards mb-md-5 pb-md-5 d-flex justify-content-around gap-5 flex-wrap">
           <div class="__card col-12 col-md-4" :class="store.checked ? 'dark-shadow' : ''">
             <div class="__content">
               <p class="heading">Card Hover Effect
