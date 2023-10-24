@@ -76,7 +76,7 @@ export default {
                             <label for="">Scegli una lingua e scarica il mio CV</label>
                             <div class="d-flex flex-row gap-2 justify-content-center justify-content-md-start">
                                 
-                                <div class="col-2">
+                                <div class="col-3 col-lg-2">
                                     <select v-model="select" @change="checkError()" class="form-select" :class="checkError()" aria-label="Default select example">
                                         <option value="italiano">IT</option>
                                         <option value="tedesco">DE</option>
@@ -103,7 +103,7 @@ export default {
                             <label for="">Wählen Sie eine Sprache und laden Sie meinen Lebenslauf herunter</label>
                             <div class="d-flex flex-row gap-2 justify-content-center justify-content-md-start">
                                 
-                                <div class="col-2">
+                                <div class="col-3 col-lg-2">
                                     <select v-model="select" @change="checkError()" class="form-select" :class="checkError()" aria-label="Default select example">
                                         <option value="italiano">IT</option>
                                         <option value="tedesco">DE</option>
@@ -130,7 +130,7 @@ export default {
                             <label for="">Choose a language and download my CV</label>
                             <div class="d-flex flex-row gap-2 justify-content-center justify-content-md-start">
                                 
-                                <div class="col-2">
+                                <div class="col-3 col-lg-2">
                                     <select v-model="select" @change="checkError()" class="form-select" :class="checkError()" aria-label="Default select example">
                                         <option value="italiano">IT</option>
                                         <option value="tedesco">DE</option>
