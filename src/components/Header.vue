@@ -43,29 +43,34 @@ import { store } from '../store.js';
                 <ul class="h-100 navbar-nav d-flex flex-row align-items-end gap-1 gap-md-3">
                     <li class="nav-item h-100 align-self-end">
                         <router-link :to="{ name: 'home' }" class="nav-link text-center" @mouseover="hover = true, nameHover = 'home'" @mouseleave="hover = false, nameHover = ''" :class="pageControl('home') ? store.checked ? 'bg-light text-dark' : 'bg-dark' : '' ,  hover && nameHover == 'home' ? store.checked ? 'bg-light text-dark' : 'bg-dark' : ''">
-                            <i class="fa-solid fa-house-chimney"></i>
+                            <i class="fa-solid fa-house-chimney me-1"></i>
                             <span class="d-none d-md-block">Home</span>
                         </router-link>
                     </li>
                     <li class="nav-item h-100 align-self-end cont-switcher">
                         <router-link :to="{ name: 'projects' }" class="nav-link text-center" @mouseover="hover = true , nameHover = 'projects'" @mouseleave="hover = false , nameHover = ''" :class="pageControl('projects') ? store.checked ? 'bg-light text-dark' : 'bg-dark' : ''  ,  hover && nameHover == 'projects' ? store.checked ? 'bg-light text-dark' : 'bg-dark' : ''">
-                            <i class="fa-solid fa-diagram-project"></i>
-                            <span class="d-none d-md-block">Projects</span>
+                            <i class="fa-solid fa-diagram-project me-1"></i>
+                            <span v-if="store.language == 'italian'" class="d-none d-md-block">Progetti</span>
+                            <span v-if="store.language == 'german'" class="d-none d-md-block">Projekte</span>
+                            <span v-if="store.language == 'english'" class="d-none d-md-block">Projects</span>
 
                         </router-link>
                     </li>
                     <li class="nav-item h-100 align-self-end">
                         <router-link :to="{ name: 'contact' }" class="nav-link text-center" @mouseover="hover = true , nameHover = 'contact'" @mouseleave="hover = false , nameHover = ''" :class="pageControl('contact')  ? store.checked ? 'bg-light text-dark' : 'bg-dark' : ''  ,  hover && nameHover == 'contact' ? store.checked ? 'bg-light text-dark' : 'bg-dark' : ''">
-                            <i class="fa-regular fa-comments"></i>
-                            <span class="d-none d-md-block">Contact</span>
+                            <i class="fa-regular fa-comments me-1"></i>
+                            <span v-if="store.language == 'italian'" class="d-none d-md-block">Contatto</span>
+                            <span v-if="store.language == 'german'" class="d-none d-md-block">Kontakt</span>
+                            <span v-if="store.language == 'english'" class="d-none d-md-block">Contact</span>
                         </router-link>
                     </li>
                 </ul>
             </div>
             
-            <div class="d-flex gap-2 col-1 flex-wrap">
+            <div class="d-none d-md-block d-flex gap-2 col-2 flex-wrap">
 
-                <div class="container d-flex justify-content-end align-items-center">
+                <div class="container d-flex justify-content-end align-items-center gap-3">
+
                     <div class="one-quarter" id="switch">
                         <input v-model="store.checked" type="checkbox" class="checkbox" id="chk" />
                         <label class="label" for="chk">
@@ -73,6 +78,60 @@ import { store } from '../store.js';
                             <i class="fas fa-sun"></i>
                             <div class="ball"></div>
                         </label>
+                    </div>
+
+                    <select v-model="store.language" class="form-select bg-transparent text-light" aria-label="Default select example" name="" id="">
+                        <option selected value="italian">It</option>
+                        <option value="german">De</option>
+                        <option value="english">En</option>
+                    </select>
+
+                </div>
+            </div>
+
+            <div class="d-md-none d-flex gap-2 col-1 flex-wrap">
+
+                <div class="container d-flex justify-content-end align-items-center gap-3">
+                    
+                    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i class="fa-solid fa-bars"></i></button>
+
+                    <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+                        <div class="offcanvas-header">
+                            <h5 v-if="store.language == 'italian'" class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Impostazioni pagina</h5>
+                            <h5 v-if="store.language == 'german'" class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Seiteneinstellungen</h5>
+                            <h5 v-if="store.language == 'english'" class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Page Settings</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body pt-4" :class="store.checked ? '' : 'bg-dark text-light'">
+                            <div class="d-flex flex-column align-items-start gap-3">
+
+                                <div class="d-flex justify-content-center align-items-center gap-3">
+                                    <label v-if="store.language == 'italian'">Modalità notte/giorno:</label>
+                                    <label v-if="store.language == 'german'">Dark Mode Ein/Aus:</label>
+                                    <label v-if="store.language == 'english'">Dark Mode On/Off:</label>
+                                    <div class="one-quarter" id="switch">
+                                        <input v-model="store.checked" type="checkbox" class="checkbox" id="chk" />
+                                        <label class="label" for="chk">
+                                            <i class="fas fa-moon"></i>
+                                            <i class="fas fa-sun"></i>
+                                            <div class="ball"></div>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex justify-content-center align-items-center gap-2">
+                                    <label v-if="store.language == 'italian'" for="form-select">Cambia lingua: </label>
+                                    <label v-if="store.language == 'german'" for="form-select">Sprache ändern: </label>
+                                    <label v-if="store.language == 'english'" for="form-select">Change Language: </label>
+                                    <select v-model="store.language" class="form-select" aria-label="Default select example" name="form-select" id="form-select">
+                                        <option selected value="italian">It</option>
+                                        <option value="german">De</option>
+                                        <option value="english">En</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -82,6 +141,15 @@ import { store } from '../store.js';
 </template>
 
 <style scoped lang="scss">
+
+.offcanvas-header {
+    background: linear-gradient(16deg, rgba(2,0,36,1) 0%, rgba(48,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    color: white;
+}
+
+select {
+    width: auto;
+}
 
 .nav-bar {
     color: white;

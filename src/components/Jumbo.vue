@@ -1,10 +1,13 @@
 <script>
 import Carousel3d from '../components/Carousel3d.vue';
+import { store } from '../store';
 export default {
     name : 'Jumbo',
 
     data() {
         return {
+            store,
+
             select : '',
 
             warningChooseLanguage : false
@@ -59,10 +62,69 @@ export default {
         <div class="jumbo">
             <div class="inner-jumbo container py-3 d-flex flex-column-reverse flex-md-row">
                 <div class="col-12 col-md-6 d-flex flex-column-reverse flex-md-column justify-content-center align-items-center ">
-                    <div class="text-center text-md-start">
-                        <h1 class="align-self-start">Hi, I'm <strong class="my-name">Danilo</strong></h1>
+
+                    <div v-if="store.language == 'italian'" class="text-center text-md-start">
+                        <h1 class="align-self-start">Ciao, sono <strong class="my-name">Danilo</strong></h1>
                         <h3 class="align-self-start">Junior Web Developer</h3>
-                        <p class="align-self-start greeting">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum illum similique harum quasi? Nesciunt expedita sapiente placeat aperiam repudiandae adipisci, distinctio similique ipsum, officia architecto, exercitationem fugiat corrupti corporis fugit?</p>
+                        <p class="align-self-start greeting">
+                            Benvenuto nel mio portfolio! Sono entusiasta di condividere con te il mio lavoro e le mie esperienze. 
+                            Grazie per dedicare del tempo a esplorare i miei progetti. 
+                            Spero che tu possa trarre ispirazione e scoprire il mio impegno nel mondo del design e dello sviluppo
+                        </p>
+                        <div class="d-flex flex-column gap-2">
+
+                            <label for="">Scegli una lingua e scarica il mio CV</label>
+                            <div class="d-flex flex-row gap-2 justify-content-center justify-content-md-start">
+                                
+                                <div class="col-2">
+                                    <select v-model="select" @change="checkError()" class="form-select" :class="checkError()" aria-label="Default select example">
+                                        <option value="italiano">IT</option>
+                                        <option value="tedesco">DE</option>
+                                    </select>
+                                </div>
+                                <button @click="downloadCV('tedesco')" class="btn btn-secondary"><i class="fa-solid fa-download"></i></button>
+                            </div>
+                            <div v-if="warningChooseLanguage" class="text-danger">
+                                Scegli una lingua
+                            </div>
+                        </div>
+                    </div>
+
+                    <div v-if="store.language == 'german'" class="text-center text-md-start">
+                        <h1 class="align-self-start">Hallo, ich bin  <strong class="my-name">Danilo</strong></h1>
+                        <h3 class="align-self-start">Junior Web Developer</h3>
+                        <p class="align-self-start greeting">
+                            Willkommen in meinem Portfolio! Ich freue mich, meine Arbeit und Erfahrungen mit Ihnen zu teilen. Vielen Dank, 
+                            dass Sie sich die Zeit nehmen, meine Projekte zu erkunden. 
+                            Ich hoffe, dass Sie Inspiration finden und mein Engagement in der Welt des Designs und der Entwicklung entdecken können
+                        </p>
+                        <div class="d-flex flex-column gap-2">
+
+                            <label for="">Wählen Sie eine Sprache und laden Sie meinen Lebenslauf herunter</label>
+                            <div class="d-flex flex-row gap-2 justify-content-center justify-content-md-start">
+                                
+                                <div class="col-2">
+                                    <select v-model="select" @change="checkError()" class="form-select" :class="checkError()" aria-label="Default select example">
+                                        <option value="italiano">IT</option>
+                                        <option value="tedesco">DE</option>
+                                    </select>
+                                </div>
+                                <button @click="downloadCV('tedesco')" class="btn btn-secondary"><i class="fa-solid fa-download"></i></button>
+                            </div>
+                            <div v-if="warningChooseLanguage" class="text-danger">
+                                Wähle eine Sprache
+                            </div>
+                        </div>
+                    </div>
+
+                    <div v-if="store.language == 'english'" class="text-center text-md-start">
+                        <h1 class="align-self-start">Hello, I'm <strong class="my-name">Danilo</strong></h1>
+                        <h3 class="align-self-start">Junior Web Developer</h3>
+                        <p class="align-self-start greeting">
+                            Welcome to my portfolio! I'm excited to share my work and experiences with you. 
+                            Thank you for taking the time to explore my projects. 
+                            I hope you can find inspiration and discover my commitment in the world of design and development
+                        </p>
                         <div class="d-flex flex-column gap-2">
 
                             <label for="">Choose a language and download my CV</label>
@@ -119,6 +181,11 @@ img {
         background: linear-gradient(16deg, rgba(2,0,36,1) 0%, rgba(48,9,121,1) 35%, rgba(0,212,255,1) 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+
+        text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.147);
+
+
+        font-size: 45px;
     }
 
     button {

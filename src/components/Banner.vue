@@ -18,16 +18,26 @@ import { store } from '../store'
             <div class="__container">
                 <div class="row ps-5 ps-sm-0">
                     <div class="cont-sx col-8">
-                        <strong :class="store.checked ? 'text-light' : 'text-dark'">
+                        <strong v-if="store.language == 'italian'" :class="store.checked ? 'text-light' : 'text-dark'">
                             100% AL
                             <br>
                             CASO TUO
                         </strong>
+                        <strong v-if="store.language == 'german'" :class="store.checked ? 'text-light' : 'text-dark'">
+                            100% RICHTIG
+                            <br>
+                            FÜR DICH
+                        </strong>
+                        <strong v-if="store.language == 'english'" :class="store.checked ? 'text-light' : 'text-dark'">
+                            100% RIGHT
+                            <br>
+                            FOR YOU
+                        </strong>
                     </div>
-                    <div class="cont-dx col-4 d-none d-lg-block">
-                        <strong>Creo per te il sito che fa al caso tuo</strong>
-                        <em>Una collaborazione di idee studiate per te insieme a te</em>
-                        <span>vuoi saperne di piu?</span>
+                    <div class="cont-dx col-4 d-none d-lg-block pt-3">
+                        <span v-if="store.language == 'italian'">Se stai cercando un giovane talento nel mondo del design e dello sviluppo che porta freschezza, creatività e una passione per l'apprendimento costante al tuo progetto, sei nel posto giusto</span>
+                        <span v-if="store.language == 'german'">Wenn du nach einem jungen Talent in der Welt des Designs und der Entwicklung suchst, das Frische, Kreativität und eine Leidenschaft für kontinuierliches Lernen in dein Projekt bringt, bist du hier genau richtig</span>
+                        <span v-if="store.language == 'english'">If you are looking for a young talent in the world of design and development who brings freshness, creativity, and a passion for continuous learning to your project, you are in the right place.</span>
                     </div>
                 </div>
                 

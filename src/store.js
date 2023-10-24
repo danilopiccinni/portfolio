@@ -15,4 +15,6 @@ export const store = reactive({
 
     switcherTutorial : true,
 
+    language : 'italian'
+
 });

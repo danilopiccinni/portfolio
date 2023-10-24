@@ -1,8 +1,9 @@
 <script>
+import { store } from '../store';
     export default {
         data() {
             return {
-
+                store,
             }
         }
     }
@@ -18,7 +19,9 @@
 
 
             <div class="d-flex justify-content-center align-items-center d-none d-lg-block">
-                <span>Get connected with us on social networks:</span>
+                <span v-if="store.language == 'italian'">Resta in contatto tramite i social network:</span>
+                <span v-if="store.language == 'german'">Bleib über soziale Netzwerke in Verbindung:</span>
+                <span v-if="store.language == 'english'">Get connected with us on social networks:</span>
             </div>
 
 
@@ -59,8 +62,14 @@
                             <i class="fas fa-gem me-3"></i>Danilo Piccinni
                         </h6>
 
-                        <p>
-                            Junior Full Stack Web Developer con la passione per l'apprendimento e l'ambizione di crescere nel campo della tecnologia.
+                        <p v-if="store.language == 'italian'">
+                            Junior Full Stack Web Developer con la passione per l'apprendimento e l'ambizione di crescere nel campo della tecnologia
+                        </p>
+                        <p v-if="store.language == 'german'">
+                            Junior Full Stack Webentwickler mit Leidenschaft fürs Lernen und dem Ehrgeiz, im Bereich der Technologie zu wachsen
+                        </p>
+                        <p v-if="store.language == 'english'">
+                            Junior Full Stack Web Developer with a passion for learning and the ambition to grow in the field of technology
                         </p>
                     </div>
 
@@ -69,7 +78,9 @@
                     <div class="col-md-5 col-lg-4  mx-auto my-auto mb-4">
   
                         <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-                        <p><i class="fas fa-home me-3"></i> Luzern, Luzern 6014, CH</p>
+                        <p v-if="store.language == 'italian'"><i class="fas fa-home me-3"></i> Lucerna, Lucerna 6014, CH</p>
+                        <p v-if="store.language == 'german'"><i class="fas fa-home me-3"></i> Luzern, Luzern 6014, CH</p>
+                        <p v-if="store.language == 'english'"><i class="fas fa-home me-3"></i> Lucerne, Lucerne 6014, CH</p>
                         <p>
                             <i class="fas fa-envelope me-3"></i>
                             danilopwebdev@gmail.com
@@ -82,8 +93,10 @@
 
         <!-- Copyright -->
         <div class="copyright text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-            © 2023 - My Junior portfolio  
 
+            <span v-if="store.language == 'italian'">© 2023 - Il mio Junior-Portfolio</span>
+            <span v-if="store.language == 'german'">© 2023 - Meine Junior-Portfolio</span>
+            <span v-if="store.language == 'english'">© 2023 - My Junior-Portfolio</span>
         </div>
         <!-- Copyright -->
         </footer>

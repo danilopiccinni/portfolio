@@ -1,52 +1,134 @@
 <script>
 import 'animate.css';
+import { store } from '../store';
 export default {
     name : 'SectionFullScreen',
 
     data() {
         return {
+            store,
+
             animationOn: false,
 
             column1: 'https://fastly.picsum.photos/id/2/5000/3333.jpg?hmac=_KDkqQVttXw_nM-RyJfLImIbafFrqLsuGO5YuHqD-qQ',
 
-            column2: [
-                    {
-                        title: 'Titolo in Grassetto',
-                        text: 'un po di testo per prendere misure'
-                    },
-                    {
-                        title: 'Titolo in Grassetto',
-                        text: 'un po di testo per prendere misure'
-                    },
-                    {
-                        title: 'Titolo in Grassetto',
-                        text: 'un po di testo per prendere misure'
-                    },
-                    {
-                        title: 'Titolo in Grassetto',
-                        text: 'un po di testo per prendere misure'
-                    },
 
+            column2English : [
+                {
+                    title: 'Solid Technical Foundations',
+                    text: 'I possess solid fundamental technical skills in the field of web development.'
+                },
+                {
+                    title: 'Continuous Learning',
+                    text: 'Committed to keeping skills up-to-date through online courses and self-learning.'
+                },
+                {
+                    title: 'Team Player',
+                    text: 'Collaborative and capable of working effectively in a multidisciplinary team.'
+                },
+                {
+                    title: 'Problem Solver',
+                    text: 'Skilled at problem-solving and addressing challenges in a creative manner.'
+                },
             ],
 
-            column3: [
-                    {
-                        title: 'Titolo in Grassetto',
-                        text: 'elit. Odit, ea. Quidem voluptatem nesciunt porro molestias illum, accusamus quibusdam minus eos beatae architecto in doloremque dolorem fuga distinctio quisquam adipisci reprehenderit.'
-                    },
-                    {
-                        title: 'Titolo in Grassetto',
-                        text: 'elit. Odit, ea. Quidem voluptatem nesciunt porro molestias illum, accusamus quibusdam minus eos beatae architecto in doloremque dolorem fuga distinctio quisquam adipisci reprehenderit.'
-                    },
-                    {
-                        title: 'Titolo in Grassetto',
-                        text: 'elit. Odit, ea. Quidem voluptatem nesciunt porro molestias illum, accusamus quibusdam minus eos beatae architecto in doloremque dolorem fuga distinctio quisquam adipisci reprehenderit.'
-                    },
-                    {
-                        title: 'Titolo in Grassetto',
-                        text: 'elit. Odit, ea. Quidem voluptatem nesciunt porro molestias illum, accusamus quibusdam minus eos beatae architecto in doloremque dolorem fuga distinctio quisquam adipisci reprehenderit.'
-                    },
-            ]
+            column3English : [
+                {
+                    title: 'Bold Title',
+                    text: "I am a young talent in the field of design and development, with a passion for continuous learning. My determination and creativity are an asset to any team."
+                },
+                {
+                    title: 'Bold Title',
+                    text: "I am a motivated and creative junior web developer. My thirst for learning and desire for constant growth can positively contribute to your company's projects."
+                },
+                {
+                    title: 'Bold Title',
+                    text: "I am a young designer with a curious mind and a fresh perspective. My innovative outlook and constant search for new solutions can bring innovation to your team."
+                },
+                {
+                    title: 'Bold Title',
+                    text: "I am a passionate junior in design and development, eager to learn and contribute to the company's success. My passion for technology and creativity is my calling card."
+                },
+            ],
+
+
+            column2German : [
+                {
+                    title: 'Solide Basi Tecniche',
+                    text: 'Ich habe solide grundlegende technische Fähigkeiten im Bereich der Webentwicklung.'
+                },
+                {
+                    title: 'Apprendimento Continuo',
+                    text: 'Engagiert, Fähigkeiten durch Online-Kurse und Selbststudium aktuell zu halten.'
+                },
+                {
+                    title: 'Team Player',
+                    text: 'Kollaborativ und in der Lage, effektiv in einem multidisziplinären Team zu arbeiten.'
+                },
+                {
+                    title: 'Problem Solver',
+                    text: 'Fähig, Probleme zu lösen und Herausforderungen kreativ anzugehen.'
+                },
+            ],
+
+            column3German : [
+                {
+                    title: 'Fetter Titel',
+                    text: "Ich bin ein junges Talent im Bereich Design und Entwicklung, mit einer Leidenschaft für kontinuierliches Lernen. Meine Entschlossenheit und Kreativität sind ein Gewinn für jedes Team."
+                },
+                {
+                    title: 'Fetter Titel',
+                    text: "Ich bin ein motivierter und kreativer junior Webentwickler. Mein Durst nach Wissen und mein Wunsch nach ständigem Wachstum können positiv zu den Projekten Ihres Unternehmens beitragen."
+                },
+                {
+                    title: 'Fetter Titel',
+                    text: "Ich bin ein junger Designer mit einem neugierigen Geist und einer frischen Perspektive. Mein innovativer Blick und die ständige Suche nach neuen Lösungen können Innovation in Ihr Team bringen."
+                },
+                {
+                    title: 'Fetter Titel',
+                    text: "Ich bin ein leidenschaftlicher Junior im Bereich Design und Entwicklung, der darauf brennt zu lernen und zum Erfolg des Unternehmens beizutragen. Meine Leidenschaft für Technologie und Kreativität ist meine Visitenkarte."
+                },
+            ],
+
+
+            column2Italian : [
+                {
+                    title: 'Fondamenti Tecnici Solidi',
+                    text: 'Posseggo solide competenze tecniche di base nel campo dello sviluppo web.'
+                },
+                {
+                    title: 'Apprendimento Continuo',
+                    text: 'Impegnato a mantenere le competenze aggiornate attraverso corsi online e autoapprendimento.'
+                },
+                {
+                    title: 'Giocatore di Squadra',
+                    text: 'Collaborativo e capace di lavorare in modo efficace in un team multidisciplinare.'
+                },
+                {
+                    title: 'Risolutore di Problemi',
+                    text: 'Abile nel risolvere problemi e affrontare sfide in modo creativo.'
+                },
+            ],
+
+            column3Italian : [
+                {
+                    title: 'Titolo in Grassetto',
+                    text: "Sono un giovane talento nel campo del design e dello sviluppo, con una passione per l'apprendimento costante. La mia determinazione e creatività sono un vantaggio per qualsiasi team."
+                },
+                {
+                    title: 'Titolo in Grassetto',
+                    text: "Sono un junior web developer motivato e creativo. La mia sete di apprendimento e desiderio di crescere costantemente possono contribuire positivamente ai progetti della tua azienda."
+                },
+                {
+                    title: 'Titolo in Grassetto',
+                    text: "Sono un giovane designer con una mente curiosa e una visione fresca. La mia prospettiva innovativa e la ricerca incessante di nuove soluzioni possono portare innovazione al tuo team."
+                },
+                {
+                    title: 'Titolo in Grassetto',
+                    text: "Sono un junior appassionato di design e sviluppo, desideroso di apprendere e contribuire al successo aziendale. La mia passione per la tecnologia e la creatività sono il mio biglietto da visita."
+                },
+            ],
+
         }
     },
     mounted() {
@@ -83,26 +165,43 @@ export default {
             </div>
             <div class="column-2 d-flex flex-column col-12 col-md-6 col-lg-4 ">
                 <div>
-                    <h3 class="py-3 text-end pe-1 pe-md-5">Titolo delle liste</h3>
+                    <h3 class="py-3 text-end pe-1 pe-md-5">Competenze e Qualità</h3>
                 </div>
                 <div class="cont-list flex-grow-1">
                     <ul class="d-flex flex-column justify-content-around gap-2 p-0 pb-5 m-0">
-                        <li v-for="row, index in column2" class="d-flex flex-column justify-content-center align-items-end pe-1 pe-md-5 py-5 p-md-0" :class="animationOn==true ? 'animate__animated animate__fadeInLeft': ''" :style="{'--j': (`0.${index}` * 4)}">
-                            <span>{{row.title}}</span>
-                            <span>{{row.text}}</span> 
+                        <li v-if="store.language == 'italian'" v-for="row, index in column2Italian" class="d-flex flex-column justify-content-center align-items-end text-end pe-1 pe-md-5 py-5 p-md-0" :class="animationOn==true ? 'animate__animated animate__fadeInLeft': ''" :style="{'--j': (`0.${index}` * 4)}">
+                            <span class="title">{{row.title}}</span>
+                            <span class="text col-8">{{row.text}}</span> 
+                        </li>
+
+                        <li v-if="store.language == 'german'" v-for="row, index in column2German" class="d-flex flex-column justify-content-center align-items-end text-end pe-1 pe-md-5 py-5 p-md-0" :class="animationOn==true ? 'animate__animated animate__fadeInLeft': ''" :style="{'--j': (`0.${index}` * 4)}">
+                            <span class="title">{{row.title}}</span>
+                            <span class="text col-8">{{row.text}}</span> 
+                        </li>
+
+                        <li v-if="store.language == 'english'" v-for="row, index in column2English" class="d-flex flex-column justify-content-center align-items-end text-end pe-1 pe-md-5 py-5 p-md-0" :class="animationOn==true ? 'animate__animated animate__fadeInLeft': ''" :style="{'--j': (`0.${index}` * 4)}">
+                            <span class="title">{{row.title}}</span>
+                            <span class="text col-8">{{row.text}}</span> 
                         </li>
                     </ul>
                 </div>
             </div>
             <div class="column-3 d-flex flex-column ps-1 ps-md-5 col-12 col-md-6 col-lg-4">
                 <div>
-                    <h3 class="py-3">Perche scegliermi</h3>
+                    <h3 class="py-3">Perche scegliermi !?!?</h3>
                 </div>
                 <div class="cont-list">
                     <ul class="d-flex flex-column justify-content-around gap-2 p-0 pb-5 pe-2 m-0">
-                        <li v-for="row,index in column3" class="d-flex flex-column justify-content-center" :class="animationOn==true ? 'animate__animated animate__fadeInRight ' : '' " :style="{'--k': (`0.${index}` * 4)}">
-                            <strong>{{index + 1}}</strong>
-                            <span>{{row.title}}</span>
+                        <li v-if="store.language == 'italian'" v-for="row,index in column3Italian" class="d-flex flex-column justify-content-center" :class="animationOn==true ? 'animate__animated animate__fadeInRight ' : '' " :style="{'--k': (`0.${index}` * 4)}">
+                            <strong>{{index + 1}}.</strong>
+                            <span>{{row.text}}</span> 
+                        </li>
+                        <li v-if="store.language == 'german'" v-for="row,index in column3German" class="d-flex flex-column justify-content-center" :class="animationOn==true ? 'animate__animated animate__fadeInRight ' : '' " :style="{'--k': (`0.${index}` * 4)}">
+                            <strong>{{index + 1}}.</strong>
+                            <span>{{row.text}}</span> 
+                        </li>
+                        <li v-if="store.language == 'english'" v-for="row,index in column3English" class="d-flex flex-column justify-content-center" :class="animationOn==true ? 'animate__animated animate__fadeInRight ' : '' " :style="{'--k': (`0.${index}` * 4)}">
+                            <strong>{{index + 1}}.</strong>
                             <span>{{row.text}}</span> 
                         </li>
                     </ul>
@@ -155,6 +254,13 @@ export default {
                             z-index: 1;
                         }
 
+                        .title {
+                            font-size: 20px;
+                        }
+                        .text {
+                            font-size: 12px;
+                        }
+
                         &::after{
                             content: '';
                             position: absolute;
@@ -193,6 +299,10 @@ export default {
                         animation-delay: calc(1s * var(--k));
                         -webkit-animation-delay: calc(var(--animate-delay) * var(--k));
                         animation-delay: calc(var(--animate-delay) * var(--k));
+
+                        strong {
+                            font-size: 12px;
+                        }
                     }
                 }
             }
