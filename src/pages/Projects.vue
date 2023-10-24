@@ -550,19 +550,20 @@
     }
 }
 
+.projects {
+    height: 100%;
+}
+
 .visual-1{
 
 
     width: 100%;
-    
-    margin: auto;
+    height: 100%;
+
 
     overflow-x: hidden;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
-
-    height: calc(100vh);
-
 
     .card-project{
 
