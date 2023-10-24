@@ -53,20 +53,20 @@
 
                 <div class="row mt-3">
 
-                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                    <div class="col-md-5 col-lg-4  mx-auto mb-4">
 
                         <h6 class="text-uppercase fw-bold mb-4">
-                            <i class="fas fa-gem me-3"></i>Junior Fullstack Web Developer
+                            <i class="fas fa-gem me-3"></i>Danilo Piccinni
                         </h6>
+
                         <p>
-                            Here you can use rows and columns to organize your footer content. Lorem ipsum
-                            dolor sit amet, consectetur adipisicing elit.
+                            Junior Full Stack Web Developer con la passione per l'apprendimento e l'ambizione di crescere nel campo della tecnologia.
                         </p>
                     </div>
 
 
 
-                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                    <div class="col-md-5 col-lg-4  mx-auto my-auto mb-4">
   
                         <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
                         <p><i class="fas fa-home me-3"></i> Luzern, Luzern 6014, CH</p>
@@ -82,8 +82,8 @@
 
         <!-- Copyright -->
         <div class="copyright text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-            © 2021 Copyright:
-            <a class="text-reset fw-bold" href="">polo.com</a>
+            © 2023 - My Junior portfolio  
+
         </div>
         <!-- Copyright -->
         </footer>
