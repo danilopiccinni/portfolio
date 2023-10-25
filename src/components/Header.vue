@@ -35,12 +35,12 @@ import { store } from '../store.js';
 <template>
     <div class="container h-100 nav-bar">
         <div class="h-100 d-flex justify-content-between align-items-center">
-            <div class="d-flex col-1">
+            <div class="d-flex flex-grow-1">
                 <a class="navbar-brand" href="#">DP</a>
             </div>
 
             <div class="h-100">
-                <ul class="h-100 navbar-nav d-flex flex-row align-items-end gap-1 gap-md-3">
+                <ul class="h-100 navbar-nav d-flex flex-row justify-content-center align-items-end gap-1 gap-md-3 ps-0 ps-md-5">
                     <li class="nav-item h-100 align-self-end">
                         <router-link :to="{ name: 'home' }" class="nav-link text-center" @mouseover="hover = true, nameHover = 'home'" @mouseleave="hover = false, nameHover = ''" :class="pageControl('home') ? store.checked ? 'bg-light text-dark' : 'bg-dark' : '' ,  hover && nameHover == 'home' ? store.checked ? 'bg-light text-dark' : 'bg-dark' : ''">
                             <i class="fa-solid fa-house-chimney me-1"></i>
@@ -67,9 +67,9 @@ import { store } from '../store.js';
                 </ul>
             </div>
             
-            <div class="d-none d-md-block d-flex gap-2 col-2 flex-wrap">
+            <div class="d-none d-md-block d-flex gap-2 flex-grow-1 flex-wrap">
 
-                <div class="container d-flex justify-content-end align-items-center gap-3">
+                <div class="container d-flex justify-content-end align-items-center gap-3 p-0">
 
                     <div class="one-quarter" id="switch">
                         <input v-model="store.checked" type="checkbox" class="checkbox" id="chk" />
@@ -89,7 +89,7 @@ import { store } from '../store.js';
                 </div>
             </div>
 
-            <div class="d-md-none d-flex gap-2 col-1 flex-wrap">
+            <div class="d-md-none d-flex gap-2 flex-grow-1 flex-wrap">
 
                 <div class="container d-flex justify-content-end align-items-center gap-3">
                     
