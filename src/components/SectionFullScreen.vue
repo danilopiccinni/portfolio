@@ -54,11 +54,11 @@ export default {
 
             column2German : [
                 {
-                    title: 'Solide Basi Tecniche',
+                    title: 'Solide technische Grundlagen',
                     text: 'Ich habe solide grundlegende technische Fähigkeiten im Bereich der Webentwicklung.'
                 },
                 {
-                    title: 'Apprendimento Continuo',
+                    title: 'Kontinuierliches Lernen',
                     text: 'Engagiert, Fähigkeiten durch Online-Kurse und Selbststudium aktuell zu halten.'
                 },
                 {
