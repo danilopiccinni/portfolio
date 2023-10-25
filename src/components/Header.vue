@@ -40,7 +40,9 @@ import { store } from '../store.js';
 
             <!-- logo -->
             <div class="d-flex align-items-center flex-grow-1">
-                <a class="navbar-brand p-2" href="#">DP</a>
+                <a class="navbar-brand p-2 logo" href="#">
+                    <img src="/img/logo.png" alt="">
+                </a>
                 <!-- language-switcher -->
                 <select v-model="store.language" class="form-select d-none d-md-block py-0" aria-label="Default select example" name="form-select" id="form-select">
                     <option selected value="italian">It</option>
@@ -160,7 +162,12 @@ import { store } from '../store.js';
 
 <style scoped lang="scss">
 
-
+.logo {
+    img {
+        width: 100px;
+        height: 50px;
+    }
+}
 
 .offcanvas-header {
     background: linear-gradient(16deg, #020024 0%, #300979 35%, var(--theme-gradient) 100%);
