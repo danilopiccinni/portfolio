@@ -10,7 +10,7 @@ import { store } from '../store';
 </script>
 
 <template>
-    <div>
+    <div :style="{'--theme-gradient': store.selectedColor}">
 
         <footer class="text-center text-lg-start">
 

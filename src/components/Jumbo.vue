@@ -58,7 +58,7 @@ export default {
 </script>
 
 <template>
-    <div class="">
+    <div :style="{'--theme-gradient': store.selectedColor}">
         <div class="jumbo">
             <div class="inner-jumbo container py-3 d-flex flex-column-reverse flex-md-row">
                 <div class="col-12 col-md-6 d-flex flex-column-reverse flex-md-column justify-content-center align-items-center ">

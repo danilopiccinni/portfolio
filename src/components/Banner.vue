@@ -14,7 +14,7 @@ import { store } from '../store'
 </script>
 
 <template>
-        <div class="banner  my-5 d-none d-md-block">
+        <div :style="{'--theme-gradient': store.selectedColor}" class="banner  my-5 d-none d-md-block">
             <div class="__container">
                 <div class="row ps-5 ps-sm-0">
                     <div class="cont-sx col-8">

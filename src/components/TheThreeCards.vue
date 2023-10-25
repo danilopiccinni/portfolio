@@ -10,7 +10,7 @@ import { store } from '../store';
 </script>
 
 <template>
-    <div>
+    <div :style="{'--theme-gradient': store.selectedColor}">
       <div class="container">
         <div class="cards mb-md-5 pb-md-5 d-flex justify-content-around gap-5 flex-wrap">
           <div class="__card col-12 col-md-4" :class="store.checked ? 'dark-shadow' : ''">

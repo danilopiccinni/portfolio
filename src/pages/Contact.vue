@@ -65,7 +65,7 @@ import { store } from '../store'
 </script>
 
 <template>
-    <div :class="store.checked ? 'bg-light text-dark' : 'bg-dark text-light'">
+    <div :style="{'--theme-gradient': store.selectedColor}" :class="store.checked ? 'bg-light text-dark' : 'bg-dark text-light'">
         <!--Section: Contact v.2-->
         <section class="section" >
         <!--Section heading-->

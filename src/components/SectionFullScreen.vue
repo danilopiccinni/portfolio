@@ -157,7 +157,7 @@ export default {
 
 <template>
 
-    <div ref="section1" class="section-full-screen text-light">
+    <div :style="{'--theme-gradient': store.selectedColor}" ref="section1" class="section-full-screen text-light">
 
         <div class="d-flex justify-content-center flex-column flex-md-row">
             <div class="col-12 col-lg-4 column-1 column d-none d-lg-block">
