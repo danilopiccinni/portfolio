@@ -1,4 +1,5 @@
 <script>
+import Footer from '../components/Footer.vue';
 import emailjs from 'emailjs-com';
 import {ref} from 'vue';
 import { store } from '../store'
@@ -39,6 +40,10 @@ import { store } from '../store'
 
                 showModal : false,
             }
+        },
+
+        components : {
+            Footer
         },
 
         methods: {
@@ -114,6 +119,8 @@ import { store } from '../store'
                 </form>
             </div>
         </section>
+
+        <Footer></Footer>
 
 
         <!-- Modal -->
