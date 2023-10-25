@@ -164,8 +164,8 @@ import { store } from '../store.js';
 
 .logo {
     img {
-        width: 100px;
-        height: 50px;
+        width: 42px;
+        height: 42px;
     }
 }
 
