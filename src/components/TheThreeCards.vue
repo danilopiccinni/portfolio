@@ -84,7 +84,7 @@ import { store } from '../store';
     bottom: 0;
     width: 100%;
     height: 5px;
-    background: linear-gradient(16deg, rgba(2,0,36,1) 0%, rgba(48,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    background: linear-gradient(16deg, #020024 0%, #300979 35%, var(--theme-gradient) 100%);
     z-index: 0;
     transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
   }
@@ -123,7 +123,7 @@ import { store } from '../store';
       font-weight: 600;
       border: none;
       cursor: pointer;
-      background: linear-gradient(16deg, rgba(2,0,36,1) 0%, rgba(48,9,121,1) 35%, rgba(0,212,255,1) 100%);
+      background: linear-gradient(16deg, #020024 0%, #300979 35%, var(--theme-gradient) 100%);
       border-radius: 5px;
       box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   

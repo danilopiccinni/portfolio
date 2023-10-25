@@ -178,7 +178,7 @@ img {
 
     .my-name {
 
-        background: linear-gradient(16deg, rgba(2,0,36,1) 0%, rgba(48,9,121,1) 35%, rgba(0,212,255,1) 100%);
+        background: linear-gradient(16deg, #020024 0%, #300979 35%, var(--theme-gradient) 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
 
@@ -190,7 +190,7 @@ img {
 
     button {
         background: rgb(0,44,99);
-background: linear-gradient(52deg, rgba(0,44,99,1) 0%, rgba(0,113,255,1) 100%);   
+        background: linear-gradient(16deg, #020024 0%, #300979 35%, var(--theme-gradient) 100%);
 }
 
     .error {
@@ -204,7 +204,7 @@ background: linear-gradient(52deg, rgba(0,44,99,1) 0%, rgba(0,113,255,1) 100%);
     .selfie {    
         transform: translateY(20%);
 
-        background: linear-gradient(16deg, rgba(2,0,36,1) 0%, rgba(48,9,121,1) 35%, rgba(0,212,255,1) 100%);
+        background: linear-gradient(16deg, #020024 0%, #300979 35%, var(--theme-gradient) 100%);
         border-radius: 67% 33% 67% 33% / 32% 71% 29% 68% ;
         animation: bubble 25s linear infinite;
 

@@ -10,6 +10,8 @@ import { store } from '../store.js';
 
                 hover : false,
                 nameHover : '',
+
+                selectedColor: '#00D4FF',
             }
         },
 
@@ -23,9 +25,9 @@ import { store } from '../store.js';
                 }
             },
 
- 
-
-
+            changeColor() {
+                document.documentElement.style.setProperty('--theme-gradient', this.store.selectedColor);
+            }
         },
     }
 
@@ -33,23 +35,33 @@ import { store } from '../store.js';
 </script>
 
 <template>
-    <div class="container h-100 nav-bar">
-        <div class="h-100 d-flex justify-content-between align-items-center">
-            <div class="d-flex flex-grow-1">
-                <a class="navbar-brand" href="#">DP</a>
+    <div :style="{'--theme-gradient': store.selectedColor}" class="h-100 nav-bar">
+        <div class="container h-100 d-flex justify-content-between align-items-center">
+
+            <!-- logo -->
+            <div class="d-flex align-items-center flex-grow-1">
+                <a class="navbar-brand p-2" href="#">DP</a>
+                <!-- language-switcher -->
+                <select v-model="store.language" class="form-select d-none d-md-block py-0" aria-label="Default select example" name="form-select" id="form-select">
+                    <option selected value="italian">It</option>
+                    <option value="german">De</option>
+                    <option value="english">En</option>
+                </select>
             </div>
 
+            
+            <!-- nav-links -->
             <div class="h-100">
-                <ul class="h-100 navbar-nav d-flex flex-row justify-content-center align-items-end gap-1 gap-md-3 ps-0 ps-md-5">
+                <ul class="h-100 navbar-nav d-flex flex-row justify-content-center align-items-end gap-1 gap-md-3 ">
                     <li class="nav-item h-100 align-self-end">
                         <router-link :to="{ name: 'home' }" class="nav-link text-center" @mouseover="hover = true, nameHover = 'home'" @mouseleave="hover = false, nameHover = ''" :class="pageControl('home') ? store.checked ? 'bg-light text-dark' : 'bg-dark' : '' ,  hover && nameHover == 'home' ? store.checked ? 'bg-light text-dark' : 'bg-dark' : ''">
-                            <i class="fa-solid fa-house-chimney me-1"></i>
+                            <i class="fa-solid fa-house-chimney"></i>
                             <span class="d-none d-md-block">Home</span>
                         </router-link>
                     </li>
                     <li class="nav-item h-100 align-self-end cont-switcher">
                         <router-link :to="{ name: 'projects' }" class="nav-link text-center" @mouseover="hover = true , nameHover = 'projects'" @mouseleave="hover = false , nameHover = ''" :class="pageControl('projects') ? store.checked ? 'bg-light text-dark' : 'bg-dark' : ''  ,  hover && nameHover == 'projects' ? store.checked ? 'bg-light text-dark' : 'bg-dark' : ''">
-                            <i class="fa-solid fa-diagram-project me-1"></i>
+                            <i class="fa-solid fa-diagram-project"></i>
                             <span v-if="store.language == 'italian'" class="d-none d-md-block">Progetti</span>
                             <span v-if="store.language == 'german'" class="d-none d-md-block">Projekte</span>
                             <span v-if="store.language == 'english'" class="d-none d-md-block">Projects</span>
@@ -58,7 +70,7 @@ import { store } from '../store.js';
                     </li>
                     <li class="nav-item h-100 align-self-end">
                         <router-link :to="{ name: 'contact' }" class="nav-link text-center" @mouseover="hover = true , nameHover = 'contact'" @mouseleave="hover = false , nameHover = ''" :class="pageControl('contact')  ? store.checked ? 'bg-light text-dark' : 'bg-dark' : ''  ,  hover && nameHover == 'contact' ? store.checked ? 'bg-light text-dark' : 'bg-dark' : ''">
-                            <i class="fa-regular fa-comments me-1"></i>
+                            <i class="fa-regular fa-comments"></i>
                             <span v-if="store.language == 'italian'" class="d-none d-md-block">Contatto</span>
                             <span v-if="store.language == 'german'" class="d-none d-md-block">Kontakt</span>
                             <span v-if="store.language == 'english'" class="d-none d-md-block">Contact</span>
@@ -67,83 +79,91 @@ import { store } from '../store.js';
                 </ul>
             </div>
             
-            <div class="d-none d-md-block d-flex gap-2 flex-grow-1 flex-wrap">
+            <!--  -->
+            <div class=" d-flex gap-2 flex-grow-1  justify-content-end align-items-center">
 
-                <div class="container d-flex justify-content-end align-items-center gap-3 p-0">
-
-                    <div class="one-quarter" id="switch">
-                        <input v-model="store.checked" type="checkbox" class="checkbox" id="chk" />
-                        <label class="label" for="chk">
-                            <i class="fas fa-moon"></i>
-                            <i class="fas fa-sun"></i>
-                            <div class="ball"></div>
-                        </label>
-                    </div>
-
-                    <select v-model="store.language" class="form-select bg-transparent text-light" aria-label="Default select example" name="" id="">
-                        <option selected value="italian">It</option>
-                        <option value="german">De</option>
-                        <option value="english">En</option>
-                    </select>
-
+                <!-- darkMode-switcher -->
+                <div class="d-none d-md-block one-quarter" id="switch">
+                    <input v-model="store.checked" type="checkbox" class="checkbox" id="chk" />
+                    <label class="label" for="chk">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                        <div class="ball"></div>
+                    </label>
                 </div>
-            </div>
+                
+                <!-- button to open offcanvas -->
+                <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i class="fa-solid fa-bars"></i></button>
 
-            <div class="d-md-none d-flex gap-2 flex-grow-1 flex-wrap">
+                <!-- offcanvas -->
+                <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+                    <div class="offcanvas-header">
+                        <h5 v-if="store.language == 'italian'" class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Impostazioni pagina</h5>
+                        <h5 v-if="store.language == 'german'" class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Seiteneinstellungen</h5>
+                        <h5 v-if="store.language == 'english'" class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Page Settings</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body pt-4" :class="store.checked ? '' : 'bg-dark text-light'">
+                        <div class="d-flex flex-column align-items-start gap-3">
 
-                <div class="container d-flex justify-content-end align-items-center gap-3">
-                    
-                    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i class="fa-solid fa-bars"></i></button>
-
-                    <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
-                        <div class="offcanvas-header">
-                            <h5 v-if="store.language == 'italian'" class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Impostazioni pagina</h5>
-                            <h5 v-if="store.language == 'german'" class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Seiteneinstellungen</h5>
-                            <h5 v-if="store.language == 'english'" class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Page Settings</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                        </div>
-                        <div class="offcanvas-body pt-4" :class="store.checked ? '' : 'bg-dark text-light'">
-                            <div class="d-flex flex-column align-items-start gap-3">
-
-                                <div class="d-flex justify-content-center align-items-center gap-3">
-                                    <label v-if="store.language == 'italian'">Modalità notte/giorno:</label>
-                                    <label v-if="store.language == 'german'">Dark Mode Ein/Aus:</label>
-                                    <label v-if="store.language == 'english'">Dark Mode On/Off:</label>
-                                    <div class="one-quarter" id="switch">
-                                        <input v-model="store.checked" type="checkbox" class="checkbox" id="chk" />
-                                        <label class="label" for="chk">
-                                            <i class="fas fa-moon"></i>
-                                            <i class="fas fa-sun"></i>
-                                            <div class="ball"></div>
-                                        </label>
-                                    </div>
+                            <!-- darkMode-switcher with label (3language) -->
+                            <div class="d-flex justify-content-center align-items-center gap-3">
+                                <label v-if="store.language == 'italian'">Modalità notte/giorno:</label>
+                                <label v-if="store.language == 'german'">Dark Mode Ein/Aus:</label>
+                                <label v-if="store.language == 'english'">Dark Mode On/Off:</label>
+                                <div class="one-quarter" id="switch">
+                                    <input v-model="store.checked" type="checkbox" class="checkbox" id="chk" />
+                                    <label class="label" for="chk">
+                                        <i class="fas fa-moon"></i>
+                                        <i class="fas fa-sun"></i>
+                                        <div class="ball"></div>
+                                    </label>
                                 </div>
-
-                                <div class="d-flex justify-content-center align-items-center gap-2">
-                                    <label v-if="store.language == 'italian'" for="form-select">Cambia lingua: </label>
-                                    <label v-if="store.language == 'german'" for="form-select">Sprache ändern: </label>
-                                    <label v-if="store.language == 'english'" for="form-select">Change Language: </label>
-                                    <select v-model="store.language" class="form-select" aria-label="Default select example" name="form-select" id="form-select">
-                                        <option selected value="italian">It</option>
-                                        <option value="german">De</option>
-                                        <option value="english">En</option>
-                                    </select>
-                                </div>
-
                             </div>
+
+                            <!-- language-switcher with label (3language) -->
+                            <div class="d-flex justify-content-center align-items-center gap-2">
+                                <label v-if="store.language == 'italian'" for="form-select">Cambia lingua: </label>
+                                <label v-if="store.language == 'german'" for="form-select">Sprache ändern: </label>
+                                <label v-if="store.language == 'english'" for="form-select">Change Language: </label>
+                                <select v-model="store.language" class="form-select" aria-label="Default select example" name="form-select" id="form-select">
+                                    <option selected value="italian">It</option>
+                                    <option value="german">De</option>
+                                    <option value="english">En</option>
+                                </select>
+                            </div>
+                                                            
+                            <!-- theme-changer with label (3language) -->
+                            <div class="d-flex justify-content-center align-items-center gap-2">
+                                <label v-if="store.language == 'italian'" for="form-select">Cambia tema: </label>
+                                <label v-if="store.language == 'german'" for="form-select">Thema ändern: </label>
+                                <label v-if="store.language == 'english'" for="form-select">Change Theme: </label>
+                                <input @input="changeColor()" type="color" v-model="store.selectedColor"/>
+
+                                <!--  pre-set themes -->
+                                <!-- <select @change="changeColor()" v-model="selectedColor" class="form-select bg-transparent text-light" aria-label="Default select example" name="" id="">
+                                    <option value="#00D4FF" selected>Blue</option>
+                                    <option value="#ff0000">rosso</option>
+                                    <option value="#00ff00">verde</option>
+                                </select> -->
+                            </div>
+
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 </template>
+                                    
+
 
 <style scoped lang="scss">
 
+
+
 .offcanvas-header {
-    background: linear-gradient(16deg, rgba(2,0,36,1) 0%, rgba(48,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    background: linear-gradient(16deg, #020024 0%, #300979 35%, var(--theme-gradient) 100%);
     color: white;
 }
 
@@ -152,6 +172,7 @@ select {
 }
 
 .nav-bar {
+    background: linear-gradient(16deg, rgba(2,0,36,1) 0%, rgba(48,9,121,1) 35%, var(--theme-gradient) 100%);
     color: white;
 }
 

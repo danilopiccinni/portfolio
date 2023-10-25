@@ -81,7 +81,7 @@ import { store } from './store.js';
     transition: top 0.5s ease;
 
    
-    background: linear-gradient(16deg, rgba(2,0,36,1) 0%, rgba(48,9,121,1) 35%, rgba(0,212,255,1) 100%);
+
     -webkit-border-bottom-right-radius: 50px;
     -webkit-border-bottom-left-radius: 50px;
     -moz-border-radius-bottomright: 50px;

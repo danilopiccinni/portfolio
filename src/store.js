@@ -15,6 +15,8 @@ export const store = reactive({
 
     switcherTutorial : true,
 
-    language : 'italian'
+    language : 'italian',
+    
+    selectedColor: '#00D4FF',
 
 });
