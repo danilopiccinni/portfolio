@@ -4,7 +4,7 @@ export const store = reactive({
 
     selectedProject: {},
 
-    visual : 1,
+    visual : 2,
 
     checked : false,
 
