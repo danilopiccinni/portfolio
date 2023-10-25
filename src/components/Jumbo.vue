@@ -146,7 +146,7 @@ export default {
                 </div>
 
                 <div class="cont-img col-12 col-md-6 d-flex flex-column align-items-center justify-content-center">
-                    <img class="selfie z-2" src="../../public/img/Danilo.png" alt="">
+                    <img class="selfie z-2" src="/img/Danilo.png" alt="">
                     <div class="carousel-3d z-1">
                         <Carousel3d></Carousel3d>
                     </div>
