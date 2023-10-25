@@ -78,6 +78,10 @@
                         color: 'grey'
                     },
                     {
+                        name : 'Bootstrap',
+                        color: 'grey'
+                    },
+                    {
                         name : 'Postman',
                         color: 'purple'
                     },
@@ -95,7 +99,7 @@
 
                 projects : [
                     {
-                        title : 'Netflix ',
+                        title : 'Netflix',
                         repo :  'repo-netflix-tech',
                         type: {
                             name: 'FrontEnd',
@@ -111,7 +115,7 @@
                                 color: 'red'
                             },
                         ],
-                        cover : '/img/1.jpeg',
+                        cover : '/img/netflix.jpeg',
                         images : ['/img/1.jpeg',
                                 '/img/2.jpeg',
                                 '/img/3.jpeg',
@@ -120,8 +124,8 @@
                                 '/img/6.jpeg',
                                 'https://picsum.photos/200/300'
                                 ],
-                        slug : 'project-1',
-                        description : 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla, praesentium qui. Assumenda deleniti perferendis consequuntur nobis ratione quibusdam aspernatur? Illo impedit libero voluptates! Earum facere omnis laboriosam iste aspernatur. Tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis obcaecati cupiditate quas, veniam qui dignissimos. At totam tempore ipsa consectetur sint, provident accusamus sequi eius unde veniam laboriosam aspernatur porro!Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, provident praesentium ratione sequi fugiat eaque porro dicta voluptate ullam, officia, modi unde enim. Mollitia, fugiat facere. Aliquid expedita deserunt autem!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium beatae quisquam asperiores nam in! Consectetur veritatis rerum facilis. Sint odio laudantium natus blanditiis nulla adipisci cum quos earum ullam molestiae.'
+                        slug : 'netflix',
+                        description : 'Replica del famoso sito di streaming di film e serie tv "Netflix" con un layput rivisitato e una ricerca tramite API da "TheMovieDB".'
                     },
                     {
                         title : 'Max Coach',
@@ -162,7 +166,7 @@
                     },
                     {
                         title : 'Spotify',
-                        repo :  'repo-netflix-tech',
+                        repo :  'repo-spotify',
                         type: {
                             name: 'FrontEnd',
                             color: 'yellow'
@@ -181,7 +185,7 @@
                                 color: 'pink'
                             },
                         ],
-                        cover : '/img/3.jpeg',
+                        cover : '/img/spotify.jpeg',
                         images : ['/img/1.jpeg',
                                 '/img/2.jpeg',
                                 '/img/3.jpeg',
@@ -190,8 +194,8 @@
                                 '/img/6.jpeg',
                                 'https://picsum.photos/200/300'
                                 ],
-                        slug : 'project-1',
-                        description : 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla, praesentium qui. Assumenda deleniti perferendis consequuntur nobis ratione quibusdam aspernatur? Illo impedit libero voluptates! Earum facere omnis laboriosam iste aspernatur. Tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis obcaecati cupiditate quas, veniam qui dignissimos. At totam tempore ipsa consectetur sint, provident accusamus sequi eius unde veniam laboriosam aspernatur porro!Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, provident praesentium ratione sequi fugiat eaque porro dicta voluptate ullam, officia, modi unde enim. Mollitia, fugiat facere. Aliquid expedita deserunt autem!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium beatae quisquam asperiores nam in! Consectetur veritatis rerum facilis. Sint odio laudantium natus blanditiis nulla adipisci cum quos earum ullam molestiae.'
+                        slug : 'spotify',
+                        description : 'Replica del famoso sito di streaming di musica "Spotify"'
                     },
                     {
                         title : 'Campo minato',
@@ -251,7 +255,7 @@
                                 color: 'blue'
                             },     
                         ],
-                        cover : '/img/5.jpeg',
+                        cover : '/img/dc.jpeg',
                         images : ['/img/1.jpeg',
                                 '/img/2.jpeg',
                                 '/img/3.jpeg',
@@ -261,11 +265,11 @@
                                 'https://picsum.photos/200/300'
                                 ],
                         slug : 'project-1',
-                        description : 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla, praesentium qui. Assumenda deleniti perferendis consequuntur nobis ratione quibusdam aspernatur? Illo impedit libero voluptates! Earum facere omnis laboriosam iste aspernatur. Tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis obcaecati cupiditate quas, veniam qui dignissimos. At totam tempore ipsa consectetur sint, provident accusamus sequi eius unde veniam laboriosam aspernatur porro!Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, provident praesentium ratione sequi fugiat eaque porro dicta voluptate ullam, officia, modi unde enim. Mollitia, fugiat facere. Aliquid expedita deserunt autem!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium beatae quisquam asperiores nam in! Consectetur veritatis rerum facilis. Sint odio laudantium natus blanditiis nulla adipisci cum quos earum ullam molestiae.'
+                        description : 'Replica del sito web della DC Comics utilizzando Laravel come framework di sviluppo.'
                     },                    
                     {
                         title : 'Whatsapp',
-                        repo :  'repo-MaxCoach-tech',
+                        repo :  'repo-whatsapp',
                         type: {
                             name: 'Back-end',
                             color: 'blue'
@@ -288,7 +292,7 @@
                                 color: 'yellow'
                             },
                         ],
-                        cover : '/img/6.jpeg',
+                        cover : '/img/whatsapp.jpeg',
                         images : ['/img/1.jpeg',
                                 '/img/2.jpeg',
                                 '/img/3.jpeg',
@@ -297,11 +301,11 @@
                                 '/img/6.jpeg',
                                 'https://picsum.photos/200/300'
                                 ],
-                        slug : 'Max-coach',
-                        description : 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla, praesentium qui. Assumenda deleniti perferendis consequuntur nobis ratione quibusdam aspernatur? Illo impedit libero voluptates! Earum facere omnis laboriosam iste aspernatur. Tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis obcaecati cupiditate quas, veniam qui dignissimos. At totam tempore ipsa consectetur sint, provident accusamus sequi eius unde veniam laboriosam aspernatur porro!Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, provident praesentium ratione sequi fugiat eaque porro dicta voluptate ullam, officia, modi unde enim. Mollitia, fugiat facere. Aliquid expedita deserunt autem!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium beatae quisquam asperiores nam in! Consectetur veritatis rerum facilis. Sint odio laudantium natus blanditiis nulla adipisci cum quos earum ullam molestiae.'
+                        slug : 'whatsapp',
+                        description : 'Creazione di un sistema di chat con risposte automatiche e gestione dei contatti tramite file JSON, utilizzando il layout del famoso social WhatsApp.'
                     },
                     {
-                        title : 'Netflix',
+                        title : 'Carousel',
                         repo :  'repo-netflix-tech',
                         type: {
                             name: 'FrontEnd',
@@ -309,23 +313,183 @@
                         },
                         technologies : [
                             {
-                                name : 'Sass',
+                                name : 'htmll',
+                                color: 'blue'
+                            },                    
+                            {
+                                name : 'css',
                                 color: 'red'
+                            },
+                            {
+                                name : 'js',
+                                color: 'yellow'
+                            },
+                            {
+                                name : 'VsCode',
+                                color: 'aqua'
+                            },
+                        ],
+                        cover : '/img/carousel.jpeg',
+                        images : ['/img/1.jpeg',
+                                '/img/2.jpeg',
+                                '/img/3.jpeg',
+                                '/img/4.jpeg',
+                                '/img/5.jpeg',
+                                '/img/6.jpeg',
+                                'https://picsum.photos/200/300'
+                                ],
+                        slug : 'carousel',
+                        description : 'Simple automatic carousel with start and stop and reverse button to show images.'
+                    },
+                    {
+                        title : 'Responsive layout',
+                        repo :  'repo-netflix-tech',
+                        type: {
+                            name: 'FrontEnd',
+                            color: 'blue'
+                        },
+                        technologies : [
+                            {
+                                name : 'html',
+                                color: 'blue'
+                            },                    
+                            {
+                                name : 'css',
+                                color: 'red'
+                            },
+                            {
+                                name : 'VsCode',
+                                color: 'aqua'
+                            },
+                            {
+                        name : 'Figma',
+                        color: 'grey'
+                    },
+                    {
+                        name : 'Bootstrap',
+                        color: 'grey'
+                    },
+                        ],
+                        cover : '/img/responsive-layout.png',
+                        images : ['/img/1.jpeg',
+                                '/img/2.jpeg',
+                                '/img/3.jpeg',
+                                '/img/4.jpeg',
+                                '/img/5.jpeg',
+                                '/img/6.jpeg',
+                                'https://picsum.photos/200/300'
+                                ],
+                        slug : 'responsive-layout',
+                        description : 'Simple website landing page with responsive capabilities.'
+                    },
+                    {
+                        title : 'Bootstrap Portfolio layout',
+                        repo :  'repo-netflix-tech',
+                        type: {
+                            name: 'FrontEnd',
+                            color: 'blue'
+                        },
+                        technologies : [
+                            {
+                                name : 'html',
+                                color: 'blue'
+                            },                    
+                            {
+                                name : 'css',
+                                color: 'red'
+                            },
+                            {
+                                name : 'VsCode',
+                                color: 'aqua'
+                            },
+                            {
+                        name : 'Figma',
+                        color: 'grey'
+                    },
+                    {
+                        name : 'Bootstrap',
+                        color: 'grey'
+                    },
+                        ],
+                        cover : '/img/boostrap-portfolio-layout.jpeg',
+                        images : ['/img/1.jpeg',
+                                '/img/2.jpeg',
+                                '/img/3.jpeg',
+                                '/img/4.jpeg',
+                                '/img/5.jpeg',
+                                '/img/6.jpeg',
+                                'https://picsum.photos/200/300'
+                                ],
+                        slug : 'carousel',
+                        description : 'Simple layout for a Portfolio made with bootstrap.'
+                    },
+                    {
+                        title : 'Classroom',
+                        repo :  'repo-netflix-tech',
+                        type: {
+                            name: 'FrontEnd',
+                            color: 'blue'
+                        },
+                        technologies : [
+                            {
+                                name : 'html',
+                                color: 'blue'
+                            },                    
+                            {
+                                name : 'css',
+                                color: 'red'
+                            },
+                            {
+                                name : 'VsCode',
+                                color: 'aqua'
+                            },
+                            {
+                                name : 'Bootstrap',
+                                color: 'grey'
+                            },
+                        ],
+                        cover : '/img/classroom.jpeg',
+                        images : ['/img/1.jpeg',
+                                '/img/2.jpeg',
+                                '/img/3.jpeg',
+                                '/img/4.jpeg',
+                                '/img/5.jpeg',
+                                '/img/6.jpeg',
+                                'https://picsum.photos/200/300'
+                                ],
+                        slug : 'carousel',
+                        description : 'Clone layout of the Boolean Classroom dashboard.'
+                    },
+                    {
+                        title : 'Dice Game',
+                        repo :  'repo-netflix-tech',
+                        type: {
+                            name: 'FrontEnd',
+                            color: 'blue'
+                        },
+                        technologies : [
+                            {
+                                name : 'html',
+                                color: 'blue'
+                            },                    
+                            {
+                                name : 'css',
+                                color: 'red'
+                            },
+                            {
+                                name : 'VsCode',
+                                color: 'aqua'
                             },
                             {
                                 name : 'JS',
                                 color: 'yellow'
                             },
                             {
-                                name : 'HTML',
-                                color: 'aqua'
-                            },                    
-                            {
-                                name : 'CSS',
-                                color: 'blue'
-                            },                    
+                                name : 'Bootstrap',
+                                color: 'grey'
+                            },
                         ],
-                        cover : '/img/1.jpeg',
+                        cover : '/img/dice-game.png',
                         images : ['/img/1.jpeg',
                                 '/img/2.jpeg',
                                 '/img/3.jpeg',
@@ -334,32 +498,31 @@
                                 '/img/6.jpeg',
                                 'https://picsum.photos/200/300'
                                 ],
-                        slug : 'project-1',
-                        description : 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla, praesentium qui. Assumenda deleniti perferendis consequuntur nobis ratione quibusdam aspernatur? Illo impedit libero voluptates! Earum facere omnis laboriosam iste aspernatur. Tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis obcaecati cupiditate quas, veniam qui dignissimos. At totam tempore ipsa consectetur sint, provident accusamus sequi eius unde veniam laboriosam aspernatur porro!Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, provident praesentium ratione sequi fugiat eaque porro dicta voluptate ullam, officia, modi unde enim. Mollitia, fugiat facere. Aliquid expedita deserunt autem!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium beatae quisquam asperiores nam in! Consectetur veritatis rerum facilis. Sint odio laudantium natus blanditiis nulla adipisci cum quos earum ullam molestiae.'
+                        slug : 'carousel',
+                        description : 'A little dice game at the best of 3 against the computer. The user enters his email and only if the mail matches you can press the button to play.'
                     },
-                    {
-                        title : 'Max Coach',
-                        repo :  'repo-MaxCoach-tech',
+                                        {
+                        title : 'Dropbox website clone',
+                        repo :  'repo-netflix-tech',
                         type: {
-                            name: 'Back-end',
+                            name: 'FrontEnd',
                             color: 'blue'
                         },
                         technologies : [
                             {
-                                name : 'HTML',
-                                color: 'aqua'
-                            },                    
-                            {
-                                name : 'CSS',
+                                name : 'html',
                                 color: 'blue'
                             },                    
                             {
-                                name : 'Sass',
+                                name : 'css',
                                 color: 'red'
                             },
-
+                            {
+                                name : 'VsCode',
+                                color: 'aqua'
+                            },
                         ],
-                        cover : '/img/2.jpeg',
+                        cover : '/img/dropbox.jpeg',
                         images : ['/img/1.jpeg',
                                 '/img/2.jpeg',
                                 '/img/3.jpeg',
@@ -368,10 +531,9 @@
                                 '/img/6.jpeg',
                                 'https://picsum.photos/200/300'
                                 ],
-                        slug : 'Max-coach',
-                        description : 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla, praesentium qui. Assumenda deleniti perferendis consequuntur nobis ratione quibusdam aspernatur? Illo impedit libero voluptates! Earum facere omnis laboriosam iste aspernatur. Tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis obcaecati cupiditate quas, veniam qui dignissimos. At totam tempore ipsa consectetur sint, provident accusamus sequi eius unde veniam laboriosam aspernatur porro!Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, provident praesentium ratione sequi fugiat eaque porro dicta voluptate ullam, officia, modi unde enim. Mollitia, fugiat facere. Aliquid expedita deserunt autem!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium beatae quisquam asperiores nam in! Consectetur veritatis rerum facilis. Sint odio laudantium natus blanditiis nulla adipisci cum quos earum ullam molestiae.'
+                        slug : 'dropbox-websiteclone',
+                        description : 'Clone of an older version of the Dropbox website layout.'
                     },
-                    
                 ]
             }
         },
