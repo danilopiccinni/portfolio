@@ -178,14 +178,12 @@ img {
 
     .my-name {
 
-        background: linear-gradient(16deg, #020024 0%, #300979 35%, var(--theme-gradient) 100%);
+        background: linear-gradient(16deg, #300979 0%, #300979 35%, var(--theme-gradient) 100%);
+
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
 
-        text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.147);
-
-
-        font-size: 45px;
+        font-size: 50px;
     }
 
     button {
