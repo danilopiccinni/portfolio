@@ -47,7 +47,7 @@
                 arrayTechnologies : [
                     {
                         name : 'HTML',
-                        color: 'sand'
+                        color: 'orange'
                     },                    
                     {
                         name : 'CSS',
@@ -71,7 +71,7 @@
                     },
                     {
                         name : 'VsCode',
-                        color: 'orange'
+                        color: 'aqua'
                     },
                     {
                         name : 'Figma',
@@ -103,24 +103,12 @@
                         },
                         technologies : [
                             {
-                                name: 'tech1',
+                                name : 'CSS',
                                 color: 'blue'
-                            },
+                            },                    
                             {
-                                name: 'tech2',
+                                name : 'Sass',
                                 color: 'red'
-                            },
-                            {
-                                name: 'tech3',
-                                color: 'green'
-                            },
-                            {
-                                name: 'tech4',
-                                color: 'orange'
-                            },
-                            {
-                                name: 'tech5',
-                                color: 'yellow'
                             },
                         ],
                         cover : '/img/1.jpeg',
@@ -139,29 +127,25 @@
                         title : 'Max Coach',
                         repo :  'repo-MaxCoach-tech',
                         type: {
-                            name: 'tipologia',
+                            name: 'Back-end',
                             color: 'green'
                         },
                         technologies : [
                             {
-                                name: 'tech1',
-                                color: 'blue'
-                            },
-                            {
-                                name: 'tech2',
+                                name : 'Sass',
                                 color: 'red'
                             },
                             {
-                                name: 'tech3',
+                                name : 'PHP',
                                 color: 'green'
                             },
                             {
-                                name: 'tech4',
-                                color: 'orange'
+                                name : 'JS',
+                                color: 'yellow'
                             },
                             {
-                                name: 'tech5',
-                                color: 'yellow'
+                                name : 'MySQL',
+                                color: 'pink'
                             },
                         ],
                         cover : '/img/2.jpeg',
@@ -177,7 +161,7 @@
                         description : 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla, praesentium qui. Assumenda deleniti perferendis consequuntur nobis ratione quibusdam aspernatur? Illo impedit libero voluptates! Earum facere omnis laboriosam iste aspernatur. Tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis obcaecati cupiditate quas, veniam qui dignissimos. At totam tempore ipsa consectetur sint, provident accusamus sequi eius unde veniam laboriosam aspernatur porro!Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, provident praesentium ratione sequi fugiat eaque porro dicta voluptate ullam, officia, modi unde enim. Mollitia, fugiat facere. Aliquid expedita deserunt autem!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium beatae quisquam asperiores nam in! Consectetur veritatis rerum facilis. Sint odio laudantium natus blanditiis nulla adipisci cum quos earum ullam molestiae.'
                     },
                     {
-                        title : 'Netflix',
+                        title : 'Spotify',
                         repo :  'repo-netflix-tech',
                         type: {
                             name: 'FrontEnd',
@@ -185,27 +169,19 @@
                         },
                         technologies : [
                             {
-                                name: 'tech1',
-                                color: 'blue'
-                            },
-                            {
-                                name: 'tech2',
+                                name : 'Sass',
                                 color: 'red'
                             },
                             {
-                                name: 'tech3',
+                                name : 'PHP',
                                 color: 'green'
                             },
                             {
-                                name: 'tech4',
-                                color: 'orange'
-                            },
-                            {
-                                name: 'tech5',
-                                color: 'yellow'
+                                name : 'MySQL',
+                                color: 'pink'
                             },
                         ],
-                        cover : '/img/1.jpeg',
+                        cover : '/img/3.jpeg',
                         images : ['/img/1.jpeg',
                                 '/img/2.jpeg',
                                 '/img/3.jpeg',
@@ -218,7 +194,7 @@
                         description : 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla, praesentium qui. Assumenda deleniti perferendis consequuntur nobis ratione quibusdam aspernatur? Illo impedit libero voluptates! Earum facere omnis laboriosam iste aspernatur. Tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis obcaecati cupiditate quas, veniam qui dignissimos. At totam tempore ipsa consectetur sint, provident accusamus sequi eius unde veniam laboriosam aspernatur porro!Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, provident praesentium ratione sequi fugiat eaque porro dicta voluptate ullam, officia, modi unde enim. Mollitia, fugiat facere. Aliquid expedita deserunt autem!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium beatae quisquam asperiores nam in! Consectetur veritatis rerum facilis. Sint odio laudantium natus blanditiis nulla adipisci cum quos earum ullam molestiae.'
                     },
                     {
-                        title : 'Netflix',
+                        title : 'Campo minato',
                         repo :  'repo-netflix-tech',
                         type: {
                             name: 'FrontEnd',
@@ -226,27 +202,23 @@
                         },
                         technologies : [
                             {
-                                name: 'tech1',
-                                color: 'blue'
+                                name : 'JS',
+                                color: 'yellow'
                             },
                             {
-                                name: 'tech2',
-                                color: 'red'
-                            },
-                            {
-                                name: 'tech3',
+                                name : 'PHP',
                                 color: 'green'
                             },
                             {
-                                name: 'tech4',
-                                color: 'orange'
+                                name : 'MySQL',
+                                color: 'pink'
                             },
                             {
-                                name: 'tech5',
-                                color: 'yellow'
+                                name : 'VsCode',
+                                color: 'orange'
                             },
                         ],
-                        cover : '/img/1.jpeg',
+                        cover : '/img/4.jpeg',
                         images : ['/img/1.jpeg',
                                 '/img/2.jpeg',
                                 '/img/3.jpeg',
@@ -259,7 +231,7 @@
                         description : 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla, praesentium qui. Assumenda deleniti perferendis consequuntur nobis ratione quibusdam aspernatur? Illo impedit libero voluptates! Earum facere omnis laboriosam iste aspernatur. Tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis obcaecati cupiditate quas, veniam qui dignissimos. At totam tempore ipsa consectetur sint, provident accusamus sequi eius unde veniam laboriosam aspernatur porro!Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, provident praesentium ratione sequi fugiat eaque porro dicta voluptate ullam, officia, modi unde enim. Mollitia, fugiat facere. Aliquid expedita deserunt autem!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium beatae quisquam asperiores nam in! Consectetur veritatis rerum facilis. Sint odio laudantium natus blanditiis nulla adipisci cum quos earum ullam molestiae.'
                     },
                     {
-                        title : 'Netflix',
+                        title : 'Dc Comics',
                         repo :  'repo-netflix-tech',
                         type: {
                             name: 'FrontEnd',
@@ -267,27 +239,19 @@
                         },
                         technologies : [
                             {
-                                name: 'tech1',
-                                color: 'blue'
-                            },
-                            {
-                                name: 'tech2',
-                                color: 'red'
-                            },
-                            {
-                                name: 'tech3',
-                                color: 'green'
-                            },
-                            {
-                                name: 'tech4',
-                                color: 'orange'
-                            },
-                            {
-                                name: 'tech5',
+                                name : 'JS',
                                 color: 'yellow'
                             },
+                            {
+                                name : 'HTML',
+                                color: 'aqua'
+                            },                    
+                            {
+                                name : 'CSS',
+                                color: 'blue'
+                            },     
                         ],
-                        cover : '/img/1.jpeg',
+                        cover : '/img/5.jpeg',
                         images : ['/img/1.jpeg',
                                 '/img/2.jpeg',
                                 '/img/3.jpeg',
@@ -300,35 +264,31 @@
                         description : 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla, praesentium qui. Assumenda deleniti perferendis consequuntur nobis ratione quibusdam aspernatur? Illo impedit libero voluptates! Earum facere omnis laboriosam iste aspernatur. Tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis obcaecati cupiditate quas, veniam qui dignissimos. At totam tempore ipsa consectetur sint, provident accusamus sequi eius unde veniam laboriosam aspernatur porro!Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, provident praesentium ratione sequi fugiat eaque porro dicta voluptate ullam, officia, modi unde enim. Mollitia, fugiat facere. Aliquid expedita deserunt autem!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium beatae quisquam asperiores nam in! Consectetur veritatis rerum facilis. Sint odio laudantium natus blanditiis nulla adipisci cum quos earum ullam molestiae.'
                     },                    
                     {
-                        title : 'Max Coach',
+                        title : 'Whatsapp',
                         repo :  'repo-MaxCoach-tech',
                         type: {
-                            name: 'tipologia',
+                            name: 'Back-end',
                             color: 'blue'
                         },
                         technologies : [
                             {
-                                name: 'tech1',
-                                color: 'blue'
-                            },
+                                name : 'HTML',
+                                color: 'aqua'
+                            },                    
                             {
-                                name: 'tech2',
+                                name : 'CSS',
+                                color: 'blue'
+                            },                    
+                            {
+                                name : 'Sass',
                                 color: 'red'
                             },
                             {
-                                name: 'tech3',
-                                color: 'green'
-                            },
-                            {
-                                name: 'tech4',
-                                color: 'orange'
-                            },
-                            {
-                                name: 'tech5',
+                                name : 'JS',
                                 color: 'yellow'
                             },
                         ],
-                        cover : '/img/2.jpeg',
+                        cover : '/img/6.jpeg',
                         images : ['/img/1.jpeg',
                                 '/img/2.jpeg',
                                 '/img/3.jpeg',
@@ -349,25 +309,21 @@
                         },
                         technologies : [
                             {
-                                name: 'tech1',
-                                color: 'blue'
-                            },
-                            {
-                                name: 'tech2',
+                                name : 'Sass',
                                 color: 'red'
                             },
                             {
-                                name: 'tech3',
-                                color: 'green'
-                            },
-                            {
-                                name: 'tech4',
-                                color: 'orange'
-                            },
-                            {
-                                name: 'tech5',
+                                name : 'JS',
                                 color: 'yellow'
                             },
+                            {
+                                name : 'HTML',
+                                color: 'aqua'
+                            },                    
+                            {
+                                name : 'CSS',
+                                color: 'blue'
+                            },                    
                         ],
                         cover : '/img/1.jpeg',
                         images : ['/img/1.jpeg',
@@ -385,30 +341,23 @@
                         title : 'Max Coach',
                         repo :  'repo-MaxCoach-tech',
                         type: {
-                            name: 'tipologia',
+                            name: 'Back-end',
                             color: 'blue'
                         },
                         technologies : [
                             {
-                                name: 'tech1',
-                                color: 'blue'
-                            },
+                                name : 'HTML',
+                                color: 'aqua'
+                            },                    
                             {
-                                name: 'tech2',
+                                name : 'CSS',
+                                color: 'blue'
+                            },                    
+                            {
+                                name : 'Sass',
                                 color: 'red'
                             },
-                            {
-                                name: 'tech3',
-                                color: 'green'
-                            },
-                            {
-                                name: 'tech4',
-                                color: 'orange'
-                            },
-                            {
-                                name: 'tech5',
-                                color: 'yellow'
-                            },
+
                         ],
                         cover : '/img/2.jpeg',
                         images : ['/img/1.jpeg',
