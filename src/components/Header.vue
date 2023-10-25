@@ -40,7 +40,7 @@ import { store } from '../store.js';
 
             <!-- logo -->
             <div class="d-flex align-items-center flex-grow-1">
-                <a class="navbar-brand p-2 logo" href="#">
+                <a class="navbar-brand p-0 logo" href="#">
                     <img src="/img/logo.png" alt="">
                 </a>
                 <!-- language-switcher -->
