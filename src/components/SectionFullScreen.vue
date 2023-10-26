@@ -165,7 +165,9 @@ export default {
             </div>
             <div class="column-2 d-flex flex-column col-12 col-md-6 col-lg-4 ">
                 <div>
-                    <h3 class="py-3 text-end pe-1 pe-md-5">Competenze e Qualità</h3>
+                    <h3 v-if="store.language == 'italian'" class="py-3 text-end pe-1 pe-md-5">Competenze e Qualità</h3>
+                    <h3 v-if="store.language == 'german'" class="py-3 text-end pe-1 pe-md-5">Kompetenz und Qualität</h3>
+                    <h3 v-if="store.language == 'english'" class="py-3 text-end pe-1 pe-md-5">Skills and quality</h3>
                 </div>
                 <div class="cont-list flex-grow-1">
                     <ul class="d-flex flex-column justify-content-around gap-2 p-0 pb-5 m-0">
@@ -188,7 +190,9 @@ export default {
             </div>
             <div class="column-3 d-flex flex-column ps-1 ps-md-5 col-12 col-md-6 col-lg-4">
                 <div>
-                    <h3 class="py-3">Perche scegliermi !?!?</h3>
+                    <h3 v-if="store.language == 'italian'" class="py-3">Perche scegliermi !?!?</h3>
+                    <h3 v-if="store.language == 'german'" class="py-3">Warum mich wählen !?!?</h3>
+                    <h3 v-if="store.language == 'english'" class="py-3">Why choose me !?!?</h3>
                 </div>
                 <div class="cont-list">
                     <ul class="d-flex flex-column justify-content-around gap-2 p-0 pb-5 pe-2 m-0">
