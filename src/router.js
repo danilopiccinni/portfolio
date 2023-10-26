@@ -42,8 +42,15 @@ const router = createRouter({
     ]
 });
 
+// add title on URL
 router.beforeEach((to) => {
     document.title = to.meta?.title ? 'Portfolio - ' + to.meta.title : 'Portfolio';
 });
+
+// Scroll to top on page change 
+router.beforeEach((to, from, next) => {
+    window.scrollTo(0, 0);
+    next();
+  });
 
 export { router };
