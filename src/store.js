@@ -15,8 +15,8 @@ export const store = reactive({
 
     switcherTutorial : true,
 
-    language : 'italian',
+    language : JSON.parse(localStorage.getItem('selectedLanguage')) || 'english',
     
-    selectedColor: '#00D4FF',
+    selectedColor: JSON.parse(localStorage.getItem('selectedColor')) || '#00D4FF',
 
 });

@@ -27,6 +27,11 @@ import { store } from '../store.js';
 
             changeColor() {
                 document.documentElement.style.setProperty('--theme-gradient', this.store.selectedColor);
+                localStorage.setItem('selectedColor', JSON.stringify(this.store.selectedColor))
+            },
+
+            changeLanguage() {
+                localStorage.setItem('selectedLanguage', JSON.stringify(this.store.language))
             }
         },
     }
@@ -44,7 +49,7 @@ import { store } from '../store.js';
                     <img src="/img/logo.png" alt="">
                 </a>
                 <!-- language-switcher -->
-                <select v-model="store.language" class="form-select d-none d-md-block py-0" aria-label="Default select example" name="form-select" id="form-select">
+                <select v-model="store.language" @change="changeLanguage()" class="form-select d-none d-md-block py-0" aria-label="Default select example" name="form-select" id="form-select">
                     <option selected value="italian">It</option>
                     <option value="german">De</option>
                     <option value="english">En</option>
@@ -128,7 +133,7 @@ import { store } from '../store.js';
                                 <label v-if="store.language == 'italian'" for="form-select">Cambia lingua: </label>
                                 <label v-if="store.language == 'german'" for="form-select">Sprache ändern: </label>
                                 <label v-if="store.language == 'english'" for="form-select">Change Language: </label>
-                                <select v-model="store.language" class="form-select" aria-label="Default select example" name="form-select" id="form-select">
+                                <select v-model="store.language" @change="changeLanguage()" class="form-select" aria-label="Default select example" name="form-select" id="form-select">
                                     <option selected value="italian">It</option>
                                     <option value="german">De</option>
                                     <option value="english">En</option>
