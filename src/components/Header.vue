@@ -112,7 +112,7 @@ import { store } from '../store.js';
                         <h5 v-if="store.language == 'italian'" class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Impostazioni pagina</h5>
                         <h5 v-if="store.language == 'german'" class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Seiteneinstellungen</h5>
                         <h5 v-if="store.language == 'english'" class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Page Settings</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        <button type="button" class="btn-close bg-light" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body pt-4" :class="store.checked ? '' : 'bg-dark text-light'">
                         <div class="d-flex flex-column align-items-start gap-3">
