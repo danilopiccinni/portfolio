@@ -71,21 +71,15 @@ import { store } from '../store'
         <!--Section heading-->
         <div v-if="store.language == 'italian'" class="container text-center">
             <h1 class="h1-responsive font-weight-bold my-4">Contattami</h1>
-            <h6>Inviami un messaggio e saró felice di rispondere. Utilizza il modulo sottostante per inviare le tue domande, commenti o richieste</h6>
-            <h6>Sarà un piacere per me ascoltarti e fornirti le risposte di cui hai bisogno</h6>
-            <h6>Non vedo l'ora di sentirti!</h6>
+            <h6>Inviami un messaggio e saró felice di rispondere. Utilizza il modulo sottostante per inviare le tue domande, commenti o richieste.</h6>
         </div>
         <div v-if="store.language == 'german'" class="container text-center">
             <h1 class="h1-responsive font-weight-bold my-4">Kontaktiere mich</h1>
             <h6>Schick mir eine Nachricht, und ich antworte gerne. Verwende das Formular unten, um deine Fragen, Kommentare oder Anfragen zu senden.</h6>
-            <h6>Es wird mir eine Freude sein, dir zuzuhören und die Antworten zu geben, die du benötigst.</h6>
-            <h6>Ich freue mich darauf, von dir zu hören!</h6>
         </div>
         <div v-if="store.language == 'english'" class="container text-center">
             <h1  class="h1-responsive font-weight-bold my-4">Contact me</h1>
             <h6>Send me a message, and I'll be happy to reply. Use the form below to submit your questions, comments, or requests.</h6>
-            <h6>It will be my pleasure to listen to you and provide the answers you need.</h6>
-            <h6>I look forward to hearing from you!</h6>
         </div>
 
             <div class="form-container">
@@ -117,6 +111,21 @@ import { store } from '../store'
                         <button v-if="store.language == 'english'" class="submit" type="submit" name="send">Send</button>
                     </div>
                 </form>
+            </div>
+
+            <div class="container pb-5">
+                <div v-if="store.language == 'italian'" class=" text-center">
+                    <h6>Sarà un piacere per me ascoltarti e fornirti le risposte di cui hai bisogno.</h6>
+                    <h6>Non vedo l'ora di sentirti!</h6>
+                </div>
+                <div v-if="store.language == 'german'" class=" text-center">
+                    <h6>Es wird mir eine Freude sein, dir zuzuhören und die Antworten zu geben, die du benötigst.</h6>
+                    <h6>Ich freue mich darauf, von dir zu hören!</h6>
+                </div>
+                <div v-if="store.language == 'english'" class=" text-center">
+                    <h6>It will be my pleasure to listen to you and provide the answers you need.</h6>
+                    <h6>I look forward to hearing from you!</h6>
+                </div>
             </div>
         </section>
 
