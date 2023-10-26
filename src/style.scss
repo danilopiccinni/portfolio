@@ -5,3 +5,9 @@
     font-family: 'Ubuntu', sans-serif;
 
 }
+
+@media screen and (max-width : 576px) {
+    * {
+        font-size: small;
+    }
+}
