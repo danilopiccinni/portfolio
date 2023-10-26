@@ -432,7 +432,9 @@
                 
                 z-index: 5;
     
-                width: 100%;
+                width: 50%;
+
+
                 max-height: 80%;
 
     
@@ -543,4 +545,16 @@
             }
         }
     }
-</style>
+
+    @media screen and (max-width: 768px) {
+        .cont-carouselThumbsDark:hover {
+            width: 75%;
+        }
+    }
+
+    @media screen and (max-width: 576px) {
+        .cont-carouselThumbsDark:hover {
+            width: 100%;
+        }
+    }
+    </style>
