@@ -431,13 +431,9 @@
             &:hover {
                 
                 z-index: 5;
-    
-                width: 50%;
-
 
                 max-height: 80%;
 
-    
                 overflow: hidden;
 
                 & .cont-thumbs-icon {
@@ -543,6 +539,12 @@
                     left: 0px;
                 }
             }
+        }
+    }
+
+    @media screen and (min-width: 577px) {
+        .cont-carouselThumbsDark:hover {
+            width: 50%;
         }
     }
 
