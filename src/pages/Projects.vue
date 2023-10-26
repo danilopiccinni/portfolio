@@ -557,16 +557,14 @@
                 } else {
                     this.store.visual += 1
                 }
+                localStorage.setItem('selectedVisual', JSON.stringify(this.store.visual))
             },
 
-            changeVisual1() {
-                console.log('ciao')
-                this.store.visual = 1
+            changeVisual(num) {
+                this.store.visual = num
+                localStorage.setItem('selectedVisual', JSON.stringify(this.store.visual))
             },
 
-            changeVisual2() {
-                this.store.visual = 2
-            },
         },
     }
 </script>
@@ -598,14 +596,14 @@
             </button>
             <ul class="dropdown-menu" :class="store.checked ? 'bg-light' : 'bg-dark'">
                 <li>
-                    <a v-if="store.language == 'italian'" class="dropdown-item" :class="store.checked ? '' : 'text-light'" v-on:click="changeVisual1">Singolo full screen</a>
-                    <a v-if="store.language == 'german'" class="dropdown-item" :class="store.checked ? '' : 'text-light'" v-on:click="changeVisual1">Vollbild-Einzeldarstellung</a>
-                    <a v-if="store.language == 'english'" class="dropdown-item" :class="store.checked ? '' : 'text-light'" v-on:click="changeVisual1">Full-screen single</a>
+                    <a v-if="store.language == 'italian'" class="dropdown-item" :class="store.checked ? '' : 'text-light'" v-on:click="changeVisual(1)">Singolo full screen</a>
+                    <a v-if="store.language == 'german'" class="dropdown-item" :class="store.checked ? '' : 'text-light'" v-on:click="changeVisual(1)">Vollbild-Einzeldarstellung</a>
+                    <a v-if="store.language == 'english'" class="dropdown-item" :class="store.checked ? '' : 'text-light'" v-on:click="changeVisual(1)">Full-screen single</a>
                 </li>
                 <li>
-                    <a v-if="store.language == 'italian'" class="dropdown-item" :class="store.checked ? '' : 'text-light'"  v-on:click="changeVisual2">Griglia</a>
-                    <a v-if="store.language == 'german'" class="dropdown-item" :class="store.checked ? '' : 'text-light'"  v-on:click="changeVisual2">Gitter</a>
-                    <a v-if="store.language == 'english'" class="dropdown-item" :class="store.checked ? '' : 'text-light'"  v-on:click="changeVisual2">Grid</a>
+                    <a v-if="store.language == 'italian'" class="dropdown-item" :class="store.checked ? '' : 'text-light'"  v-on:click="changeVisual(2)">Griglia</a>
+                    <a v-if="store.language == 'german'" class="dropdown-item" :class="store.checked ? '' : 'text-light'"  v-on:click="changeVisual(2)">Gitter</a>
+                    <a v-if="store.language == 'english'" class="dropdown-item" :class="store.checked ? '' : 'text-light'"  v-on:click="changeVisual(2)">Grid</a>
                 </li>
             </ul>
         </div>

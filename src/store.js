@@ -4,9 +4,9 @@ export const store = reactive({
 
     selectedProject: {},
 
-    visual : 2,
+    visual : JSON.parse(localStorage.getItem('selectedVisual')) || 2,
 
-    checked : false,
+    checked : JSON.parse(localStorage.getItem('selectedChecked')) || false,
 
     isNavbarHidden: false,
     prevScrollY: 0,

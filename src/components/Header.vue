@@ -32,6 +32,10 @@ import { store } from '../store.js';
 
             changeLanguage() {
                 localStorage.setItem('selectedLanguage', JSON.stringify(this.store.language))
+            },
+
+            changeCheck() {
+                localStorage.setItem('selectedChecked', JSON.stringify(this.store.checked))
             }
         },
     }
@@ -91,7 +95,7 @@ import { store } from '../store.js';
 
                 <!-- darkMode-switcher -->
                 <div class="d-none d-md-block one-quarter me-2" id="switch">
-                    <input v-model="store.checked" type="checkbox" class="checkbox" id="chk" />
+                    <input v-model="store.checked" @change="changeCheck()" type="checkbox" class="checkbox" id="chk" />
                     <label class="label" for="chk">
                         <i class="fas fa-moon"></i>
                         <i class="fas fa-sun"></i>
@@ -119,7 +123,7 @@ import { store } from '../store.js';
                                 <label v-if="store.language == 'german'">Dark Mode Ein/Aus:</label>
                                 <label v-if="store.language == 'english'">Dark Mode On/Off:</label>
                                 <div class="one-quarter" id="switch">
-                                    <input v-model="store.checked" type="checkbox" class="checkbox" id="chk" />
+                                    <input v-model="store.checked" @change="changeCheck()" type="checkbox" class="checkbox" id="chk" />
                                     <label class="label" for="chk">
                                         <i class="fas fa-moon"></i>
                                         <i class="fas fa-sun"></i>
