@@ -432,7 +432,7 @@
                 
                 z-index: 5;
 
-                max-height: 80%;
+                max-height: 50%;
 
                 overflow: hidden;
 
@@ -444,10 +444,20 @@
                 & img {
                     opacity: 1;
                 }
-                & img {
-                    border-radius: 80px 0px 300px 0px;
+                & .carousel-inner {
+                    border-radius: 80px 0px 0px 0px;
                 }
-            }    
+            }
+            
+            .carousel-inner {
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                border-radius: 80px 0px 300px 0px;
+
+                transition: 2.5s;
+
+            }
 
             video {
                 width: 100%;
@@ -460,7 +470,7 @@
             img {
                 width: 100%;
                 height: 100%;
-                border-radius: 80px 0px 300px 0px;
+
                 aspect-ratio: 16 / 9;
 
                 opacity: 0.6;
