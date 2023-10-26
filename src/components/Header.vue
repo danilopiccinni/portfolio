@@ -36,6 +36,12 @@ import { store } from '../store.js';
 
             changeCheck() {
                 localStorage.setItem('selectedChecked', JSON.stringify(this.store.checked))
+                // change bg of budy to not see different color
+                if (this.store.checked) {
+                    document.body.style.backgroundColor = 'white';
+                } else {
+                    document.body.style.backgroundColor = '#212529';
+                }
             }
         },
     }
