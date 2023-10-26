@@ -82,10 +82,10 @@ import { store } from '../store.js';
             </div>
             
             <!--  -->
-            <div class=" d-flex gap-2 flex-grow-1  justify-content-end align-items-center">
+            <div class=" d-flex flex-grow-1  justify-content-end align-items-center">
 
                 <!-- darkMode-switcher -->
-                <div class="d-none d-md-block one-quarter" id="switch">
+                <div class="d-none d-md-block one-quarter me-2" id="switch">
                     <input v-model="store.checked" type="checkbox" class="checkbox" id="chk" />
                     <label class="label" for="chk">
                         <i class="fas fa-moon"></i>
