@@ -18,8 +18,10 @@
 </script>
 
 <template>
-    <div>
-        <iframe src="https://yu-gi-ho-danilop.netlify.app" frameborder="0" ></iframe>
+    <div class="pt-5">
+        <div class="d-flex m-auto w-75 pt-5">
+            <iframe :src="project.link" frameborder="0" ></iframe>
+        </div>
     </div>
 </template>
 
