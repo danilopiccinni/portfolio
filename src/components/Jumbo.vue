@@ -26,7 +26,7 @@ export default {
             } else {
                 this.warningChooseLanguage = false
                 let cvUrl = ''
-                if (lingua == 'italiano') {
+                if (this.select == 'italiano') {
                     cvUrl = '../../public/img/Danilo_Piccinni_Cv.pdf';
                 } else {
                     cvUrl = '../../public/img/Danilo_Piccinni_Lebenslauf_ (1).pdf';
@@ -35,8 +35,8 @@ export default {
                 let link = document.createElement('a');
                 link.href = cvUrl;
                 link.target = '_blank';
-                if (lingua = 'italiano') {
-                    link.download = 'Danilo_Piccinni_CV.pdf';
+                if (this.select == 'italiano') {
+                    link.download = 'Danilo_Piccinni_CVv.pdf';
                 } else {
                     link.download = 'Danilo_Piccinni_Lebenslauf.pdf';
                 }
@@ -82,7 +82,7 @@ export default {
                                         <option value="tedesco">DE</option>
                                     </select>
                                 </div>
-                                <button @click="downloadCV('tedesco')" class="btn btn-secondary"><i class="fa-solid fa-download"></i></button>
+                                <button @click="downloadCV()" class="btn btn-secondary"><i class="fa-solid fa-download"></i></button>
                             </div>
                             <div v-if="warningChooseLanguage" class="text-danger">
                                 Scegli una lingua
