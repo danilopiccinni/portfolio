@@ -18,8 +18,8 @@
 </script>
 
 <template>
-    <div class="pt-5">
-        <div class="d-flex m-auto w-75 pt-5">
+    <div class="">
+        <div class="d-flex justify-content-center">
             <iframe :src="project.link" frameborder="0" ></iframe>
         </div>
     </div>
@@ -28,8 +28,10 @@
 <style scoped lang="scss">
 
     iframe {
-        width: 100%;
-        height: 100vh;
+        width: 90%;
+        padding-top: 150px;
+        padding-bottom: 50px;
+        aspect-ratio: 16/9;
     }
 
 </style>
