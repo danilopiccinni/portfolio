@@ -1,2 +1,8 @@
-#
-/*    /index.html   200
+[build]
+  command = "npm run build"  # Il comando per generare il tuo progetto Vue.js
+  publish = "dist"  # La directory in cui si troveranno i file da distribuire
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
