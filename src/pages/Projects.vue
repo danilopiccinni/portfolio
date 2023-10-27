@@ -333,7 +333,7 @@
                     {
                         title : 'Carousel',
                         repo :  'https://github.com/danilopiccinni/js-array-objects-carousel',
-                        link : 'https://relaxed-chimera-c6a4fa.netlify.app/',
+                        link : 'https://carouseldanilop.netlify.app/',
                         type: {
                             name: 'FrontEnd',
                             color: 'blue'
