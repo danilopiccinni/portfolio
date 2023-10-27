@@ -32,7 +32,7 @@
 
 <template>
     <div :style="{'--i': (`${index / 8}`)}" class="project rounded" :class="onOffSelectEffect == true ? 'animate__animated animate__bounceOut' : ' animate__animated animate__fadeInRight'">
-        <router-link :to="{ name: 'singleProjects' , params : {title : project.title}}" @mouseleave="isLeave = true" @mouseover="isLeave = false" v-on:click="selectProject(project) , onOffSelectEffect=true" class="nav-link" href="#">
+        <router-link :to="{ name: 'singleProject' , params : {title : project.title}}" @mouseleave="isLeave = true" @mouseover="isLeave = false" v-on:click="selectProject(project) , onOffSelectEffect=true" class="nav-link" href="#">
             <div class=" cont-cover  rounded" :style="{ backgroundImage : `url(${project.cover})` }">
                 <div class="cont-details" :style="isLeave ? {opacity : 0} : ''">
                     <div class="details-project container">

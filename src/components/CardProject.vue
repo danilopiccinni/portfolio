@@ -186,7 +186,7 @@
 
                 <div>
                     <button class="details btn btn-primary">
-                        <router-link :to="{ name: 'singleProjects' , params : {title : project.title}}" v-on:click="selectProject(project)" class="nav-link" href="#">
+                        <router-link :to="{ name: 'singleProject' , params : {title : project.title}}" v-on:click="selectProject(project)" class="nav-link" href="#">
                             Apri progetto
                         </router-link>
                     </button>
