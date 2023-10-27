@@ -27,9 +27,9 @@ export default {
                 this.warningChooseLanguage = false
                 let cvUrl = ''
                 if (this.select == 'italiano') {
-                    cvUrl = '../../public/img/Danilo_Piccinni_Cv.pdf';
+                    cvUrl = '/img/Danilo_Piccinni_Cv.pdf';
                 } else {
-                    cvUrl = '../../public/img/Danilo_Piccinni_Lebenslauf_ (1).pdf';
+                    cvUrl = '/public/img/Danilo_Piccinni_Lebenslauf_ (1).pdf';
                     
                 }
                 let link = document.createElement('a');
