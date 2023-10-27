@@ -85,37 +85,49 @@
                         name : 'Postman',
                         color: 'purple'
                     },
-
                 ],
-
-                images : ['img/1.jpeg',
-                        'img/2.jpeg',
-                        'img/3.jpeg',
-                        'img/4.jpeg',
-                        'img/5.jpeg',
-                        'img/6.jpeg',
-                        'https://picsum.photos/200/300'
-                        ],
 
                 projects : [
                     {
                         title : 'Netflix',
-                        repo :  'repo-netflix-tech',
+                        repo :  'https://github.com/danilopiccinni/vite-boolflix/tree/master',
+                        link : 'https://boolflix-danilop.netlify.app',
                         type: {
                             name: 'FrontEnd',
                             color: 'blue'
                         },
                         technologies : [
                             {
-                                name : 'CSS',
-                                color: 'blue'
-                            },                    
+                                name : 'HTML',
+                                color: 'orange'
+                            },                      
                             {
                                 name : 'Sass',
                                 color: 'red'
                             },
+                            {
+                                name : 'JS',
+                                color: 'yellow'
+                            },
+                            {
+                                name : 'Postman',
+                                color: 'purple'
+                            },
+                            {
+                                name : 'VsCode',
+                                color: 'aqua'
+                            },
+                            {
+                                name : 'Vue',
+                                color : 'blue'
+                            },
+                            {
+                                name : 'Axios',
+                                color : 'green'
+                            }
+
                         ],
-                        cover : '/img/netflix.jpeg',
+                        cover : '/img/netflix/netflix.png',
                         images : ['/img/1.jpeg',
                                 '/img/2.jpeg',
                                 '/img/3.jpeg',
@@ -128,81 +140,86 @@
                         description : 'Replica del famoso sito di streaming di film e serie tv "Netflix" con un layput rivisitato e una ricerca tramite API da "TheMovieDB".Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla, praesentium qui. Assumenda deleniti perferendis consequuntur nobis ratione quibusdam aspernatur? Illo impedit libero voluptates! Earum facere omnis laboriosam iste aspernatur. Tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis obcaecati cupiditate quas, veniam qui dignissimos. At totam tempore ipsa consectetur sint, provident accusamus sequi eius unde veniam laboriosam aspernatur porro!Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, provident praesentium ratione sequi fugiat eaque porro dicta voluptate ullam, officia, modi unde enim. Mollitia, fugiat facere. Aliquid expedita deserunt autem!Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
                     },
                     {
-                        title : 'Max Coach',
-                        repo :  'repo-MaxCoach-tech',
+                        title : 'Avada Movers',
+                        repo :  'https://github.com/danilopiccinni/proj-html-vuejs',
+                        link : 'https://avada-movers-danilop.netlify.app',
                         type: {
-                            name: 'Back-end',
-                            color: 'green'
+                            name: 'Front End',
+                            color: 'blue'
                         },
                         technologies : [
                             {
+                                name : 'HTML',
+                                color: 'orange'
+                            },  
+                            {
                                 name : 'Sass',
                                 color: 'red'
-                            },
-                            {
-                                name : 'PHP',
-                                color: 'green'
                             },
                             {
                                 name : 'JS',
                                 color: 'yellow'
                             },
                             {
-                                name : 'MySQL',
-                                color: 'pink'
+                                name : 'VsCode',
+                                color: 'aqua'
                             },
+
                         ],
-                        cover : '/img/2.jpeg',
-                        images : ['/img/1.jpeg',
-                                '/img/2.jpeg',
-                                '/img/3.jpeg',
-                                '/img/4.jpeg',
-                                '/img/5.jpeg',
-                                '/img/6.jpeg',
-                                'https://picsum.photos/200/300'
-                                ],
-                        slug : 'Max-coach',
+                        cover : '/img/avada-movers/header-jumbo.png',
+                        images : [
+                            '/img/avada-movers/awards.png',
+                            '/img/avada-movers/services.png',
+                            '/img/avada-movers/services-hover.png',
+                            '/img/avada-movers/how-we-help.png',
+                            '/img/avada-movers/testimonials.png',
+                            '/img/avada-movers/request-a-quote.png',
+                            '/img/avada-movers/footer.png',
+                            '/img/avada-movers/avada-full-page.png',
+                        ],
+                        slug : 'avada-movers',
                         description : 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla, praesentium qui. Assumenda deleniti perferendis consequuntur nobis ratione quibusdam aspernatur? Illo impedit libero voluptates! Earum facere omnis laboriosam iste aspernatur. Tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis obcaecati cupiditate quas, veniam qui dignissimos. At totam tempore ipsa consectetur sint, provident accusamus sequi eius unde veniam laboriosam aspernatur porro!Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, provident praesentium ratione sequi fugiat eaque porro dicta voluptate ullam, officia, modi unde enim. Mollitia, fugiat facere. Aliquid expedita deserunt autem!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium beatae quisquam asperiores nam in! Consectetur veritatis rerum facilis. Sint odio laudantium natus blanditiis nulla adipisci cum quos earum ullam molestiae.'
                     },
                     {
                         title : 'Spotify',
-                        repo :  'repo-spotify',
+                        repo :  'https://github.com/danilopiccinni/html-css-spotifyweb',
+                        link : 'https://spotify-web-danilop.netlify.app',
                         type: {
                             name: 'FrontEnd',
-                            color: 'yellow'
+                            color: 'blue'
                         },
                         technologies : [
+                            {
+                                name : 'HTML',
+                                color: 'orange'
+                            },  
                             {
                                 name : 'Sass',
                                 color: 'red'
                             },
                             {
-                                name : 'PHP',
-                                color: 'green'
-                            },
-                            {
                                 name : 'MySQL',
                                 color: 'pink'
                             },
                         ],
-                        cover : '/img/spotify.jpeg',
-                        images : ['/img/1.jpeg',
-                                '/img/2.jpeg',
-                                '/img/3.jpeg',
-                                '/img/4.jpeg',
-                                '/img/5.jpeg',
-                                '/img/6.jpeg',
-                                'https://picsum.photos/200/300'
-                                ],
+                        cover : '/img/spotify/complete-1.png',
+                        images : [
+                            '/img/spotify/complete-2.png',
+                            '/img/spotify/complete-small-view.png',
+                            '/img/spotify/media-player-bar.png',
+                            '/img/spotify/aside.png',
+                            '/img/spotify/aside-mobile.png',
+                        ],
                         slug : 'spotify',
                         description : 'Replica del famoso sito di streaming di musica "Spotify" Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla, praesentium qui. Assumenda deleniti perferendis consequuntur nobis ratione quibusdam aspernatur? Illo impedit libero voluptates! Earum facere omnis laboriosam iste aspernatur. Tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis obcaecati cupiditate quas, veniam qui dignissimos. At totam tempore ipsa consectetur sint, provident accusamus sequi eius unde veniam laboriosam aspernatur porro!Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, provident praesentium ratione sequi fugiat eaque porro dicta voluptate ullam, officia, modi unde enim. Mollitia, fugiat facere. Aliquid expedita deserunt autem!Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
                     },
                     {
                         title : 'Campo minato',
                         repo :  'repo-netflix-tech',
+                        link : 'https://spotify-web-danilop.netlify.app',
                         type: {
                             name: 'FrontEnd',
-                            color: 'purple'
+                            color: 'blue'
                         },
                         technologies : [
                             {
@@ -231,29 +248,38 @@
                                 '/img/6.jpeg',
                                 'https://picsum.photos/200/300'
                                 ],
-                        slug : 'project-1',
+                        slug : 'campo-minato',
                         description : 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla, praesentium qui. Assumenda deleniti perferendis consequuntur nobis ratione quibusdam aspernatur? Illo impedit libero voluptates! Earum facere omnis laboriosam iste aspernatur. Tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis obcaecati cupiditate quas, veniam qui dignissimos. At totam tempore ipsa consectetur sint, provident accusamus sequi eius unde veniam laboriosam aspernatur porro!Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, provident praesentium ratione sequi fugiat eaque porro dicta voluptate ullam, officia, modi unde enim. Mollitia, fugiat facere. Aliquid expedita deserunt autem!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium beatae quisquam asperiores nam in! Consectetur veritatis rerum facilis. Sint odio laudantium natus blanditiis nulla adipisci cum quos earum ullam molestiae.'
                     },
                     {
                         title : 'Dc Comics',
-                        repo :  'repo-netflix-tech',
+                        repo :  'https://github.com/danilopiccinni/laravel-dc-comics',
+                        link : '',
                         type: {
                             name: 'FrontEnd',
                             color: 'blue'
                         },
                         technologies : [
                             {
-                                name : 'JS',
-                                color: 'yellow'
-                            },
-                            {
                                 name : 'HTML',
                                 color: 'aqua'
                             },                    
                             {
-                                name : 'CSS',
+                                name : 'php',
+                                color: 'yellow'
+                            },
+                            {
+                                name : 'sass',
                                 color: 'blue'
-                            },     
+                            },
+                            {
+                                name : 'laravel',
+                                color: 'aqua'
+                            },
+                            {
+                                name : 'VsCode',
+                                color: 'aqua'
+                            },
                         ],
                         cover : '/img/dc.jpeg',
                         images : ['/img/1.jpeg',
@@ -264,14 +290,15 @@
                                 '/img/6.jpeg',
                                 'https://picsum.photos/200/300'
                                 ],
-                        slug : 'project-1',
+                        slug : 'dc-comics',
                         description : 'Replica del sito web della DC Comics utilizzando Laravel come framework di sviluppo. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla, praesentium qui. Assumenda deleniti perferendis consequuntur nobis ratione quibusdam aspernatur? Illo impedit libero voluptates! Earum facere omnis laboriosam iste aspernatur. Tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis obcaecati cupiditate quas, veniam qui dignissimos. At totam tempore ipsa consectetur sint, provident accusamus sequi eius unde veniam laboriosam aspernatur porro!Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, provident praesentium ratione sequi fugiat eaque porro dicta voluptate ullam, officia, modi unde enim. Mollitia, fugiat facere. Aliquid expedita deserunt autem!Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
                     },                    
                     {
                         title : 'Whatsapp',
-                        repo :  'repo-whatsapp',
+                        repo :  'https://github.com/danilopiccinni/vue-boolzapp',
+                        link : 'https://boolzappdanilop.netlify.app',
                         type: {
-                            name: 'Back-end',
+                            name: 'Front-end',
                             color: 'blue'
                         },
                         technologies : [
@@ -284,36 +311,36 @@
                                 color: 'blue'
                             },                    
                             {
-                                name : 'Sass',
-                                color: 'red'
-                            },
-                            {
                                 name : 'JS',
                                 color: 'yellow'
                             },
                         ],
-                        cover : '/img/whatsapp.jpeg',
-                        images : ['/img/1.jpeg',
-                                '/img/2.jpeg',
-                                '/img/3.jpeg',
-                                '/img/4.jpeg',
-                                '/img/5.jpeg',
-                                '/img/6.jpeg',
-                                'https://picsum.photos/200/300'
-                                ],
+                        cover : '/img/whatsapp/complete-light.png',
+                        images : [
+                            '/img/whatsapp/complete-dark.png',
+                            '/img/whatsapp/user-profile-bar.png',
+                            '/img/whatsapp/chat-list.png',
+                            '/img/whatsapp/chat-search.png',
+                            '/img/whatsapp/chat-area.png',
+                            '/img/whatsapp/contact-panel.png',
+                            '/img/whatsapp/chat-window.png',
+                            '/img/whatsapp/message-input-bar.png',
+                            '/img/whatsapp/message-input-bar-writing.png',
+                        ],
                         slug : 'whatsapp',
                         description : 'Creazione di un sistema di chat con risposte automatiche e gestione dei contatti tramite file JSON, utilizzando il layout del famoso social WhatsApp.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla, praesentium qui. Assumenda deleniti perferendis consequuntur nobis ratione quibusdam aspernatur? Illo impedit libero voluptates! Earum facere omnis laboriosam iste aspernatur. Tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis obcaecati cupiditate quas, veniam qui dignissimos. At totam tempore ipsa consectetur sint, provident accusamus sequi eius unde veniam laboriosam aspernatur porro!Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, provident praesentium ratione sequi fugiat eaque porro dicta voluptate ullam, officia, modi unde enim. Mollitia, fugiat facere. Aliquid expedita deserunt autem!Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
                     },
                     {
                         title : 'Carousel',
-                        repo :  'repo-netflix-tech',
+                        repo :  'https://github.com/danilopiccinni/js-array-objects-carousel',
+                        link : 'https://relaxed-chimera-c6a4fa.netlify.app/',
                         type: {
                             name: 'FrontEnd',
                             color: 'blue'
                         },
                         technologies : [
                             {
-                                name : 'htmll',
+                                name : 'html',
                                 color: 'blue'
                             },                    
                             {
@@ -329,21 +356,20 @@
                                 color: 'aqua'
                             },
                         ],
-                        cover : '/img/carousel.jpeg',
-                        images : ['/img/1.jpeg',
-                                '/img/2.jpeg',
-                                '/img/3.jpeg',
-                                '/img/4.jpeg',
-                                '/img/5.jpeg',
-                                '/img/6.jpeg',
-                                'https://picsum.photos/200/300'
-                                ],
+                        cover : '/img/carousel/complete.png',
+                        images : [
+                            '/img/carousel/left-right.png',
+                            '/img/carousel/left.png',
+                            '/img/carousel/right.png',
+                            '/img/carousel/buttons.png',
+                        ],
                         slug : 'carousel',
                         description : 'Simple automatic carousel with start and stop and reverse button to show images. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla, praesentium qui. Assumenda deleniti perferendis consequuntur nobis ratione quibusdam aspernatur? Illo impedit libero voluptates! Earum facere omnis laboriosam iste aspernatur. Tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis obcaecati cupiditate quas, veniam qui dignissimos. At totam tempore ipsa consectetur sint, provident accusamus sequi eius unde veniam laboriosam aspernatur porro!Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, provident praesentium ratione sequi fugiat eaque porro dicta voluptate ullam, officia, modi unde enim. Mollitia, fugiat facere. Aliquid expedita deserunt autem!Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
                     },
                     {
                         title : 'Responsive layout',
-                        repo :  'repo-netflix-tech',
+                        repo :  'https://github.com/danilopiccinni/htmlcss-responsive-layout',
+                        link : 'https://responsive-layout-danilop.netlify.app/',
                         type: {
                             name: 'FrontEnd',
                             color: 'blue'
@@ -361,30 +387,25 @@
                                 name : 'VsCode',
                                 color: 'aqua'
                             },
-                            {
-                        name : 'Figma',
-                        color: 'grey'
-                    },
-                    {
-                        name : 'Bootstrap',
-                        color: 'grey'
-                    },
                         ],
-                        cover : '/img/responsive-layout.png',
-                        images : ['/img/1.jpeg',
-                                '/img/2.jpeg',
-                                '/img/3.jpeg',
-                                '/img/4.jpeg',
-                                '/img/5.jpeg',
-                                '/img/6.jpeg',
-                                'https://picsum.photos/200/300'
-                                ],
+                        cover : '/img/responsive-layout/cover.png',
+                        images : [
+                            '/img/responsive-layout/nav.png',
+                            '/img/responsive-layout/section-1.png',
+                            '/img/responsive-layout/section-2.png',
+                            '/img/responsive-layout/benefits.png',
+                            '/img/responsive-layout/testimonials.png',
+                            '/img/responsive-layout/about.png',
+                            '/img/responsive-layout/footer.png',
+                            '/img/responsive-layout/full-page.png',
+                        ],
                         slug : 'responsive-layout',
                         description : 'Simple website landing page with responsive capabilities. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla, praesentium qui. Assumenda deleniti perferendis consequuntur nobis ratione quibusdam aspernatur? Illo impedit libero voluptates! Earum facere omnis laboriosam iste aspernatur. Tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis obcaecati cupiditate quas, veniam qui dignissimos. At totam tempore ipsa consectetur sint, provident accusamus sequi eius unde veniam laboriosam aspernatur porro!Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, provident praesentium ratione sequi fugiat eaque porro dicta voluptate ullam, officia, modi unde enim. Mollitia, fugiat facere. Aliquid expedita deserunt autem!Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
                     },
                     {
                         title : 'Bootstrap Portfolio layout',
-                        repo :  'repo-netflix-tech',
+                        repo :  'https://github.com/danilopiccinni/html-css-bootstrap-freelancer',
+                        link : 'https://bootstrap-portfolio-layout-danilop.netlify.app/',
                         type: {
                             name: 'FrontEnd',
                             color: 'blue'
@@ -403,29 +424,31 @@
                                 color: 'aqua'
                             },
                             {
-                        name : 'Figma',
-                        color: 'grey'
-                    },
-                    {
-                        name : 'Bootstrap',
-                        color: 'grey'
-                    },
+                                name : 'Figma',
+                                color: 'grey'
+                            },
+                            {
+                                name : 'Bootstrap',
+                                color: 'grey'
+                            },
                         ],
-                        cover : '/img/boostrap-portfolio-layout.jpeg',
-                        images : ['/img/1.jpeg',
-                                '/img/2.jpeg',
-                                '/img/3.jpeg',
-                                '/img/4.jpeg',
-                                '/img/5.jpeg',
-                                '/img/6.jpeg',
-                                'https://picsum.photos/200/300'
-                                ],
-                        slug : 'carousel',
+                        cover : '/img/boostrap-portfolio-layout/cover.png',
+                        images : [
+                            '/img/boostrap-portfolio-layout/nav.png',
+                            '/img/boostrap-portfolio-layout/jumbo.png',
+                            '/img/boostrap-portfolio-layout/portfolio.png',
+                            '/img/boostrap-portfolio-layout/about.png',
+                            '/img/boostrap-portfolio-layout/contact.png',
+                            '/img/boostrap-portfolio-layout/footer.png',
+                            '/img/boostrap-portfolio-layout/full-page.png',
+                        ],
+                        slug : 'boostrap-portfolio-layout',
                         description : 'Simple layout for a Portfolio made with bootstrap. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla, praesentium qui. Assumenda deleniti perferendis consequuntur nobis ratione quibusdam aspernatur? Illo impedit libero voluptates! Earum facere omnis laboriosam iste aspernatur. Tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis obcaecati cupiditate quas, veniam qui dignissimos. At totam tempore ipsa consectetur sint, provident accusamus sequi eius unde veniam laboriosam aspernatur porro!Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, provident praesentium ratione sequi fugiat eaque porro dicta voluptate ullam, officia, modi unde enim. Mollitia, fugiat facere. Aliquid expedita deserunt autem!Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
                     },
                     {
                         title : 'Classroom',
-                        repo :  'repo-netflix-tech',
+                        repo :  'https://github.com/danilopiccinni/html-css-bootstrap-dashboard',
+                        link : 'https://classroom-danilp.netlify.app/',
                         type: {
                             name: 'FrontEnd',
                             color: 'blue'
@@ -448,21 +471,26 @@
                                 color: 'grey'
                             },
                         ],
-                        cover : '/img/classroom.jpeg',
-                        images : ['/img/1.jpeg',
-                                '/img/2.jpeg',
-                                '/img/3.jpeg',
-                                '/img/4.jpeg',
-                                '/img/5.jpeg',
-                                '/img/6.jpeg',
-                                'https://picsum.photos/200/300'
+                        cover : '/img/classroom/cover.png',
+                        images : [
+                                '/img/classroom/small-view.png',
+                                '/img/classroom/nav.png',
+                                '/img/classroom/aside-main.png',
+                                '/img/classroom/aside.png',
+                                '/img/classroom/main.png',
+                                '/img/classroom/class-list.png',
+                                '/img/classroom/faq.png',
+                                '/img/classroom/graphic.png',
+                                '/img/classroom/todo.png',
+                                '/img/classroom/full-page.png',
                                 ],
-                        slug : 'carousel',
+                        slug : 'classroom',
                         description : 'Clone layout of the Boolean Classroom dashboard. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla, praesentium qui. Assumenda deleniti perferendis consequuntur nobis ratione quibusdam aspernatur? Illo impedit libero voluptates! Earum facere omnis laboriosam iste aspernatur. Tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis obcaecati cupiditate quas, veniam qui dignissimos. At totam tempore ipsa consectetur sint, provident accusamus sequi eius unde veniam laboriosam aspernatur porro!Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, provident praesentium ratione sequi fugiat eaque porro dicta voluptate ullam, officia, modi unde enim. Mollitia, fugiat facere. Aliquid expedita deserunt autem!Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
                     },
                     {
                         title : 'Dice Game',
-                        repo :  'repo-netflix-tech',
+                        repo :  'https://github.com/danilopiccinni/js-mail-dadi',
+                        link : 'https://mail-dice-game-danilop.netlify.app/',
                         type: {
                             name: 'FrontEnd',
                             color: 'blue'
@@ -498,12 +526,13 @@
                                 '/img/6.jpeg',
                                 'https://picsum.photos/200/300'
                                 ],
-                        slug : 'carousel',
+                        slug : 'dice-game',
                         description : 'A little dice game at the best of 3 against the computer. The user enters his email and only if the mail matches you can press the button to play. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla, praesentium qui. Assumenda deleniti perferendis consequuntur nobis ratione quibusdam aspernatur? Illo impedit libero voluptates! Earum facere omnis laboriosam iste aspernatur. Tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis obcaecati cupiditate quas, veniam qui dignissimos. At totam tempore ipsa consectetur sint, provident accusamus sequi eius unde veniam laboriosam aspernatur porro!Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, provident praesentium ratione sequi fugiat eaque porro dicta voluptate ullam, officia, modi unde enim. Mollitia, fugiat facere. Aliquid expedita deserunt autem!Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
                     },
-                                        {
+                    {
                         title : 'Dropbox website clone',
-                        repo :  'repo-netflix-tech',
+                        repo :  'https://github.com/danilopiccinni/htmlcss-dropbox',
+                        link : 'https://dropbox-danilop.netlify.app/',
                         type: {
                             name: 'FrontEnd',
                             color: 'blue'
@@ -531,7 +560,41 @@
                                 '/img/6.jpeg',
                                 'https://picsum.photos/200/300'
                                 ],
-                        slug : 'dropbox-websiteclone',
+                        slug : 'dropbox-website-clone',
+                        description : 'Clone of an older version of the Dropbox website layout. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla, praesentium qui. Assumenda deleniti perferendis consequuntur nobis ratione quibusdam aspernatur? Illo impedit libero voluptates! Earum facere omnis laboriosam iste aspernatur. Tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis obcaecati cupiditate quas, veniam qui dignissimos. At totam tempore ipsa consectetur sint, provident accusamus sequi eius unde veniam laboriosam aspernatur porro!Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, provident praesentium ratione sequi fugiat eaque porro dicta voluptate ullam, officia, modi unde enim. Mollitia, fugiat facere. Aliquid expedita deserunt autem!Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
+                    },
+                    {
+                        title : 'Discord',
+                        repo :  'https://github.com/danilopiccinni/htmlcss-discord',
+                        link : 'https://discord-danilop.netlify.app/',
+                        type: {
+                            name: 'FrontEnd',
+                            color: 'blue'
+                        },
+                        technologies : [
+                            {
+                                name : 'html',
+                                color: 'blue'
+                            },                    
+                            {
+                                name : 'css',
+                                color: 'red'
+                            },
+                            {
+                                name : 'VsCode',
+                                color: 'aqua'
+                            },
+                        ],
+                        cover : '/img/dropbox.jpeg',
+                        images : ['/img/1.jpeg',
+                                '/img/2.jpeg',
+                                '/img/3.jpeg',
+                                '/img/4.jpeg',
+                                '/img/5.jpeg',
+                                '/img/6.jpeg',
+                                'https://picsum.photos/200/300'
+                                ],
+                        slug : 'discord',
                         description : 'Clone of an older version of the Dropbox website layout. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla, praesentium qui. Assumenda deleniti perferendis consequuntur nobis ratione quibusdam aspernatur? Illo impedit libero voluptates! Earum facere omnis laboriosam iste aspernatur. Tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis obcaecati cupiditate quas, veniam qui dignissimos. At totam tempore ipsa consectetur sint, provident accusamus sequi eius unde veniam laboriosam aspernatur porro!Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, provident praesentium ratione sequi fugiat eaque porro dicta voluptate ullam, officia, modi unde enim. Mollitia, fugiat facere. Aliquid expedita deserunt autem!Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
                     },
                 ]
