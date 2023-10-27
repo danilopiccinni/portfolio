@@ -77,7 +77,9 @@ import { store } from '../store';
 
                     <div class="col-md-5 col-lg-4  mx-auto my-auto mb-4">
   
-                        <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+                        <h6 v-if="store.language == 'italian'" class="text-uppercase fw-bold mb-4">Contatto</h6>
+                        <h6 v-if="store.language == 'german'" class="text-uppercase fw-bold mb-4">Contakt</h6>
+                        <h6 v-if="store.language == 'english'" class="text-uppercase fw-bold mb-4">Contact</h6>
                         <p v-if="store.language == 'italian'"><i class="fas fa-home me-3"></i> Lucerna, Lucerna 6014, CH</p>
                         <p v-if="store.language == 'german'"><i class="fas fa-home me-3"></i> Luzern, Luzern 6014, CH</p>
                         <p v-if="store.language == 'english'"><i class="fas fa-home me-3"></i> Lucerne, Lucerne 6014, CH</p>
