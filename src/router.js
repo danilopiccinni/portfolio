@@ -17,7 +17,7 @@ const router = createRouter({
             }
         },
         {
-            path: '',
+            path: '/projects',
             name: 'projects',
             component: Projects,
             meta: {
@@ -25,12 +25,12 @@ const router = createRouter({
             }
         },
         {
-            path: '',
+            path: '/projects/:title',
             name: 'singleProject',
             component: SingleProject,
         },
         {
-            path: '',
+            path: '/contact',
             name: 'contact',
             component: Contact,
             meta: {
