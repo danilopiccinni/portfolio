@@ -82,28 +82,44 @@ import { store } from '../store'
             <h6>Send me a message, and I'll be happy to reply. Use the form below to submit your questions, comments, or requests.</h6>
         </div>
 
-            <div class="form-container">
+
+        <div class="d-flex cont container rounded  my-5">
+
+            <div class="form-container col-12 col-lg-6">
      
-                <form class="form col-12 container" ref="form" @submit.prevent="sendMail">
+                <form class="form container" ref="form" @submit.prevent="sendMail">
                     <div class="form-group">
                         <input v-if="store.language == 'italian'" class="col-12" name="from_name" placeholder="Il tuo nome" type="text" :value="inputFieldReset" required>
                         <input v-if="store.language == 'german'" class="col-12" name="from_name" placeholder="Dein Name" type="text" :value="inputFieldReset" required>
                         <input v-if="store.language == 'english'" class="col-12" name="from_name" placeholder="Your name" type="text" :value="inputFieldReset" required>
+                        <div class="input-hint" v-if="store.language == 'italian'">Suggerimento: Inserisci il tuo nome completo.</div>
+                        <div class="input-hint" v-if="store.language == 'german'">Hinweis: Geben Sie Ihren vollständigen Namen ein.</div>
+                        <div class="input-hint" v-if="store.language == 'english'">Hint: Enter your full name.</div>
                     </div>
                     <div class="form-group">
                         <input v-if="store.language == 'italian'" class="col-12" name="email" placeholder="La tua E-Mail" type="email" :value="inputFieldReset" required>
                         <input v-if="store.language == 'german'" class="col-12" name="email" placeholder="Deine E-Mail" type="email" :value="inputFieldReset" required>
                         <input v-if="store.language == 'english'" class="col-12" name="email" placeholder="Your email" type="email" :value="inputFieldReset" required>
+                        <div class="input-hint" v-if="store.language == 'italian'">Suggerimento: Inserisci un indirizzo e-mail valido.</div>
+                        <div class="input-hint" v-if="store.language == 'german'">Hinweis: Geben Sie eine gültige E-Mail-Adresse ein.</div>
+                        <div class="input-hint" v-if="store.language == 'english'">Hint: Enter a valid email address.</div>
                     </div>
                     <div class="form-group">
                         <input v-if="store.language == 'italian'" class="col-12" name="subject" placeholder="Oggetto" type="text" :value="inputFieldReset" required>
                         <input v-if="store.language == 'german'" class="col-12" name="subject" placeholder="Betreff" type="text" :value="inputFieldReset" required>
                         <input v-if="store.language == 'english'" class="col-12" name="subject" placeholder="Subject" type="text" :value="inputFieldReset" required>
+                        <div class="input-hint" v-if="store.language == 'italian'">Suggerimento: Indica brevemente l'argomento del tuo messaggio.</div>
+                        <div class="input-hint" v-if="store.language == 'german'">Hinweis: Geben Sie kurz das Thema Ihrer Nachricht an.</div>
+                        <div class="input-hint" v-if="store.language == 'english'">Hint: Briefly describe the subject of your message.</div>
+
                     </div>
                     <div class="form-group">
                         <textarea v-if="store.language == 'italian'" class="text-area col-12" name="message" placeholder="Messaggio" type="text" :value="inputFieldReset" required></textarea>
                         <textarea v-if="store.language == 'german'" class="text-area col-12" name="message" placeholder="Nachricht" type="text" :value="inputFieldReset" required></textarea>
                         <textarea v-if="store.language == 'english'" class="text-area col-12" name="message" placeholder="Message" type="text" :value="inputFieldReset" required></textarea>
+                        <div class="input-hint" v-if="store.language == 'italian'">Suggerimento: Scrivi qui il tuo messaggio. Sii chiaro e conciso. Descrivi dettagliatamente la tua richiesta o domanda.</div>
+                        <div class="input-hint" v-if="store.language == 'german'">Hinweis: Schreiben Sie hier Ihre Nachricht. Seien Sie klar und präzise. Beschreiben Sie ausführlich Ihre Anfrage oder Frage.</div>
+                        <div class="input-hint" v-if="store.language == 'english'">Hint: Write your message here. Be clear and concise. Describe your request or question in detail.</div>
                     </div>
                     <div class="form-group">
                         <button v-if="store.language == 'italian'" class="submit" type="submit" name="send">Invia</button>
@@ -111,7 +127,15 @@ import { store } from '../store'
                         <button v-if="store.language == 'english'" class="submit" type="submit" name="send">Send</button>
                     </div>
                 </form>
+
             </div>
+
+            <div class="col-6 d-none d-lg-block">
+                <div class="d-flex justify-content-center align-items-center h-100">
+                    <img class="logo" src="/img/logo.png" alt="">
+                </div>
+            </div>
+        </div>
 
             <div class="container pb-5">
                 <div v-if="store.language == 'italian'" class=" text-center">
@@ -161,6 +185,19 @@ import { store } from '../store'
 
 <style scoped lang="scss">
 
+.input-hint {
+    padding-left: 8px;
+    padding-top: 2px;
+    font-size: 12px;
+    color: white;
+}
+
+    .logo {
+        width: 100%;
+        aspect-ratio: 1/1;
+
+    }
+
     .section {
         padding-top: 100px;
         padding-bottom: 5px;
@@ -182,16 +219,16 @@ import { store } from '../store'
         font-weight: bold;
         }
 
+        .cont {
+            background: linear-gradient(16deg, #020024 0%, #300979 35%, var(--theme-gradient) 100%);
+        }
+
         .form-container {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        margin: 50px auto;
         border-radius: 10px;
-        padding: 10px;
-        background: linear-gradient(16deg, #020024 0%, #300979 35%, var(--theme-gradient) 100%);
-
         }
 
         .form-group {
