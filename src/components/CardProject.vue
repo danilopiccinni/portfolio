@@ -133,7 +133,7 @@
                         <button class="bg-light" type="button" :data-bs-target="'#carouselThumbsDark' + project.slug" data-bs-slide-to="1" aria-label="Slide 2"></button>
                         <button class="bg-light" type="button" :data-bs-target="'#carouselThumbsDark' + project.slug" data-bs-slide-to="2" aria-label="Slide 3"></button>
                     </div> -->
-                    <div class="carousel-inner d-flex">
+                    <div class="carousel-inner">
 
                         <div  class="carousel-item active" data-bs-interval="10000">
                             <img :src="project.cover" class="d-block w-100" alt="...">
@@ -541,8 +541,7 @@
             
             max-width: 40%;
             max-height: 160px;
-      
-    
+
             padding-bottom: 80px;
        
             text-align: center;
@@ -559,19 +558,17 @@
                     
             &:hover {
 
+                max-width: 50%;
+                max-height: 60%;
+
+                overflow: auto;
     
-
-                max-height: 50%;
-
-
-    
-
-
                 & .info-icon {
                     display: none;
                 }
             }
 
+   
             .cont-info-icon {
                 position: relative;
 
@@ -584,19 +581,19 @@
         }
     }
 
-    @media screen and (min-width: 577px) {
+    @media screen and (min-width: 992px) {
         .cont-carouselThumbsDark:hover {
             width: 50%;
         }
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (min-width: 768px) and (max-width : 991px) {
         .cont-carouselThumbsDark:hover {
             width: 75%;
         }
     }
 
-    @media screen and (max-width: 576px) {
+    @media screen and (max-width: 767px) {
         .cont-carouselThumbsDark:hover {
             width: 100%;
         }
