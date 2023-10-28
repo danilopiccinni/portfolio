@@ -542,7 +542,7 @@
             max-width: 40%;
             max-height: 160px;
 
-            padding-bottom: 80px;
+            padding: 10px;
        
             text-align: center;
     
