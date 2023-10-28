@@ -47,44 +47,57 @@
                 arrayTechnologies : [
                     {
                         name : 'HTML',
-                        color: 'orange'
+                        color: '#ff7500'
                     },                    
                     {
                         name : 'CSS',
-                        color: 'blue'
+                        color: '#00b9e4'
                     },                    
                     {
                         name : 'Sass',
-                        color: 'red'
+                        color: '#f06292'
                     },
                     {
                         name : 'JS',
-                        color: 'yellow'
+                        color: '#fcd602'
                     },
                     {
                         name : 'PHP',
-                        color: 'green'
+                        color: '#7fabff'
                     },
                     {
                         name : 'MySQL',
-                        color: 'pink'
+                        color: '#0c7a6b'
                     },
                     {
                         name : 'VsCode',
-                        color: 'aqua'
+                        color: '#1c89d1'
                     },
                     {
                         name : 'Figma',
-                        color: 'grey'
+                        color: '#b6df00'
                     },
                     {
                         name : 'Bootstrap',
-                        color: 'grey'
+                        color: '#8c11fc'
                     },
                     {
                         name : 'Postman',
-                        color: 'purple'
+                        color: '#be5328'
                     },
+                    {
+                        name : 'VueJs',
+                        color : '#81c784'
+                    },
+                    {
+                        name : 'Axios',
+                        color : '#edd9c5'
+                    },
+                    {
+                        name : 'Laravel',
+                        color : '#ff0000'
+                    }
+
                 ],
 
                 projects : [
@@ -99,31 +112,31 @@
                         technologies : [
                             {
                                 name : 'HTML',
-                                color: 'orange'
+                                color: '#ff7500'
                             },                      
                             {
                                 name : 'Sass',
-                                color: 'red'
+                                color: '#f06292'
                             },
                             {
                                 name : 'JS',
-                                color: 'yellow'
+                                color: '#fcd602'
                             },
                             {
                                 name : 'Postman',
-                                color: 'purple'
+                                color: '#be5328'
                             },
                             {
                                 name : 'VsCode',
-                                color: 'aqua'
+                                color: '#1c89d1'
                             },
                             {
-                                name : 'Vue',
-                                color : 'blue'
+                                name : 'VueJs',
+                                color : '#81c784'
                             },
                             {
                                 name : 'Axios',
-                                color : 'green'
+                                color : '#edd9c5'
                             }
 
                         ],
@@ -150,19 +163,19 @@
                         technologies : [
                             {
                                 name : 'HTML',
-                                color: 'orange'
+                                color: '#ff7500'
                             },  
                             {
                                 name : 'Sass',
-                                color: 'red'
+                                color: '#f06292'
                             },
                             {
                                 name : 'JS',
-                                color: 'yellow'
+                                color: '#fcd602'
                             },
                             {
                                 name : 'VsCode',
-                                color: 'aqua'
+                                color: '#1c89d1'
                             },
 
                         ],
@@ -191,15 +204,19 @@
                         technologies : [
                             {
                                 name : 'HTML',
-                                color: 'orange'
+                                color: '#ff7500'
                             },  
                             {
                                 name : 'Sass',
-                                color: 'red'
+                                color: '#f06292'
                             },
                             {
                                 name : 'MySQL',
-                                color: 'pink'
+                                color: '#0c7a6b'
+                            },
+                            {
+                                name : 'VueJs',
+                                color : '#81c784'
                             },
                         ],
                         cover : '/img/spotify/complete-1.png',
@@ -223,20 +240,24 @@
                         },
                         technologies : [
                             {
+                                name : 'HTML',
+                                color: '#ff7500'
+                            }, 
+                            {
                                 name : 'JS',
-                                color: 'yellow'
+                                color: '#fcd602'
                             },
                             {
                                 name : 'PHP',
-                                color: 'green'
+                                color: '#7fabff'
                             },
                             {
                                 name : 'MySQL',
-                                color: 'pink'
+                                color: '#0c7a6b'
                             },
                             {
                                 name : 'VsCode',
-                                color: 'orange'
+                                color: '#1c89d1'
                             },
                         ],
                         cover : '/img/4.jpeg',
@@ -262,23 +283,23 @@
                         technologies : [
                             {
                                 name : 'HTML',
-                                color: 'aqua'
+                                color: '#ff7500'
                             },                    
                             {
-                                name : 'php',
-                                color: 'yellow'
+                                name : 'PHP',
+                                color: '#7fabff'
                             },
                             {
-                                name : 'sass',
-                                color: 'blue'
+                                name : 'Sass',
+                                color: '#f06292'
                             },
                             {
-                                name : 'laravel',
-                                color: 'aqua'
+                                name : 'Laravel',
+                                color : '#ff0000'
                             },
                             {
                                 name : 'VsCode',
-                                color: 'aqua'
+                                color: '#1c89d1'
                             },
                         ],
                         cover : '/img/dc.jpeg',
@@ -304,15 +325,15 @@
                         technologies : [
                             {
                                 name : 'HTML',
-                                color: 'aqua'
+                                color: '#ff7500'
                             },                    
                             {
                                 name : 'CSS',
-                                color: 'blue'
+                                color: '#00b9e4'
                             },                    
                             {
                                 name : 'JS',
-                                color: 'yellow'
+                                color: '#fcd602'
                             },
                         ],
                         cover : '/img/whatsapp/complete-light.png',
@@ -340,20 +361,20 @@
                         },
                         technologies : [
                             {
-                                name : 'html',
-                                color: 'blue'
+                                name : 'HTML',
+                                color: '#ff7500'
                             },                    
                             {
-                                name : 'css',
-                                color: 'red'
+                                name : 'CSS',
+                                color: '#00b9e4'
                             },
                             {
-                                name : 'js',
-                                color: 'yellow'
+                                name : 'JS',
+                                color: '#fcd602'
                             },
                             {
                                 name : 'VsCode',
-                                color: 'aqua'
+                                color: '#1c89d1'
                             },
                         ],
                         cover : '/img/carousel/complete.png',
@@ -376,16 +397,16 @@
                         },
                         technologies : [
                             {
-                                name : 'html',
-                                color: 'blue'
+                                name : 'HTML',
+                                color: '#ff7500'
                             },                    
                             {
-                                name : 'css',
-                                color: 'red'
+                                name : 'CSS',
+                                color: '#00b9e4'
                             },
                             {
                                 name : 'VsCode',
-                                color: 'aqua'
+                                color: '#1c89d1'
                             },
                         ],
                         cover : '/img/responsive-layout/cover.png',
@@ -412,24 +433,24 @@
                         },
                         technologies : [
                             {
-                                name : 'html',
-                                color: 'blue'
+                                name : 'HTML',
+                                color: '#ff7500'
                             },                    
                             {
-                                name : 'css',
-                                color: 'red'
+                                name : 'CSS',
+                                color: '#00b9e4'
                             },
                             {
                                 name : 'VsCode',
-                                color: 'aqua'
+                                color: '#1c89d1'
                             },
                             {
                                 name : 'Figma',
-                                color: 'grey'
+                                color: '#b6df00'
                             },
                             {
                                 name : 'Bootstrap',
-                                color: 'grey'
+                                color: '#8c11fc'
                             },
                         ],
                         cover : '/img/boostrap-portfolio-layout/cover.png',
@@ -455,20 +476,20 @@
                         },
                         technologies : [
                             {
-                                name : 'html',
-                                color: 'blue'
+                                name : 'HTML',
+                                color: '#ff7500'
                             },                    
                             {
-                                name : 'css',
-                                color: 'red'
+                                name : 'CSS',
+                                color: '#00b9e4'
                             },
                             {
                                 name : 'VsCode',
-                                color: 'aqua'
+                                color: '#1c89d1'
                             },
                             {
                                 name : 'Bootstrap',
-                                color: 'grey'
+                                color: '#8c11fc'
                             },
                         ],
                         cover : '/img/classroom/cover.png',
@@ -497,24 +518,24 @@
                         },
                         technologies : [
                             {
-                                name : 'html',
-                                color: 'blue'
+                                name : 'HTML',
+                                color: '#ff7500'
                             },                    
                             {
-                                name : 'css',
-                                color: 'red'
+                                name : 'CSS',
+                                color: '#00b9e4'
                             },
                             {
                                 name : 'VsCode',
-                                color: 'aqua'
+                                color: '#1c89d1'
                             },
                             {
                                 name : 'JS',
-                                color: 'yellow'
+                                color: '#fcd602'
                             },
                             {
                                 name : 'Bootstrap',
-                                color: 'grey'
+                                color: '#8c11fc'
                             },
                         ],
                         cover : '/img/dice-game.png',
@@ -539,16 +560,16 @@
                         },
                         technologies : [
                             {
-                                name : 'html',
-                                color: 'blue'
+                                name : 'HTML',
+                                color: '#ff7500'
                             },                    
                             {
-                                name : 'css',
-                                color: 'red'
+                                name : 'CSS',
+                                color: '#00b9e4'
                             },
                             {
                                 name : 'VsCode',
-                                color: 'aqua'
+                                color: '#1c89d1'
                             },
                         ],
                         cover : '/img/dropbox.jpeg',
@@ -573,16 +594,16 @@
                         },
                         technologies : [
                             {
-                                name : 'html',
-                                color: 'blue'
+                                name : 'HTML',
+                                color: '#ff7500'
                             },                    
                             {
-                                name : 'css',
-                                color: 'red'
+                                name : 'CSS',
+                                color: '#00b9e4'
                             },
                             {
                                 name : 'VsCode',
-                                color: 'aqua'
+                                color: '#1c89d1'
                             },
                         ],
                         cover : '/img/dropbox.jpeg',

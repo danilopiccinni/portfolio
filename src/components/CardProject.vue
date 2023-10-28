@@ -177,26 +177,34 @@
                 </div>
                 <!-- details-icon -->
 
-                
-                <h1 class="title">
+                <h1 class="title m-0">
                     {{project.title}}
                 </h1>
-
+                
                 <h4 class="type" :style="{color : project.type.color}">
                     {{ project.type.name }}
                 </h4>
-
-                <h6 class="repo">
-                    {{ project.repo }}
-                </h6>
                 
-                <ul class="p-0 d-flex gap-2 justify-content-center flex-wrap technologies">
+                <ul class="p-0 d-flex gap-3 justify-content-center flex-wrap technologies">
                     <li v-for="technology in project.technologies"  class="list-group-item">
-                        <span class="badge rounded-pill" :style="{backgroundColor : technology.color}">
+                        <span class="badge rounded-pill text-dark" :style="{backgroundColor : technology.color}">
                             {{ technology.name + ' '}} 
                         </span>
                     </li>
                 </ul>
+
+                <div class="d-flex justify-content-center gap-3">
+                    <div class="mb-2" >
+                        <span>Link: </span>
+                        <a :href="project.repo" class="repo">Git-Hub</a>
+                    </div>
+                    <div v-if="project.link != ''" class="mb-2" >
+                        <span>Link: </span>
+                        <a :href="project.repo" class="repo">Web-Site</a>
+                    </div>
+
+                </div>
+                
                 
                 <p class="description">
                     {{ project.description }}
@@ -219,6 +227,12 @@
 
 
 <style scoped lang="scss">
+
+.badge {
+    box-shadow: 0px 0px 5px 3px rgba(255,255,255,1);
+    -webkit-box-shadow: 0px 0px 5px 3px rgba(255,255,255,1);
+    -moz-box-shadow: 0px 0px 5px 3px rgba(255,255,255,1);
+    }
 
     .cont-cover {
 
@@ -525,9 +539,9 @@
             bottom: 0px;
             right: 0px;
             
-            max-width: 50%;
-            max-height: 25%;
-            min-height: 150px;
+            max-width: 40%;
+            max-height: 160px;
+      
     
             padding-bottom: 80px;
        
@@ -541,18 +555,17 @@
             -o-box-shadow: 0px 0px 70px 100px rgba(10, 10, 10, 0.914);
             box-shadow: 0px 0px 70px 100px rgba(10, 10, 10, 0.914);
     
-            transition: all 2.5s;
+            transition: all ease-in-out 0.5s;
                     
             &:hover {
-                bottom: 50px;
-                right: 50px;
+
     
-                max-width: 70%;
+
                 max-height: 50%;
 
-                padding: 10px;
+
     
-                overflow: auto;
+
 
                 & .info-icon {
                     display: none;

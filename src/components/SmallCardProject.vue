@@ -37,21 +37,25 @@
             <div class=" cont-cover  rounded" :style="{ backgroundImage : `url(${project.cover})` }">
                 <div class="cont-details" :style="isLeave ? {opacity : 0} : ''">
                     <div class="details-project container">
-                        <h1 class="title">
+                        <h3 class="title">
                             {{project.title}}
-                        </h1>
+                        </h3>
     
-                        <h4 class="type" :style="{backgroundColor : project.type.color}">
+                        <h5 class="type" :style="{ color : project.type.color}">
                             {{ project.type.name }}
-                        </h4>
+                        </h5>
     
-                        <h6 class="repo">
-                            {{ project.repo }}
-                        </h6>
+                        <!-- <a class="repo" :href="project.repo">
+                            GithubLink
+                        </a>
+
+                        <a v-if="project.link != ''" :href="project.link">
+                            WebLink
+                        </a> -->
                         
                         <ul class="p-0 d-flex gap-2 justify-content-center flex-wrap technologies">
                             <li v-for="technology in project.technologies"  class="list-group-item">
-                                <span class="badge rounded-pill" :style="{backgroundColor : technology.color}">
+                                <span class="badge rounded-pill text-dark" :style="{backgroundColor : technology.color}">
                                     {{ technology.name + ' '}} 
                                 </span>
                             </li>
