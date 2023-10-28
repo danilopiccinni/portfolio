@@ -50,7 +50,7 @@ import { store } from './store.js';
     </div>
 
 
-      <main :class="store.checked ? 'bg-light' : 'bg-dark'">
+      <main :class="store.checked ? 'bg-white' : 'bg-dark'">
         <router-view class="router-view" v-slot="{ Component }">
           <Transition name="page-opacity" mode="out-in">
             <component :is="Component"/>
