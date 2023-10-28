@@ -52,6 +52,7 @@
 </template>
 
 <style scoped lang="scss">
+
 .cont-iframe {
    width: 92vw;
    height: 80vh;
@@ -60,6 +61,10 @@
    background-color: white;
    position: relative;
    transition: all 1s;
+   
+   box-shadow: -10px -5px 5px 0px rgba(130, 130, 130, 0.71);
+   -webkit-box-shadow: -10px -5px 5px 0px rgba(130, 130, 130, 0.71);
+   -moz-box-shadow: -10px -5px 5px 0px rgba(130, 130, 130, 0.71);
    
     &::after {
         content: '';
@@ -72,6 +77,12 @@
         transform: translate(-50%, 100%);
         border-right: 10px ridge #d4d4d4;
         transition: all 1s;
+
+        z-index: -1;
+
+        box-shadow: -10px -5px 5px 0px rgba(130, 130, 130, 0.71);
+        -webkit-box-shadow: -10px -5px 5px 0px rgba(130, 130, 130, 0.71);
+        -moz-box-shadow: -10px -5px 5px 0px rgba(130, 130, 130, 0.71);
     }
 
     &::before {
@@ -88,6 +99,12 @@
         -webkit-border-radius: 11px 12px 0px 0px;
         -moz-border-radius: 11px 12px 0px 0px;
         transition: all 1s;
+
+        z-index: -1;
+
+        box-shadow: -10px -3px 5px 0px rgba(130, 130, 130, 0.71);
+        -webkit-box-shadow: -10px -3px 5px 0px rgba(130, 130, 130, 0.71);
+        -moz-box-shadow: -10px -3px 5px 0px rgba(130, 130, 130, 0.71);
     }
         
     iframe {
@@ -166,6 +183,10 @@
         bottom: -30px;
         right: 5%;
         transform: translate(-50%, -50%);
+
+        box-shadow: -5px -5px 5px 0px rgba(130, 130, 130, 0.71);
+        -webkit-box-shadow: -5px -5px 5px 0px rgba(130, 130, 130, 0.71);
+        -moz-box-shadow: -5px -5px 5px 0px rgba(130, 130, 130, 0.71);
     }
 }
 </style>
