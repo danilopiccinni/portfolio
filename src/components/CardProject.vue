@@ -17,6 +17,7 @@
         methods : {
             selectProject(project) {  
                 this.store.selectedProject = project
+                localStorage.setItem('selectedProject', JSON.stringify(project))
             },
 
             switchTutorial() {

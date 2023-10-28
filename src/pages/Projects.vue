@@ -602,10 +602,6 @@
         },
 
         methods : {
-            selectProject(project) {  
-                this.store.selectedProject = project
-            },
-
             pageControl(name) {
                 if (this.$route.name == name) {
                     return true

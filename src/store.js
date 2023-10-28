@@ -2,7 +2,7 @@ import { reactive } from 'vue'
 
 export const store = reactive({
 
-    selectedProject: {},
+    selectedProject: JSON.parse(localStorage.getItem('selectedProject')) || {},
 
     visual : JSON.parse(localStorage.getItem('selectedVisual')) || 2,
 
