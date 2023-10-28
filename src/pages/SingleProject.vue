@@ -46,7 +46,7 @@
                     
                     <ul class="p-0 d-flex gap-3  flex-wrap technologies">
                         <li v-for="technology in project.technologies"  class="list-group-item">
-                            <span class="badge rounded-pill text-dark" :style="{backgroundColor : technology.color}">
+                            <span :class="store.checked ? 'badge-dark' : 'badge-white'" class="badge rounded-pill text-dark" :style="{backgroundColor : technology.color}">
                                 {{ technology.name + ' '}} 
                             </span>
                         </li>
@@ -71,14 +71,16 @@
 
                 <!-- cover -->
                 <div class="w-100 d-flex flex-column align-items-center gap-5 mb-5" >
-                    <img :class="store.checked ? 'shadow-dark' : 'shadow-white'" class=" rounded border cont-image mt-5" :src="project.cover" alt="">
+                    <img :class="store.checked ? 'shadow-dark' : 'shadow-white'" class="rounded border cont-image mt-5'" :src="project.cover" alt="">
                 </div>
                 
                 <!-- v-for images  -->
                 <div class="w-100 d-flex flex-column align-items-center gap-5">
-                    <img v-for="image in project.images" :class="store.checked ? 'shadow-dark' : 'shadow-white'" class="cont-image rounded border" :src="image" alt="">
+                    <div v-for="image in project.images" class="mt-3 d-flex flex-column align-items-center">
+                        <img :class="store.checked ? 'shadow-dark' : 'shadow-white'" class="cont-image rounded border" :src="image.src" alt="">
+                        <p class="mb-5 pt-3 text-center">{{ image.description }}</p>
+                    </div>
                 </div>
-
             </div>
         </div>
 
@@ -88,6 +90,20 @@
 </template>
 
 <style scoped lang="scss">
+
+.badge-dark {
+    box-shadow: 0px 0px 5px 3px rgba(0,0,0,1);
+    -webkit-box-shadow: 0px 0px 5px 3px rgba(0,0,0,1);
+    -moz-box-shadow: 0px 0px 5px 3px rgba(0,0,0,1);
+}
+
+.badge-white {
+    box-shadow: 0px 0px 5px 3px rgba(255,255,255,1);
+    -webkit-box-shadow: 0px 0px 5px 3px rgba(255,255,255,1);
+    -moz-box-shadow: 0px 0px 5px 3px rgba(255,255,255,1);
+}
+
+
 
 .shadow-dark{
     box-shadow: 6px 2px 13px 6px rgba(0,0,0,0.49);
@@ -103,7 +119,7 @@
 
 .cont-monitor {
     position: sticky;
-    top: -50px;
+    top: -20px;
 }
 
 img {
