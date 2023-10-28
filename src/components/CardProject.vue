@@ -140,7 +140,7 @@
                         </div>
         
                         <div v-for="image in project.images" class="carousel-item" data-bs-interval="2000">
-                            <img :src="image" class="d-block w-100" alt="../../public/img/4.jpeg">
+                            <img :src="image.src" class="d-block w-100" alt="../../public/img/4.jpeg">
                         </div>
 
                         <!-- <div  class="carousel-item" data-bs-interval="10000">
