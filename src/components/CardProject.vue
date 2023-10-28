@@ -39,16 +39,27 @@
 
             <!-- tutorial container -->
             <div v-if="store.switcherTutorial" class="window-tutorial">
+
+                <div class="px-3">
+                    <h6 v-if="store.language == 'italian'">Benvenuto al tutorial di navigazione! Prova a scorrere verso l'alto e verso il basso sullo schermo intero. Quando hai finito, premi 'Ho capito' per continuare</h6>
+                    <h6 v-if="store.language == 'german'">Benvenuto al tutorial di navigazione! Prova a scorrere verso l'alto e verso il basso sullo schermo intero. Quando hai finito, premi 'Ho capito' per continuare</h6>
+                    <h6 v-if="store.language == 'english'">Benvenuto al tutorial di navigazione! Prova a scorrere verso l'alto e verso il basso sullo schermo intero. Quando hai finito, premi 'Ho capito' per continuare</h6>
+                </div>
+
                 <div class="square">
 
                     <!-- corner -->
                     <div class="corner a d-flex justify-content-center align-items-center gap-2">
                         <i class="fa-solid fa-photo-film icon"></i>
-                        <strong>Previews</strong>
+                        <strong v-if="store.language == 'italian'">Anteprime</strong>
+                        <strong v-if="store.language == 'german'">Vorschau</strong>
+                        <strong v-if="store.language == 'english'">Previews</strong>
                         
                     </div>
                     <div class="corner b d-flex justify-content-center align-items-center gap-2">
-                        <strong>Details</strong>
+                        <strong v-if="store.language == 'italian'">Dettagli</strong>
+                        <strong v-if="store.language == 'german'">Details</strong>
+                        <strong v-if="store.language == 'english'">Details</strong>
                         <i class="fa-solid fa-clipboard icon"></i>
                     </div>
                      <!-- corner -->
@@ -61,7 +72,9 @@
                     <div class="cont-scroll-icon icons-down  animate__animated animate__fadeInTopRight animate_infinite">
                         <div class="d-flex flex-column justify-content-center align-items-center animate__animated animate__pulse animate__infinite">
                             <strong class="fs-3 animate__animated animate__heartBeat animate__slower animate__delay-2s animate__repeat-3">SCROLL</strong>
-                            <span class="mb-2 animate__animated animate__heartBeat animate__slower animate__delay-2s animate__repeat-3">to the next project</span>
+                            <span v-if="store.language == 'italian'" class="mb-2 animate__animated animate__heartBeat animate__slower animate__delay-2s animate__repeat-3">Al prossimo progetto</span>
+                            <span v-if="store.language == 'german'" class="mb-2 animate__animated animate__heartBeat animate__slower animate__delay-2s animate__repeat-3">Zum nächsten Projekt</span>
+                            <span v-if="store.language == 'english'" class="mb-2 animate__animated animate__heartBeat animate__slower animate__delay-2s animate__repeat-3">To the next project</span>
                             <i class="fa-solid fa-angles-down fs-6 animate__animated animate__heartBeat animate__slower animate__delay-2s animate__repeat-3"></i>
                             <i class="fa-solid fa-angles-down fs-3 animate__animated animate__heartBeat animate__slower animate__delay-2s animate__repeat-3"></i>
                         </div>
@@ -72,14 +85,18 @@
                             <i class="fa-solid fa-angles-up fs-3 animate__animated animate__heartBeat animate__slower animate__delay-2s animate__repeat-3"></i>
                             <i class="fa-solid fa-angles-up fs-6 animate__animated animate__heartBeat animate__slower animate__delay-2s animate__repeat-3"></i>
                             <strong class="fs-3 animate__animated animate__heartBeat animate__slower animate__delay-2s animate__repeat-3">SCROLL</strong>
-                            <span class="mb-2 animate__animated animate__heartBeat animate__slower animate__delay-2s animate__repeat-3">to the previous project</span>
+                            <span v-if="store.language == 'italian'" class="mb-2 animate__animated animate__heartBeat animate__slower animate__delay-2s animate__repeat-3">Al progetto precedente</span>
+                            <span v-if="store.language == 'german'" class="mb-2 animate__animated animate__heartBeat animate__slower animate__delay-2s animate__repeat-3">Zum vorherigen Projekt</span>
+                            <span v-if="store.language == 'english'" class="mb-2 animate__animated animate__heartBeat animate__slower animate__delay-2s animate__repeat-3">To the previous project</span>
                         </div>
                     </div>
                     <!-- scroll icons -->
 
                     <!-- understand-button -->
                     <div>
-                        <button @click="switchTutorial()" class="btn btn-primary understand-button">Ok, I understand</button>
+                        <button v-if="store.language == 'italian'" @click="switchTutorial()" class="btn btn-primary understand-button">Ok, ho capito</button>
+                        <button v-if="store.language == 'german'" @click="switchTutorial()" class="btn btn-primary understand-button">Okay, I understand</button>
+                        <button v-if="store.language == 'english'" @click="switchTutorial()" class="btn btn-primary understand-button">Okay, I understand</button>
                     </div>
                     <!-- understand-button -->
 
@@ -241,6 +258,7 @@
             z-index: 100;
 
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
 
