@@ -173,17 +173,17 @@ export default {
                 </div>
                 <div class="cont-list flex-grow-1">
                     <ul class="d-flex flex-column justify-content-around gap-2 p-0 pb-5 m-0">
-                        <li v-if="store.language == 'italian'" v-for="row, index in column2Italian" class="d-flex flex-column justify-content-center align-items-end text-end pe-1 pe-md-5 py-5 p-md-0" :class="animationOn==true ? 'animate__animated animate__fadeInLeft': ''" :style="{'--j': (`0.${index}` * 4)}">
+                        <li v-if="store.language == 'italian'" v-for="row, index in column2Italian" class="d-flex flex-column justify-content-center align-items-end text-end pe-1 pe-md-5 py-2 p-md-0" :class="animationOn==true ? 'animate__animated animate__fadeInLeft': ''" :style="{'--j': (`0.${index}` * 4)}">
                             <span class="title">{{row.title}}</span>
                             <span class="text col-8">{{row.text}}</span> 
                         </li>
 
-                        <li v-if="store.language == 'german'" v-for="row, index in column2German" class="d-flex flex-column justify-content-center align-items-end text-end pe-1 pe-md-5 py-5 p-md-0" :class="animationOn==true ? 'animate__animated animate__fadeInLeft': ''" :style="{'--j': (`0.${index}` * 4)}">
+                        <li v-if="store.language == 'german'" v-for="row, index in column2German" class="d-flex flex-column justify-content-center align-items-end text-end pe-1 pe-md-5 py-2 p-md-0" :class="animationOn==true ? 'animate__animated animate__fadeInLeft': ''" :style="{'--j': (`0.${index}` * 4)}">
                             <span class="title">{{row.title}}</span>
                             <span class="text col-8">{{row.text}}</span> 
                         </li>
 
-                        <li v-if="store.language == 'english'" v-for="row, index in column2English" class="d-flex flex-column justify-content-center align-items-end text-end pe-1 pe-md-5 py-5 p-md-0" :class="animationOn==true ? 'animate__animated animate__fadeInLeft': ''" :style="{'--j': (`0.${index}` * 4)}">
+                        <li v-if="store.language == 'english'" v-for="row, index in column2English" class="d-flex flex-column justify-content-center align-items-end text-end pe-1 pe-md-5 py-2 p-md-0" :class="animationOn==true ? 'animate__animated animate__fadeInLeft': ''" :style="{'--j': (`0.${index}` * 4)}">
                             <span class="title">{{row.title}}</span>
                             <span class="text col-8">{{row.text}}</span> 
                         </li>
@@ -198,15 +198,15 @@ export default {
                 </div>
                 <div class="cont-list">
                     <ul class="d-flex flex-column justify-content-around gap-2 p-0 pb-5 pe-2 m-0">
-                        <li v-if="store.language == 'italian'" v-for="row,index in column3Italian" class="d-flex flex-column justify-content-center" :class="animationOn==true ? 'animate__animated animate__fadeInRight ' : '' " :style="{'--k': (`0.${index}` * 4)}">
+                        <li v-if="store.language == 'italian'" v-for="row,index in column3Italian" class="d-flex flex-column justify-content-center py-2" :class="animationOn==true ? 'animate__animated animate__fadeInRight ' : '' " :style="{'--k': (`0.${index}` * 4)}">
                             <strong>{{index + 1}}.</strong>
                             <span>{{row.text}}</span> 
                         </li>
-                        <li v-if="store.language == 'german'" v-for="row,index in column3German" class="d-flex flex-column justify-content-center" :class="animationOn==true ? 'animate__animated animate__fadeInRight ' : '' " :style="{'--k': (`0.${index}` * 4)}">
+                        <li v-if="store.language == 'german'" v-for="row,index in column3German" class="d-flex flex-column justify-content-center py-2" :class="animationOn==true ? 'animate__animated animate__fadeInRight ' : '' " :style="{'--k': (`0.${index}` * 4)}">
                             <strong>{{index + 1}}.</strong>
                             <span>{{row.text}}</span> 
                         </li>
-                        <li v-if="store.language == 'english'" v-for="row,index in column3English" class="d-flex flex-column justify-content-center" :class="animationOn==true ? 'animate__animated animate__fadeInRight ' : '' " :style="{'--k': (`0.${index}` * 4)}">
+                        <li v-if="store.language == 'english'" v-for="row,index in column3English" class="d-flex flex-column justify-content-center py-2" :class="animationOn==true ? 'animate__animated animate__fadeInRight ' : '' " :style="{'--k': (`0.${index}` * 4)}">
                             <strong>{{index + 1}}.</strong>
                             <span>{{row.text}}</span> 
                         </li>
