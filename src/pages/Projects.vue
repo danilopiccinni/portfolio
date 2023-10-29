@@ -930,6 +930,28 @@
                 localStorage.setItem('selectedVisual', JSON.stringify(this.store.visual))
             },
 
+
+            handleScroll() {
+
+                const scrollDiv = document.getElementById('scroll-div'); // Sostituisci con il selettore del tuo div 'cont-cover'
+
+                if (scrollDiv && scrollDiv.scrollTop < this.yourScrollThreshold) {
+                // Verifica se la posizione dello scroll supera una soglia
+
+   
+                window.scrollBy(0, -scrollDiv.scrollTop); // Simula uno scroll verso l'alto
+
+                }
+            },
+
+        },
+
+        mounted() {
+            let scrollDiv = document.getElementById('scroll-div')
+            scrollDiv.addEventListener('scroll', this.handleScroll);
+        },
+        beforeDestroy() {
+            scrollDiv.removeEventListener('scroll', this.handleScroll);
         },
     }
 </script>
@@ -937,7 +959,7 @@
 <template>
     <div class="projects">
 
-        <div v-if="store.visual == 1" class="visual-1">
+        <div id="scroll-div"  v-if="store.visual == 1" class="visual-1">
             <div v-for="project,index in projects"  class="card-project">  
                 <CardProject :project="projects[index]"></CardProject>
             </div>
