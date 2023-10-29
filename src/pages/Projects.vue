@@ -929,30 +929,15 @@
                 this.store.visual = num
                 localStorage.setItem('selectedVisual', JSON.stringify(this.store.visual))
             },
-
-
-            handleScroll() {
-
-                const scrollDiv = document.getElementById('scroll-div'); // Sostituisci con il selettore del tuo div 'cont-cover'
-                window.scrollBy(0, -1); // Simula uno scroll verso l'alto
-            },
-
         },
 
-        mounted() {
-            let scrollDiv = document.getElementById('scroll-div')
-            scrollDiv.addEventListener('scroll', this.handleScroll);
-        },
-        beforeDestroy() {
-            scrollDiv.removeEventListener('scroll', this.handleScroll);
-        },
     }
 </script>
 
 <template>
     <div class="projects">
 
-        <div id="scroll-div"  v-if="store.visual == 1" class="visual-1">
+        <div v-if="store.visual == 1" class="visual-1">
             <div v-for="project,index in projects"  class="card-project">  
                 <CardProject :project="projects[index]"></CardProject>
             </div>
