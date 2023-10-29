@@ -92,39 +92,39 @@ import { store } from '../store'
                         <input v-if="store.language == 'italian'" class="col-12" name="from_name" placeholder="Il tuo nome" type="text" :value="inputFieldReset" required>
                         <input v-if="store.language == 'german'" class="col-12" name="from_name" placeholder="Dein Name" type="text" :value="inputFieldReset" required>
                         <input v-if="store.language == 'english'" class="col-12" name="from_name" placeholder="Your name" type="text" :value="inputFieldReset" required>
-                        <div class="input-hint" v-if="store.language == 'italian'">Suggerimento: Inserisci il tuo nome completo.</div>
-                        <div class="input-hint" v-if="store.language == 'german'">Hinweis: Geben Sie Ihren vollständigen Namen ein.</div>
-                        <div class="input-hint" v-if="store.language == 'english'">Hint: Enter your full name.</div>
+                        <div class="input-hint" v-if="store.language == 'italian'"><em>Inserisci il tuo nome completo.</em></div>
+                        <div class="input-hint" v-if="store.language == 'german'"><em>Geben Sie Ihren vollständigen Namen ein.</em></div>
+                        <div class="input-hint" v-if="store.language == 'english'"><em>Enter your full name.</em></div>
                     </div>
                     <div class="form-group">
                         <input v-if="store.language == 'italian'" class="col-12" name="email" placeholder="La tua E-Mail" type="email" :value="inputFieldReset" required>
                         <input v-if="store.language == 'german'" class="col-12" name="email" placeholder="Deine E-Mail" type="email" :value="inputFieldReset" required>
                         <input v-if="store.language == 'english'" class="col-12" name="email" placeholder="Your email" type="email" :value="inputFieldReset" required>
-                        <div class="input-hint" v-if="store.language == 'italian'">Suggerimento: Inserisci un indirizzo e-mail valido.</div>
-                        <div class="input-hint" v-if="store.language == 'german'">Hinweis: Geben Sie eine gültige E-Mail-Adresse ein.</div>
-                        <div class="input-hint" v-if="store.language == 'english'">Hint: Enter a valid email address.</div>
+                        <div class="input-hint" v-if="store.language == 'italian'"><em>Inserisci un indirizzo e-mail valido.</em> </div>
+                        <div class="input-hint" v-if="store.language == 'german'"><em>Geben Sie eine gültige E-Mail-Adresse ein.</em> </div>
+                        <div class="input-hint" v-if="store.language == 'english'"><em>Enter a valid email address.</em> </div>
                     </div>
                     <div class="form-group">
                         <input v-if="store.language == 'italian'" class="col-12" name="subject" placeholder="Oggetto" type="text" :value="inputFieldReset" required>
                         <input v-if="store.language == 'german'" class="col-12" name="subject" placeholder="Betreff" type="text" :value="inputFieldReset" required>
                         <input v-if="store.language == 'english'" class="col-12" name="subject" placeholder="Subject" type="text" :value="inputFieldReset" required>
-                        <div class="input-hint" v-if="store.language == 'italian'">Suggerimento: Indica brevemente l'argomento del tuo messaggio.</div>
-                        <div class="input-hint" v-if="store.language == 'german'">Hinweis: Geben Sie kurz das Thema Ihrer Nachricht an.</div>
-                        <div class="input-hint" v-if="store.language == 'english'">Hint: Briefly describe the subject of your message.</div>
+                        <div class="input-hint" v-if="store.language == 'italian'"><em>Indica brevemente l'argomento del tuo messaggio.</em> </div>
+                        <div class="input-hint" v-if="store.language == 'german'"><em>Geben Sie kurz das Thema Ihrer Nachricht an.</em> </div>
+                        <div class="input-hint" v-if="store.language == 'english'"><em>Briefly describe the subject of your message.</em> </div>
 
                     </div>
                     <div class="form-group">
                         <textarea v-if="store.language == 'italian'" class="text-area col-12" name="message" placeholder="Messaggio" type="text" :value="inputFieldReset" required></textarea>
                         <textarea v-if="store.language == 'german'" class="text-area col-12" name="message" placeholder="Nachricht" type="text" :value="inputFieldReset" required></textarea>
                         <textarea v-if="store.language == 'english'" class="text-area col-12" name="message" placeholder="Message" type="text" :value="inputFieldReset" required></textarea>
-                        <div class="input-hint" v-if="store.language == 'italian'">Suggerimento: Scrivi qui il tuo messaggio. Sii chiaro e conciso. Descrivi dettagliatamente la tua richiesta o domanda.</div>
-                        <div class="input-hint" v-if="store.language == 'german'">Hinweis: Schreiben Sie hier Ihre Nachricht. Seien Sie klar und präzise. Beschreiben Sie ausführlich Ihre Anfrage oder Frage.</div>
-                        <div class="input-hint" v-if="store.language == 'english'">Hint: Write your message here. Be clear and concise. Describe your request or question in detail.</div>
+                        <div class="input-hint" v-if="store.language == 'italian'"><em>Scrivi qui il tuo messaggio. Sii chiaro e conciso. Descrivi dettagliatamente la tua richiesta o domanda.</em> </div>
+                        <div class="input-hint" v-if="store.language == 'german'"><em>Schreiben Sie hier Ihre Nachricht. Seien Sie klar und präzise. Beschreiben Sie ausführlich Ihre Anfrage oder Frage.</em> </div>
+                        <div class="input-hint" v-if="store.language == 'english'"><em>Write your message here. Be clear and concise. Describe your request or question in detail.</em> </div>
                     </div>
                     <div class="form-group">
-                        <button v-if="store.language == 'italian'" class="submit" type="submit" name="send">Invia</button>
-                        <button v-if="store.language == 'german'" class="submit" type="submit" name="send">Senden</button>
-                        <button v-if="store.language == 'english'" class="submit" type="submit" name="send">Send</button>
+                        <button v-if="store.language == 'italian'" class="submit btn" type="submit" name="send">Invia</button>
+                        <button v-if="store.language == 'german'" class="submit btn" type="submit" name="send">Senden</button>
+                        <button v-if="store.language == 'english'" class="submit btn" type="submit" name="send">Send</button>
                     </div>
                 </form>
 
@@ -253,10 +253,19 @@ import { store } from '../store'
         }
 
         .form-group .submit {
-        border: none;
+            border: none;
         border-radius:5px;
         height: 40px;
-        width: 70px ;
+        width: auto;
+        color: white;
+
+        background: linear-gradient(16deg, rgba(2,0,36,1) 0%, rgba(48,9,121,1) 35%, var(--theme-gradient) 100%);
+
+        &:hover {
+            border: 1px solid white;
+
+            border-color: white;
+        }
         }
 
 </style>
