@@ -1,5 +1,5 @@
 <script>
-
+import Technologies from '../components/Technologies.vue';
 import Banner from '../components/Banner.vue';
 import SectionFullScreen from '../components/SectionFullScreen.vue';
 import Footer from '../components/Footer.vue';
@@ -24,7 +24,7 @@ import TheThreeCardsVue from '../components/TheThreeCards.vue';
             Banner,
             Footer,
             TheThreeCardsVue,
-
+            Technologies
         },
     } 
 </script>
@@ -70,6 +70,10 @@ import TheThreeCardsVue from '../components/TheThreeCards.vue';
 
         <div>
             <SectionFullScreen></SectionFullScreen>
+        </div>
+
+        <div>
+            <Technologies></Technologies>
         </div>
 
         <div>
