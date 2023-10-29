@@ -63,7 +63,7 @@ import { store } from '../store';
 
           <div v-if="store.language == 'italian'" v-for="card in italianCards" class="__card col-12 col-md-4" :class="store.checked ? 'dark-shadow' : ''">
             <div class="__content">
-              <h6 class="heading align-self-center p-1">{{card.title}}</h6>
+              <h6 class="heading align-self-center pt-4">{{card.title}}</h6>
               <p class="para px-3">{{card.description}}</p>
               <div class="ps-3">
                 <button class="__btn">Mi piace</button>
@@ -73,7 +73,7 @@ import { store } from '../store';
 
           <div v-if="store.language == 'german'" v-for="card in germanCards" class="__card col-12 col-md-4" :class="store.checked ? 'dark-shadow' : ''">
             <div class="__content">
-              <h6 class="heading align-self-center p-1">{{card.title}}</h6>
+              <h6 class="heading align-self-center pt-4">{{card.title}}</h6>
               <p class="para px-3">{{card.description}}</p>
               <div class="ps-3">
                 <button class="__btn">Gefällt mir</button>
@@ -83,7 +83,7 @@ import { store } from '../store';
 
           <div v-if="store.language == 'english'" v-for="card in englishCards" class="__card col-12 col-md-4" :class="store.checked ? 'dark-shadow' : ''">
             <div class="__content">
-              <h6 class="heading align-self-center p-1">{{card.title}}</h6>
+              <h6 class="heading align-self-center pt-4">{{card.title}}</h6>
               <p class="para px-3">{{card.description}}</p>
               <div class="ps-3">
                 <button class="__btn">Like</button>
