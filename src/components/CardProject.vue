@@ -42,8 +42,8 @@
 
                 <div class="px-3">
                     <h6 v-if="store.language == 'italian'">Benvenuto al tutorial di navigazione! Prova a scorrere verso l'alto e verso il basso sullo schermo intero. Quando hai finito, premi 'Ho capito' per continuare</h6>
-                    <h6 v-if="store.language == 'german'">Benvenuto al tutorial di navigazione! Prova a scorrere verso l'alto e verso il basso sullo schermo intero. Quando hai finito, premi 'Ho capito' per continuare</h6>
-                    <h6 v-if="store.language == 'english'">Benvenuto al tutorial di navigazione! Prova a scorrere verso l'alto e verso il basso sullo schermo intero. Quando hai finito, premi 'Ho capito' per continuare</h6>
+                    <h6 v-if="store.language == 'german'">Willkommen zum Navigations-Tutorial! Versuchen Sie, auf dem Vollbildschirm nach oben und unten zu scrollen. Wenn Sie fertig sind, drücken Sie 'Ich verstehe', um fortzufahren</h6>
+                    <h6 v-if="store.language == 'english'">Welcome to the navigation tutorial! Try scrolling up and down on the full screen. When you're done, press 'I understand' to continue</h6>
                 </div>
 
                 <div class="square">
@@ -554,7 +554,7 @@
             -o-box-shadow: 0px 0px 70px 100px rgba(10, 10, 10, 0.914);
             box-shadow: 0px 0px 70px 100px rgba(10, 10, 10, 0.914);
     
-            transition: all ease-in-out 0.5s;
+            transition: all 2s;
                     
             &:hover {
 
@@ -585,6 +585,10 @@
         .cont-carouselThumbsDark:hover {
             width: 50%;
         }
+
+        .details-project {
+            max-width: 75%;
+        }
     }
 
     @media screen and (min-width: 768px) and (max-width : 991px) {
@@ -596,6 +600,14 @@
     @media screen and (max-width: 767px) {
         .cont-carouselThumbsDark:hover {
             width: 100%;
+        }
+
+        .cont-cover .details-project {
+            max-width: 70%;
+
+            &:hover {
+                max-width: 75%;
+            }
         }
     }
     </style>
