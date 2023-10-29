@@ -939,7 +939,7 @@
                 // Verifica se la posizione dello scroll supera una soglia
 
    
-                window.scrollBy(0, -scrollDiv.scrollTop); // Simula uno scroll verso l'alto
+                window.scrollBy(0, -1); // Simula uno scroll verso l'alto
 
                 }
             },
