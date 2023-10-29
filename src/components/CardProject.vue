@@ -25,16 +25,15 @@
                     this.store.switcherTutorial = false
                 } else {
                     this.store.switcherTutorial = true
-
                 }
-            }
+            },
         },
     }
 </script>
 
 <template>
     <div class="project">
-        <div class="large-card cont-cover h-100" :style="{ backgroundImage : `url(${project.cover})` }" >
+        <div class="large-card cont-cover h-100" :style="{ backgroundImage : `url(${project.cover})` }">
 
 
             <!-- tutorial container -->
@@ -264,6 +263,8 @@
             left: 0;
             top: 0;
 
+            padding-top: 100px;
+
             color: white;
 
             width: 100vw;
@@ -273,7 +274,7 @@
 
             display: flex;
             flex-direction: column;
-            justify-content: center;
+
             align-items: center;
 
             background-color: rgba(10, 10, 10, 0.914);
@@ -539,6 +540,7 @@
             max-height: 160px;
 
             padding: 10px;
+            padding-bottom: 50px;
        
             text-align: center;
     
