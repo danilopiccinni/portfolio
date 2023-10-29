@@ -26,24 +26,24 @@ import { store } from '../store';
 
 
 
-            <div class="d-flex justify-content-center align-items-center gap-3">
-                <a href="" class=" text-reset">
-                    <i class="fab fa-facebook-f"></i>
+            <div class="d-flex justify-content-center align-items-center gap-5">
+                <a class="social-links px-2 text-reset" href="https://www.facebook.com/profile.php?id=61552710159527" target="_blank">
+                    <i class="fab fa-facebook-f fs-3"></i>
                 </a>
-                <a href="" class=" text-reset">
-                    <i class="fab fa-twitter"></i>
+                <!-- <a class="social-links px-2 text-reset" href="">
+                    <i class="fab fa-twitter fs-3"></i>
+                </a> -->
+                <!-- <a class="social-links px-2 text-reset" href="" target="_blank">
+                    <i class="fab fa-google fs-3"></i>
+                </a> -->
+                <a class="social-links px-2 text-reset" href="https://www.instagram.com/danilopwebdev/" target="_blank">
+                    <i class="fab fa-instagram fs-3"></i>
                 </a>
-                <a href="" class=" text-reset">
-                    <i class="fab fa-google"></i>
+                <a class="social-links px-2 text-reset" href="https://www.linkedin.com/in/danilo-piccinni-95219427a/" target="_blank">
+                    <i class="fab fa-linkedin fs-3"></i>
                 </a>
-                <a href="" class=" text-reset">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="" class=" text-reset">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="" class=" text-reset">
-                    <i class="fab fa-github"></i>
+                <a class="social-links px-2 text-reset" href="https://github.com/danilopiccinni" target="_blank" >
+                    <i class="fab fa-github fs-3"></i>
                 </a>
             </div>
  
@@ -80,14 +80,32 @@ import { store } from '../store';
                         <h6 v-if="store.language == 'italian'" class="text-uppercase fw-bold mb-4">Contatto</h6>
                         <h6 v-if="store.language == 'german'" class="text-uppercase fw-bold mb-4">Contakt</h6>
                         <h6 v-if="store.language == 'english'" class="text-uppercase fw-bold mb-4">Contact</h6>
-                        <p v-if="store.language == 'italian'"><i class="fas fa-home me-3"></i> Lucerna, Lucerna 6014, CH</p>
-                        <p v-if="store.language == 'german'"><i class="fas fa-home me-3"></i> Luzern, Luzern 6014, CH</p>
-                        <p v-if="store.language == 'english'"><i class="fas fa-home me-3"></i> Lucerne, Lucerne 6014, CH</p>
-                        <p>
-                            <i class="fas fa-envelope me-3"></i>
-                            danilopwebdev@gmail.com
-                        </p>
-                        <p><i class="fas fa-phone me-3"></i> +41 76 204 85 51</p>
+                        
+                        <div v-if="store.language == 'italian'" class="mb-3">
+                            <a href="https://www.google.com/maps?q=47.05027,8.27817" target="_blank" class="contact-links text-reset text-decoration-none d-flex align-items-center justify-content-center justify-content-md-start justify-content-md-start gap-2">
+                                <i class="fas fa-home fs-3 p-1"></i><span> Unterwilrain 50, Lucerna 6014, CH</span>
+                            </a>
+                        </div>
+                        <div v-if="store.language == 'german'" class="mb-3">
+                            <a href="https://www.google.com/maps?q=47.05027,8.27817" target="_blank" class="contact-links text-reset text-decoration-none d-flex align-items-center justify-content-center justify-content-md-start justify-content-md-start gap-2">
+                                <i class="fas fa-home fs-3  p-1"></i><span> Unterwilrain 50, Luzern 6014, CH</span>
+                            </a>
+                        </div>
+                        <div v-if="store.language == 'english'" class="mb-3">
+                            <a href="https://www.google.com/maps?q=47.05027,8.27817" target="_blank" class="contact-links text-reset text-decoration-none d-flex align-items-center justify-content-center justify-content-md-start justify-content-md-start gap-2">
+                                <i class="fas fa-home fs-3 p-1"></i><span> Unterwilrain 50, Lucerne 6014, CH</span>
+                            </a> 
+                        </div>
+                        <div class="mb-3">
+                            <a href="mailto:danilopwebdev@gmail.com?subject=Web visit message:" target="_blank" class="contact-links text-reset text-decoration-none d-flex align-items-center justify-content-center justify-content-md-start justify-content-md-start gap-2">
+                                <i class="fas fa-envelope fs-3 p-1"></i><span> danilopwebdev@gmail.com</span>
+                            </a>
+                        </div>
+                        <div class="mb-3">
+                            <a href="+412048551" target="_blank" class="contact-links text-reset text-decoration-none d-flex align-items-center justify-content-center justify-content-md-start justify-content-md-start gap-2">
+                                <i class="fas fa-phone fs-3 p-1"></i><span> +41 76 204 85 51</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -106,6 +124,20 @@ import { store } from '../store';
 </template>
 
 <style scoped lang="scss">
+
+    .contact-links {
+
+        &:hover span {
+            color: blue;
+        }
+    }
+
+    .social-links{
+
+        &:hover i {
+            color: #f56f61;
+        }
+    }
 
     .copyright {
         background: linear-gradient(16deg, #020024 0%, #300979 35%, var(--theme-gradient) 100%);
