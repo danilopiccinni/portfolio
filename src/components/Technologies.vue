@@ -78,6 +78,11 @@ export default {
                         color : '#edd9c5',
                         src : '/img/axios_logo_icon_168545.png'
                     },
+                    {
+                        name : 'GitHub',
+                        color : '#edd9c5',
+                        src : '/img/kisspng-github-social-media-computer-icons-logo-android-5b348490ab20f1.548940641530168464701.png'
+                    },
 
                 ],
         }
@@ -88,12 +93,12 @@ export default {
 <template>
     <div class=" container my-5 pb-5">
 
-        <h3 v-if="store.language == 'italian'" class="text-center pt-5 my-5">ecnologie Incontrate</h3>
+        <h3 v-if="store.language == 'italian'" class="text-center pt-5 my-5">Tecnologie Incontrate</h3>
         <h3 v-if="store.language == 'german'" class="text-center pt-5 my-5">Begegnete Technologien</h3>
         <h3 v-if="store.language == 'english'" class="text-center pt-5 my-5">Technologies I've Encountered</h3>
 
-        <div class="cont-cards d-flex flex-wrap justify-content-center gap-2">
-            <div v-for="technology in arrayTechnologies" :style="{ backgroundImage : `url(${technology.src})`}" class="card rounded border-0 col-2 d-flex justify-content-center align-items-center">
+        <div class="cont-cards d-flex flex-wrap justify-content-center gap-3 p-2 rounded">
+            <div v-for="technology in arrayTechnologies" :style="{ backgroundImage : `url(${technology.src})`}" :class="store.checked ? 'dark-shadow' : 'white-shadow'" class="card rounded border-0 col-2 d-flex justify-content-center align-items-center">
                 <span :style="{color: technology.color}">
                     <!-- {{ technology.name }} -->
                 </span>
@@ -103,13 +108,46 @@ export default {
 </template>
 
 <style scoped lang="scss">
-    .card {
-        aspect-ratio: 0.5/0.5;
 
-        background-color: transparent;
 
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
+.card {
+    aspect-ratio: 1/1;
+    
+    background-color: transparent;
+    
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    transition: 0.1s; 
+
+    &:hover {
+        transition: 0.5s;
     }
+
+    &.white-shadow {
+        box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0.803) inset;
+        -webkit-box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0.803) inset;
+        -moz-box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0.803) inset;
+
+        &:hover {
+            box-shadow: 0px 0px 49px 0px rgba(255, 255, 255, 0.803) inset;
+            -webkit-box-shadow: 0px 0px 49px 0px rgba(255, 255, 255, 0.803) inset;
+            -moz-box-shadow: 0px 0px 49px 0px rgba(255, 255, 255, 0.803) inset;
+        }
+    }
+    
+    &.dark-shadow {
+        box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.803) inset;
+        -webkit-box-shadow: 0px 0px 0px 0px rgba(3, 3, 3, 0.803) inset;
+        -moz-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.803) inset;
+    
+        &:hover {
+            box-shadow: 0px 0px 49px 0px rgba(0, 0, 0, 0.803) inset;
+            -webkit-box-shadow: 0px 0px 49px 0px rgba(0, 0, 0, 0.803) inset;
+            -moz-box-shadow: 0px 0px 49px 0px rgba(0, 0, 0, 0.803) inset;
+        }
+    }
+    
+}
 </style>
