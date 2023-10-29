@@ -934,14 +934,7 @@
             handleScroll() {
 
                 const scrollDiv = document.getElementById('scroll-div'); // Sostituisci con il selettore del tuo div 'cont-cover'
-
-                if (scrollDiv && scrollDiv.scrollTop < this.yourScrollThreshold) {
-                // Verifica se la posizione dello scroll supera una soglia
-
-   
                 window.scrollBy(0, -1); // Simula uno scroll verso l'alto
-
-                }
             },
 
         },
