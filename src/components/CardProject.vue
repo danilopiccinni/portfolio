@@ -115,7 +115,7 @@
 
 
             <!-- container carouselThumbsDark -->
-            <div class="cont-carouselThumbsDark d-flex  justify-content-center rounded animate__animated animate__fadeInBottomRight">
+            <div class="cont-carouselThumbsDark d-flex justify-content-center rounded animate__animated animate__fadeInBottomRight">
 
                 <!-- gallery-icon -->
                 <div class="cont-thumbs-icon">
@@ -444,10 +444,8 @@
             position: absolute;
             top: 60px;
             left: 0px;
-    
-            min-width: 200px;
+
             width: 25%;
-            max-height: 25%;
 
             overflow: hidden;
     
@@ -464,8 +462,6 @@
             &:hover {
                 
                 z-index: 5;
-
-                max-height: 50%;
 
                 overflow: hidden;
 
@@ -484,7 +480,7 @@
             
             .carousel-inner {
                 width: 100%;
-                height: 100%;
+
                 overflow: hidden;
                 border-radius: 80px 0px 300px 0px;
 
@@ -505,11 +501,11 @@
                 height: 100%;
 
                 aspect-ratio: 16 / 9;
+                
+                object-fit: contain;
+                object-position: 50% ;
 
                 opacity: 0.6;
-
-                object-position: top ;
-                object-fit: contain;
 
                 transition: 2.5s;
             }
@@ -598,6 +594,10 @@
     }
 
     @media screen and (max-width: 767px) {
+
+        .cont-carouselThumbsDark {
+            width: 30%;
+        }
         .cont-carouselThumbsDark:hover {
             width: 100%;
         }
