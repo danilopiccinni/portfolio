@@ -34,7 +34,7 @@
 
 <template>
 
-        <div class="out d-flex align-items-center">
+        <div class="out d-flex flex-column align-items-center">
             <div  :class="sizeDisplay ? '' : 'small-display'" class="cont-iframe rounded">
                 
                 <iframe class="rounded" :src="project.link" frameborder="0"></iframe>
@@ -45,8 +45,16 @@
                     <span v-if="store.language == 'english'">We're sorry, but this project is currently undergoing maintenance</span>
                 </div>
                 
+                <button :class="sizeDisplay ? 'btn-success' : 'btn-danger'" class="btn button" @click="changeSizeDisplay()"><i class="fa-solid fa-power-off"></i></button>
+                <div class="hint-on mt-5 text-center">
+                    <span v-if="store.language == 'italian'">Clicca sul pulsante d'accensione <i class="fa-solid fa-power-off px-1"></i><br>e scopri se il progetto è gia online!!</span>
+                    <span v-if="store.language == 'german'">Klicke auf den Einschaltknopf <i class="fa-solid fa-power-off px-1"></i><br>und finde heraus, ob das Projekt bereits online ist!</span>
+                    <span v-if="store.language == 'english'">Click the power button <i class="fa-solid fa-power-off px-1"></i><br>and find out if the project is already online!</span>
+                </div>
             </div>
-            <button :class="sizeDisplay ? 'btn-success' : 'btn-danger'" class="btn button" @click="changeSizeDisplay()"><i class="fa-solid fa-power-off"></i></button>
+
+
+
         </div>
 
 </template>
@@ -122,6 +130,13 @@
         animation: jumper 10s linear;
         transition-delay: 2s;
     }
+
+    .hint-on {
+
+        opacity: 0;
+
+        transition: 0.5s;
+    }
 }
 
 .cont-iframe.small-display {
@@ -131,11 +146,21 @@
     background-image: url('/img/matrix-gif.gif');
     background-size: cover;
     background-repeat: no-repeat;
+
+    & .hint-on {
+        opacity: 1;
+
+        transition: 4s;
+    }
+    .button {
+        bottom: -40px;
+    }
     
     & .message {
         opacity: 0;
         transition: 0.2s;
     }
+
 
     &::after {
         content: '';
@@ -179,6 +204,7 @@
         align-items: center;
         width: 20px;
         height: 20px;
+    
         position: absolute;
         bottom: -30px;
         right: 5%;
@@ -187,6 +213,8 @@
         box-shadow: -5px -5px 5px 0px rgba(130, 130, 130, 0.71);
         -webkit-box-shadow: -5px -5px 5px 0px rgba(130, 130, 130, 0.71);
         -moz-box-shadow: -5px -5px 5px 0px rgba(130, 130, 130, 0.71);
+
+        transition: all 1s;
     }
 }
 </style>

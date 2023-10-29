@@ -35,7 +35,7 @@
             <div class="container d-flex flex-column col-12 col-md-6 my-5 flex-grow-1">
                 
                 <!-- info -->
-                <div class="py-5">
+                <div class="pt-0 pt-md-5 pb-5">
                     <h1>
                         {{project.title}}
                     </h1>
