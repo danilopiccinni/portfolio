@@ -142,9 +142,11 @@ export default {
             const windowHeight = window.innerHeight;
             const scrollPosition = window.scrollY;
 
-            // Verifica quando l'utente entra in Section 1
-            if (scrollPosition + 300 >= (section1.offsetTop) && scrollPosition + 300 < section1.offsetTop + section1.clientHeight) {
-                this.animationOn = true
+            if (this.$route.name == 'home') {
+                // Verifica quando l'utente entra in Section 1
+                if (scrollPosition + 300 >= (section1.offsetTop) && scrollPosition + 300 < section1.offsetTop + section1.clientHeight) {
+                    this.animationOn = true
+                }
             }
         }
     },
