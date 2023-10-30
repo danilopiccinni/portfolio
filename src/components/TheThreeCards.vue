@@ -65,7 +65,7 @@ import { store } from '../store';
             <div class="__content">
               <h6 class="heading align-self-center pt-4">{{card.title}}</h6>
               <p class="para px-3">{{card.description}}</p>
-              <div class="ps-3">
+              <div class="mx-auto">
                 <button class="__btn">Mi piace</button>
               </div>
             </div>
@@ -75,7 +75,7 @@ import { store } from '../store';
             <div class="__content">
               <h6 class="heading align-self-center pt-4">{{card.title}}</h6>
               <p class="para px-3">{{card.description}}</p>
-              <div class="ps-3">
+              <div class="mx-auto">
                 <button class="__btn">Gefällt mir</button>
               </div>
             </div>
@@ -85,7 +85,7 @@ import { store } from '../store';
             <div class="__content">
               <h6 class="heading align-self-center pt-4">{{card.title}}</h6>
               <p class="para px-3">{{card.description}}</p>
-              <div class="ps-3">
+              <div class="mx-auto">
                 <button class="__btn">Like</button>
               </div>
             </div>
@@ -165,6 +165,7 @@ import { store } from '../store';
 
       line-height: 1.5;
     }
+
     .__btn {
       color: #e8e8e8;
       text-decoration: none;
@@ -197,6 +198,19 @@ import { store } from '../store';
   .__card:hover .__content {
     color: #ffffff;
 
+  }
+
+  @media screen and (max-width : 341px) {
+    .__card {
+      width: 100%;
+
+      .__content {
+        text-align: center;
+        .para {
+          display: none;
+        }
+      }
+    }
   }
 
 </style>
