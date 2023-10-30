@@ -82,17 +82,17 @@ import { store } from '../store';
                         <h6 v-if="store.language == 'english'" class="text-uppercase fw-bold mb-4">Contact</h6>
                         
                         <div v-if="store.language == 'italian'" class="mb-3">
-                            <a href="https://www.google.com/maps?q=47.05027,8.27817" target="_blank" class="contact-links text-reset text-decoration-none d-flex align-items-center justify-content-center justify-content-md-start justify-content-md-start gap-2">
+                            <a href="geo:47.05027,8.27817" target="_blank" class="contact-links text-reset text-decoration-none d-flex align-items-center justify-content-center justify-content-md-start justify-content-md-start gap-2">
                                 <i class="fas fa-home fs-3 p-1"></i><span> Unterwilrain 50, Lucerna 6014, CH</span>
                             </a>
                         </div>
                         <div v-if="store.language == 'german'" class="mb-3">
-                            <a href="https://www.google.com/maps?q=47.05027,8.27817" target="_blank" class="contact-links text-reset text-decoration-none d-flex align-items-center justify-content-center justify-content-md-start justify-content-md-start gap-2">
+                            <a href="geo:47.05027,8.27817" target="_blank" class="contact-links text-reset text-decoration-none d-flex align-items-center justify-content-center justify-content-md-start justify-content-md-start gap-2">
                                 <i class="fas fa-home fs-3  p-1"></i><span> Unterwilrain 50, Luzern 6014, CH</span>
                             </a>
                         </div>
                         <div v-if="store.language == 'english'" class="mb-3">
-                            <a href="https://www.google.com/maps?q=47.05027,8.27817" target="_blank" class="contact-links text-reset text-decoration-none d-flex align-items-center justify-content-center justify-content-md-start justify-content-md-start gap-2">
+                            <a href="geo:47.05027,8.27817" target="_blank" class="contact-links text-reset text-decoration-none d-flex align-items-center justify-content-center justify-content-md-start justify-content-md-start gap-2">
                                 <i class="fas fa-home fs-3 p-1"></i><span> Unterwilrain 50, Lucerne 6014, CH</span>
                             </a> 
                         </div>
@@ -102,7 +102,7 @@ import { store } from '../store';
                             </a>
                         </div>
                         <div class="mb-3">
-                            <a href="+412048551" target="_blank" class="contact-links text-reset text-decoration-none d-flex align-items-center justify-content-center justify-content-md-start justify-content-md-start gap-2">
+                            <a href="tel:+41762048551" target="_blank" class="contact-links text-reset text-decoration-none d-flex align-items-center justify-content-center justify-content-md-start justify-content-md-start gap-2">
                                 <i class="fas fa-phone fs-3 p-1"></i><span> +41 76 204 85 51</span>
                             </a>
                         </div>
