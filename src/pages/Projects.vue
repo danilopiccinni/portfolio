@@ -140,35 +140,39 @@
                             }
 
                         ],
-                        cover : '/img/netflix/netflix.png',
+                        cover : '/img/netflix/cover.png',
                         images: [
-                            {
-                                src: '/img/1.jpeg',
-                                description: 'Una bellissima immagine con un panorama mozzafiato'
+                            {                        
+                                src: '/img/netflix/nav-bar.png',
+                                description: 'Una barra di navigazione elegante del sito web Netflix.'
                             },
                             {
-                                src: '/img/2.jpeg',
-                                description: 'Un\'immagine affascinante di un tramonto dorato'
+                                src: '/img/netflix/search-bar.png',
+                                description: 'Una barra di ricerca ben progettata su Netflix.'
                             },
                             {
-                                src: '/img/3.jpeg',
-                                description: 'Uno splendido paesaggio montano sotto il cielo sereno'
+                                src: '/img/netflix/search-bar-expanded.png',
+                                description: 'Una vista espansa della barra di ricerca su Netflix.'
                             },
                             {
-                                src: '/img/4.jpeg',
-                                description: 'Un dettaglio macro di una colorata farfalla su un fiore'
+                                src: '/img/netflix/select-genre-search.png',
+                                description: 'Una barra di ricerca con opzioni per selezionare il genere su Netflix.'
                             },
                             {
-                                src: '/img/5.jpeg',
-                                description: 'Un impressionante scorcio di una cascata nella foresta'
+                                src: '/img/netflix/home-page.png',
+                                description: 'Immagine principale della pagina Netflix, con una scelta di film e serie TV.'
                             },
                             {
-                                src: '/img/6.jpeg',
-                                description: 'Un emozionante tramonto sulla spiaggia con il mare calmo'
+                                src: '/img/netflix/info-on-hover-card.png',
+                                description: 'Immagine dettagliata di una scheda informativa visualizzata al passaggio del mouse su Netflix.'
                             },
                             {
-                                src: 'https://picsum.photos/200/300',
-                                description: 'Una foto casuale da Lorem Picsum'
+                                src: '/img/netflix/tv-series-page.png',
+                                description: 'Una pagina dedicata alle serie TV su Netflix, con una selezione di titoli.'
+                            },
+                            {
+                                src: '/img/netflix/movies-page.png',
+                                description: 'Una pagina dedicata ai film su Netflix, con una varietà di opzioni da scegliere.'
                             }
                         ],
                         slug : 'netflix',
@@ -203,6 +207,14 @@
                         ],
                         cover : '/img/avada-movers/header-jumbo.png',
                         images: [
+                            {
+                                src: '/img/avada-movers/nav-bar.png',
+                                description: 'Una immagine con la barra di navigazione del sito'
+                            },
+                            {
+                                src: '/img/avada-movers/jumbo.png',
+                                description: 'Una immagine con il jumbo che appare appena si visita il sito'
+                            },
                             {
                                 src: '/img/avada-movers/awards.png',
                                 description: 'Una immagine con i nostri premi e riconoscimenti'
@@ -291,77 +303,77 @@
                         slug : 'spotify',
                         description : 'Replica del famoso sito di streaming di musica "Spotify" Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla, praesentium qui. Assumenda deleniti perferendis consequuntur nobis ratione quibusdam aspernatur? Illo impedit libero voluptates! Earum facere omnis laboriosam iste aspernatur. Tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis obcaecati cupiditate quas, veniam qui dignissimos. At totam tempore ipsa consectetur sint, provident accusamus sequi eius unde veniam laboriosam aspernatur porro!Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, provident praesentium ratione sequi fugiat eaque porro dicta voluptate ullam, officia, modi unde enim. Mollitia, fugiat facere. Aliquid expedita deserunt autem!Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
                     },
-                    {
-                        title : 'Campo minato',
-                        repo :  'repo-netflix-tech',
-                        link : 'https://spotify-web-danilop.netlify.app',
-                        type: {
-                            name: 'FrontEnd',
-                            color: 'blue'
-                        },
-                        technologies : [
-                            {
-                                name : 'HTML',
-                                color: '#ff7500'
-                            }, 
-                            {
-                                name : 'JS',
-                                color: '#fcd602'
-                            },
-                            {
-                                name : 'PHP',
-                                color: '#7fabff'
-                            },
-                            {
-                                name : 'MySQL',
-                                color: '#0c7a6b'
-                            },
-                            {
-                                name : 'VsCode',
-                                color: '#1c89d1'
-                            },
-                        ],
-                        cover : '/img/4.jpeg',
-                        images: [
-                            {
-                                src: '/img/1.jpeg',
-                                description: 'Una splendida immagine'
-                            },
-                            {
-                                src: '/img/2.jpeg',
-                                description: 'Unaltra immagine fantastica'
-                            },
-                            {
-                                src: '/img/3.jpeg',
-                                description: 'Un paesaggio mozzafiato'
-                            },
-                            {
-                                src: '/img/4.jpeg',
-                                description: 'Unimmagine da sogno'
-                            },
-                            {
-                                src: '/img/5.jpeg',
-                                description: 'Uimmagine sorprendente'
-                            },
-                            {
-                                src: '/img/6.jpeg',
-                                description: 'Unimmagine da favola'
-                            },
-                            {
-                                src: 'https://picsum.photos/200/300',
-                                description: 'Una sorprendente immagine generata casualmente'
-                            }
-                        ],
-                        slug : 'campo-minato',
-                        description : 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla, praesentium qui. Assumenda deleniti perferendis consequuntur nobis ratione quibusdam aspernatur? Illo impedit libero voluptates! Earum facere omnis laboriosam iste aspernatur. Tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis obcaecati cupiditate quas, veniam qui dignissimos. At totam tempore ipsa consectetur sint, provident accusamus sequi eius unde veniam laboriosam aspernatur porro!Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, provident praesentium ratione sequi fugiat eaque porro dicta voluptate ullam, officia, modi unde enim. Mollitia, fugiat facere. Aliquid expedita deserunt autem!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium beatae quisquam asperiores nam in! Consectetur veritatis rerum facilis. Sint odio laudantium natus blanditiis nulla adipisci cum quos earum ullam molestiae.'
-                    },
+                    // {
+                    //     title : 'Campo minato',
+                    //     repo :  'repo-netflix-tech',
+                    //     link : 'https://spotify-web-danilop.netlify.app',
+                    //     type: {
+                    //         name: 'FrontEnd',
+                    //         color: 'blue'
+                    //     },
+                    //     technologies : [
+                    //         {
+                    //             name : 'HTML',
+                    //             color: '#ff7500'
+                    //         }, 
+                    //         {
+                    //             name : 'JS',
+                    //             color: '#fcd602'
+                    //         },
+                    //         {
+                    //             name : 'PHP',
+                    //             color: '#7fabff'
+                    //         },
+                    //         {
+                    //             name : 'MySQL',
+                    //             color: '#0c7a6b'
+                    //         },
+                    //         {
+                    //             name : 'VsCode',
+                    //             color: '#1c89d1'
+                    //         },
+                    //     ],
+                    //     cover : '/img/4.jpeg',
+                    //     images: [
+                    //         {
+                    //             src: '/img/1.jpeg',
+                    //             description: 'Una splendida immagine'
+                    //         },
+                    //         {
+                    //             src: '/img/2.jpeg',
+                    //             description: 'Unaltra immagine fantastica'
+                    //         },
+                    //         {
+                    //             src: '/img/3.jpeg',
+                    //             description: 'Un paesaggio mozzafiato'
+                    //         },
+                    //         {
+                    //             src: '/img/4.jpeg',
+                    //             description: 'Unimmagine da sogno'
+                    //         },
+                    //         {
+                    //             src: '/img/5.jpeg',
+                    //             description: 'Uimmagine sorprendente'
+                    //         },
+                    //         {
+                    //             src: '/img/6.jpeg',
+                    //             description: 'Unimmagine da favola'
+                    //         },
+                    //         {
+                    //             src: 'https://picsum.photos/200/300',
+                    //             description: 'Una sorprendente immagine generata casualmente'
+                    //         }
+                    //     ],
+                    //     slug : 'campo-minato',
+                    //     description : 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla, praesentium qui. Assumenda deleniti perferendis consequuntur nobis ratione quibusdam aspernatur? Illo impedit libero voluptates! Earum facere omnis laboriosam iste aspernatur. Tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis obcaecati cupiditate quas, veniam qui dignissimos. At totam tempore ipsa consectetur sint, provident accusamus sequi eius unde veniam laboriosam aspernatur porro!Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, provident praesentium ratione sequi fugiat eaque porro dicta voluptate ullam, officia, modi unde enim. Mollitia, fugiat facere. Aliquid expedita deserunt autem!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium beatae quisquam asperiores nam in! Consectetur veritatis rerum facilis. Sint odio laudantium natus blanditiis nulla adipisci cum quos earum ullam molestiae.'
+                    // },
                     {
                         title : 'Dc Comics',
                         repo :  'https://github.com/danilopiccinni/laravel-dc-comics',
                         link : '',
                         type: {
-                            name: 'FrontEnd',
-                            color: 'blue'
+                            name: 'Back-end',
+                            color: 'red'
                         },
                         technologies : [
                             {
@@ -513,23 +525,23 @@
                                 color: '#1c89d1'
                             },
                         ],
-                        cover : '/img/carousel/complete.png',
+                        cover : '/img/carousel/cover.png',
                         images: [
                             {
-                                src: '/img/carousel/left-right.png',
-                                description: 'Pulsanti del carosello per scorrere a sinistra e a destra'
+                                src: '/img/carousel/view-carousel.png',
+                                description: 'Visualizzazione del carosello con pulsanti per lo scorrimento in su e in giu.'
                             },
                             {
-                                src: '/img/carousel/left.png',
-                                description: 'Pulsante del carosello per scorrere a sinistra'
+                                src: '/img/carousel/image-in-active.png',
+                                description: 'Visualizzazione di un\'immagine attiva nel carosello.'
                             },
                             {
-                                src: '/img/carousel/right.png',
-                                description: 'Pulsante del carosello per scorrere a destra'
+                                src: '/img/carousel/thumbs-images.png',
+                                description: 'Visualizzazione delle miniature delle immagini nel carosello con i pulsante per lo scorrimento in su e in giu.'
                             },
                             {
-                                src: '/img/carousel/buttons.png',
-                                description: 'Pulsanti del carosello'
+                                src: '/img/carousel/command-buttons.png',
+                                description: 'Visualizzazione dei pulsanti di comando del carosello.'
                             }
                         ],
                         slug : 'carousel',
@@ -731,70 +743,70 @@
                         slug : 'classroom',
                         description : 'Clone layout of the Boolean Classroom dashboard. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla, praesentium qui. Assumenda deleniti perferendis consequuntur nobis ratione quibusdam aspernatur? Illo impedit libero voluptates! Earum facere omnis laboriosam iste aspernatur. Tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis obcaecati cupiditate quas, veniam qui dignissimos. At totam tempore ipsa consectetur sint, provident accusamus sequi eius unde veniam laboriosam aspernatur porro!Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, provident praesentium ratione sequi fugiat eaque porro dicta voluptate ullam, officia, modi unde enim. Mollitia, fugiat facere. Aliquid expedita deserunt autem!Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
                     },
-                    {
-                        title : 'Dice Game',
-                        repo :  'https://github.com/danilopiccinni/js-mail-dadi',
-                        link : 'https://mail-dice-game-danilop.netlify.app/',
-                        type: {
-                            name: 'FrontEnd',
-                            color: 'blue'
-                        },
-                        technologies : [
-                            {
-                                name : 'HTML',
-                                color: '#ff7500'
-                            },                    
-                            {
-                                name : 'CSS',
-                                color: '#00b9e4'
-                            },
-                            {
-                                name : 'VsCode',
-                                color: '#1c89d1'
-                            },
-                            {
-                                name : 'JS',
-                                color: '#fcd602'
-                            },
-                            {
-                                name : 'Bootstrap',
-                                color: '#8c11fc'
-                            },
-                        ],
-                        cover : '/img/dice-game.png',
-                        images: [
-                            {
-                                src: '/img/1.jpeg',
-                                description: 'Una splendida immagine'
-                            },
-                            {
-                                src: '/img/2.jpeg',
-                                description: 'Unaltra immagine fantastica'
-                            },
-                            {
-                                src: '/img/3.jpeg',
-                                description: 'Un paesaggio mozzafiato'
-                            },
-                            {
-                                src: '/img/4.jpeg',
-                                description: 'Unimmagine da sogno'
-                            },
-                            {
-                                src: '/img/5.jpeg',
-                                description: 'Uimmagine sorprendente'
-                            },
-                            {
-                                src: '/img/6.jpeg',
-                                description: 'Unimmagine da favola'
-                            },
-                            {
-                                src: 'https://picsum.photos/200/300',
-                                description: 'Una sorprendente immagine generata casualmente'
-                            }
-                        ],
-                        slug : 'dice-game',
-                        description : 'A little dice game at the best of 3 against the computer. The user enters his email and only if the mail matches you can press the button to play. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla, praesentium qui. Assumenda deleniti perferendis consequuntur nobis ratione quibusdam aspernatur? Illo impedit libero voluptates! Earum facere omnis laboriosam iste aspernatur. Tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis obcaecati cupiditate quas, veniam qui dignissimos. At totam tempore ipsa consectetur sint, provident accusamus sequi eius unde veniam laboriosam aspernatur porro!Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, provident praesentium ratione sequi fugiat eaque porro dicta voluptate ullam, officia, modi unde enim. Mollitia, fugiat facere. Aliquid expedita deserunt autem!Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
-                    },
+                    // {
+                    //     title : 'Dice Game',
+                    //     repo :  'https://github.com/danilopiccinni/js-mail-dadi',
+                    //     link : 'https://mail-dice-game-danilop.netlify.app/',
+                    //     type: {
+                    //         name: 'FrontEnd',
+                    //         color: 'blue'
+                    //     },
+                    //     technologies : [
+                    //         {
+                    //             name : 'HTML',
+                    //             color: '#ff7500'
+                    //         },                    
+                    //         {
+                    //             name : 'CSS',
+                    //             color: '#00b9e4'
+                    //         },
+                    //         {
+                    //             name : 'VsCode',
+                    //             color: '#1c89d1'
+                    //         },
+                    //         {
+                    //             name : 'JS',
+                    //             color: '#fcd602'
+                    //         },
+                    //         {
+                    //             name : 'Bootstrap',
+                    //             color: '#8c11fc'
+                    //         },
+                    //     ],
+                    //     cover : '/img/dice-game.png',
+                    //     images: [
+                    //         {
+                    //             src: '/img/1.jpeg',
+                    //             description: 'Una splendida immagine'
+                    //         },
+                    //         {
+                    //             src: '/img/2.jpeg',
+                    //             description: 'Unaltra immagine fantastica'
+                    //         },
+                    //         {
+                    //             src: '/img/3.jpeg',
+                    //             description: 'Un paesaggio mozzafiato'
+                    //         },
+                    //         {
+                    //             src: '/img/4.jpeg',
+                    //             description: 'Unimmagine da sogno'
+                    //         },
+                    //         {
+                    //             src: '/img/5.jpeg',
+                    //             description: 'Uimmagine sorprendente'
+                    //         },
+                    //         {
+                    //             src: '/img/6.jpeg',
+                    //             description: 'Unimmagine da favola'
+                    //         },
+                    //         {
+                    //             src: 'https://picsum.photos/200/300',
+                    //             description: 'Una sorprendente immagine generata casualmente'
+                    //         }
+                    //     ],
+                    //     slug : 'dice-game',
+                    //     description : 'A little dice game at the best of 3 against the computer. The user enters his email and only if the mail matches you can press the button to play. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla, praesentium qui. Assumenda deleniti perferendis consequuntur nobis ratione quibusdam aspernatur? Illo impedit libero voluptates! Earum facere omnis laboriosam iste aspernatur. Tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis obcaecati cupiditate quas, veniam qui dignissimos. At totam tempore ipsa consectetur sint, provident accusamus sequi eius unde veniam laboriosam aspernatur porro!Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, provident praesentium ratione sequi fugiat eaque porro dicta voluptate ullam, officia, modi unde enim. Mollitia, fugiat facere. Aliquid expedita deserunt autem!Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
+                    // },
                     {
                         title : 'Dropbox website clone',
                         repo :  'https://github.com/danilopiccinni/htmlcss-dropbox',
@@ -817,35 +829,43 @@
                                 color: '#1c89d1'
                             },
                         ],
-                        cover : '/img/dropbox.jpeg',
+                        cover : '/img/dropbox/cover.png',
                         images: [
                             {
-                                src: '/img/1.jpeg',
-                                description: 'Una splendida immagine'
+                                src: '/img/dropbox/nav-bar.png',
+                                description: 'La barra di navigazione di Dropbox con un design pulito.'
                             },
                             {
-                                src: '/img/2.jpeg',
-                                description: 'Unaltra immagine fantastica'
+                                src: '/img/dropbox/jumbo.png',
+                                description: 'Immagine in primo piano che presenta i principali servizi di Dropbox.'
                             },
                             {
-                                src: '/img/3.jpeg',
-                                description: 'Un paesaggio mozzafiato'
+                                src: '/img/dropbox/possible-subscriptions.png',
+                                description: 'Opzioni di abbonamento possibili offerte da Dropbox.'
                             },
                             {
-                                src: '/img/4.jpeg',
-                                description: 'Unimmagine da sogno'
+                                src: '/img/dropbox/office-contact.png',
+                                description: 'Informazioni di contatto per gli uffici di Dropbox.'
                             },
                             {
-                                src: '/img/5.jpeg',
-                                description: 'Uimmagine sorprendente'
+                                src: '/img/dropbox/find-partner.png',
+                                description: 'Immagine che rappresenta la ricerca di un partner o collaboratore su Dropbox.'
                             },
                             {
-                                src: '/img/6.jpeg',
-                                description: 'Unimmagine da favola'
+                                src: '/img/dropbox/operations-and-benefits.png',
+                                description: 'Operazioni e benefici legati al utilizzo di Dropbox.'
                             },
                             {
-                                src: 'https://picsum.photos/200/300',
-                                description: 'Una sorprendente immagine generata casualmente'
+                                src: '/img/dropbox/partnership-whit-business-subscription.png',
+                                description: 'Una partnership con una sottoscrizione aziendale su Dropbox.'
+                            },
+                            {
+                                src: '/img/dropbox/faq.png',
+                                description: 'Risposte alle domande frequenti su Dropbox.'
+                            },
+                            {
+                                src: '/img/dropbox/footer.png',
+                                description: 'Il piè di pagina del sito web di Dropbox.'
                             }
                         ],
                         slug : 'dropbox-website-clone',
@@ -873,35 +893,35 @@
                                 color: '#1c89d1'
                             },
                         ],
-                        cover : '/img/dropbox.jpeg',
+                        cover : '/img/discord/cover.png',
                         images: [
                             {
-                                src: '/img/1.jpeg',
-                                description: 'Una splendida immagine'
+                                src: '/img/discord/nav-bar.png',
+                                description: 'Barra di navigazione del sito web di Dropbox con design accattivante.'
                             },
                             {
-                                src: '/img/2.jpeg',
-                                description: 'Unaltra immagine fantastica'
+                                src: '/img/discord/jumbo.png',
+                                description: 'Immagine in evidenza che mette in risalto i servizi di Dropbox.'
                             },
                             {
-                                src: '/img/3.jpeg',
-                                description: 'Un paesaggio mozzafiato'
+                                src: '/img/discord/section1-home-page.png',
+                                description: 'Sezione 1 della pagina principale di Dropbox con uno sfondo panoramico.'
                             },
                             {
-                                src: '/img/4.jpeg',
-                                description: 'Unimmagine da sogno'
+                                src: '/img/discord/section2-home-page.png',
+                                description: 'Sezione 2 della pagina principale di Dropbox con elementi visivi coinvolgenti.'
                             },
                             {
-                                src: '/img/5.jpeg',
-                                description: 'Uimmagine sorprendente'
+                                src: '/img/discord/section3-home-page.png',
+                                description: 'Sezione 3 della pagina principale di Dropbox con interfaccia intuitiva.'
                             },
                             {
-                                src: '/img/6.jpeg',
-                                description: 'Unimmagine da favola'
+                                src: '/img/discord/invite-to-download.png',
+                                description: 'Invito a scaricare la app di Dropbox per un esperienza di condivisione avanzata.'
                             },
                             {
-                                src: 'https://picsum.photos/200/300',
-                                description: 'Una sorprendente immagine generata casualmente'
+                                src: '/img/discord/footer.png',
+                                description: 'Il piè di pagina del sito web di Dropbox con link utili e informazioni.'
                             }
                         ],
                         slug : 'discord',
