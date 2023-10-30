@@ -385,35 +385,39 @@
                                 color: '#1c89d1'
                             },
                         ],
-                        cover : '/img/dc.jpeg',
+                        cover : '/img/dc-comics/cover.png',
                         images: [
                             {
-                                src: '/img/1.jpeg',
-                                description: 'Una splendida immagine'
+                                src: '/img/dc-comics/nav-bar.png',
+                                description: 'Immagine della barra di navigazione.'
                             },
                             {
-                                src: '/img/2.jpeg',
-                                description: 'Unaltra immagine fantastica'
+                                src: '/img/dc-comics/comics-list.png',
+                                description: 'Immagine della lista dei fumetti.'
                             },
                             {
-                                src: '/img/3.jpeg',
-                                description: 'Un paesaggio mozzafiato'
+                                src: '/img/dc-comics/merchandising-banner.png',
+                                description: 'Immagine del banner del merchandising.'
                             },
                             {
-                                src: '/img/4.jpeg',
-                                description: 'Unimmagine da sogno'
+                                src: '/img/dc-comics/footer.png',
+                                description: 'Immagine del piè di pagina.'
                             },
                             {
-                                src: '/img/5.jpeg',
-                                description: 'Uimmagine sorprendente'
+                                src: '/img/dc-comics/single-comic.png',
+                                description: 'Immagine di un singolo progetto.'
                             },
                             {
-                                src: '/img/6.jpeg',
-                                description: 'Unimmagine da favola'
+                                src: '/img/dc-comics/create-form.png',
+                                description: 'Immagine del modulo di creazione.'
                             },
                             {
-                                src: 'https://picsum.photos/200/300',
-                                description: 'Una sorprendente immagine generata casualmente'
+                                src: '/img/dc-comics/edit-form.png',
+                                description: 'Immagine del modulo di modifica.'
+                            },
+                            {
+                                src: '/img/dc-comics/modal-delete-comic.png',
+                                description: 'Immagine di una finestra modale per la rimozione di un fumetto.'
                             }
                         ],
                         slug : 'dc-comics',
