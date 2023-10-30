@@ -8,12 +8,13 @@ import { store } from '../store'
         name: 'Contact',
 
         setup() {
-            const form = ref(null);
-            const inputFieldReset = ref(null);
+            let form = ref(null);
+            let inputFieldReset = ref(null);
 
             const sendMail = () => {
                 emailjs.sendForm('Contact-Portfolio', 'e-mail-di-contatto', form.value, 'h2vNzYANbMDbOOC1n')
                 .then(() => {
+
                     // Seleziona il modale per ID
                     const modal = document.querySelector("#sendModal");
 
@@ -22,6 +23,7 @@ import { store } from '../store'
 
                     // Imposta lo stile display su "block"
                     modal.style.display = "block";
+
                 }, (error) => {
                     alert('non inviato')
                 }); 
@@ -39,6 +41,7 @@ import { store } from '../store'
                 store,
 
                 showModal : false,
+
             }
         },
 
@@ -57,6 +60,9 @@ import { store } from '../store'
 
                     // Imposta lo stile display su "block"
                     modal.style.display = "none";
+
+                    location.reload();
+
             },
         },
 
