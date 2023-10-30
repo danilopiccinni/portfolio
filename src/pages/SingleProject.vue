@@ -55,11 +55,11 @@
                     <div class="d-flex gap-3">
                         <div class="mb-2" >
                             <span>Link: </span>
-                            <a :href="project.repo" class="repo">Git-Hub</a>
+                            <a :href="project.repo" class="repo" target="_blank">Git-Hub</a>
                         </div>
                         <div v-if="project.link != ''" class="mb-2" >
                             <span>Link: </span>
-                            <a :href="project.repo" class="repo">Web-Site</a>
+                            <a :href="project.link" class="repo" target="_blank">Web-Site</a>
                         </div>
     
                     </div>
