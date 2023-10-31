@@ -98,6 +98,75 @@
 
                 projects : [
                 {
+                        title : 'My Projects view',
+                        repo :  'https://github.com/danilopiccinni/vite-boolfolio',
+                        link : 'https://my-projects-view-danilop.netlify.app/',
+                        type: {
+                            name: 'Front End',
+                            color: 'blue'
+                        },
+                        technologies : [
+                            {
+                                name : 'HTML',
+                                color: '#ff7500'
+                            },                      
+                            {
+                                name : 'Sass',
+                                color: '#f06292'
+                            },
+                            {
+                                name : 'JS',
+                                color: '#fcd602'
+                            },
+                            {
+                                name : 'Postman',
+                                color: '#be5328'
+                            },
+                            {
+                                name : 'VsCode',
+                                color: '#1c89d1'
+                            },
+                            {
+                                name : 'VueJs',
+                                color : '#81c784'
+                            },
+                            {
+                                name : 'Axios',
+                                color : '#edd9c5'
+                            }
+
+                        ],
+                        cover : '/img/my-projects-view/cover.png',
+                        images: [
+                            {
+                                src: '/img/my-projects-view/nav-bar.png',
+                                description: 'Barra di navigazione per la visualizzazione dei tuoi progetti personali.'
+                            },
+                            {
+                                src: '/img/my-projects-view/home-page.png',
+                                description: 'Schermata principale della dashboard dei tuoi progetti personali.'
+                            },
+                            {
+                                src: '/img/my-projects-view/projects-list.png',
+                                description: 'Elenco di tutti i progetti nella dashboard dei tuoi progetti personali.'
+                            },
+                            {
+                                src: '/img/my-projects-view/projects-search-of-type.png',
+                                description: 'Ricerca di progetti basata sui tipi di progetti nella dashboard.'
+                            },
+                            {
+                                src: '/img/my-projects-view/single-project-page.png',
+                                description: 'Visualizzazione dettagliata di un singolo progetto nella dashboard.'
+                            },
+                            {
+                                src: '/img/my-projects-view/contact-form.png',
+                                description: 'Modulo per la gestione dei contatti e le richieste relative ai tuoi progetti.'
+                            }
+                        ],
+                        slug : 'my-projects-view',
+                        description : 'La vista dei miei progetti in un portfolio Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla, praesentium qui. Assumenda deleniti perferendis consequuntur nobis ratione quibusdam aspernatur? Illo impedit libero voluptates! Earum facere omnis laboriosam iste aspernatur. Tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis obcaecati cupiditate quas, veniam qui dignissimos. At totam tempore ipsa consectetur sint, provident accusamus sequi eius unde veniam laboriosam aspernatur porro!Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, provident praesentium ratione sequi fugiat eaque porro dicta voluptate ullam, officia, modi unde enim. Mollitia, fugiat facere. Aliquid expedita deserunt autem!Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
+                    },
+                    {
                         title : 'My Projects managament',
                         repo :  'https://github.com/danilopiccinni/laravel-api',
                         link : '',
@@ -121,6 +190,10 @@
                             {
                                 name : 'MySQL',
                                 color: '#0c7a6b'
+                            },
+                            {
+                                name : 'Laravel',
+                                color : '#ff0000',
                             },
                             {
                                 name : 'Postman',
