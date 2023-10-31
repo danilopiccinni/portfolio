@@ -90,17 +90,106 @@
                         color : '#81c784'
                     },
                     {
-                        name : 'Axios',
-                        color : '#edd9c5'
-                    },
-                    {
                         name : 'Laravel',
-                        color : '#ff0000'
-                    }
+                        color : '#ff0000',
+                    },
 
                 ],
 
                 projects : [
+                {
+                        title : 'Project management system',
+                        repo :  'https://github.com/danilopiccinni/laravel-api',
+                        link : '',
+                        type: {
+                            name: 'Back-End',
+                            color: 'red'
+                        },
+                        technologies : [
+                            {
+                                name : 'HTML',
+                                color: '#ff7500'
+                            },  
+                            {
+                                name : 'Sass',
+                                color: '#f06292'
+                            },
+                            {
+                                name : 'PHP',
+                                color: '#7fabff'
+                            },
+                            {
+                                name : 'MySQL',
+                                color: '#0c7a6b'
+                            },
+                            {
+                                name : 'Postman',
+                                color: '#be5328'
+                            },
+                            {
+                                name : 'Bootstrap',
+                                color: '#8c11fc'
+                            },
+                            {
+                                name : 'VsCode',
+                                color: '#1c89d1'
+                            },
+
+                        ],
+                        cover : '/img/project-management-system/cover.png',
+                        images: [
+                        {
+                            src: '/img/project-management-system/register-form.png',
+                            description: 'Layout completo del modulo di registrazione del sistema di gestione progetti.'
+                        },
+                        {
+                            src: '/img/project-management-system/login-form.png',
+                            description: 'Vista compatta dell\'interfaccia di accesso al sistema di gestione progetti.'
+                        },
+                        {
+                            src: '/img/project-management-system/create-form-for-project.png',
+                            description: 'Modulo per la creazione di nuovi progetti nel sistema.'
+                        },
+                        {
+                            src: '/img/project-management-system/projects-list-page.png',
+                            description: 'Schermata dell\'elenco di tutti i progetti presenti nel sistema.'
+                        },
+                        {
+                            src: '/img/project-management-system/single-project-show.png',
+                            description: 'Visualizzazione dettagliata di un singolo progetto.'
+                        },
+                        {
+                            src: '/img/project-management-system/create-form-for-type.png',
+                            description: 'Modulo per la creazione di nuovi tipi di progetti.'
+                        },
+                        {
+                            src: '/img/project-management-system/type-show-page.png',
+                            description: 'Visualizzazione dettagliata di un tipo di progetto specifico.'
+                        },
+                        {
+                            src: '/img/project-management-system/types-list.png',
+                            description: 'Elenco completo di tutti i tipi di progetti disponibili nel sistema.'
+                        },
+                        {
+                            src: '/img/project-management-system/create-form-for-technology.png',
+                            description: 'Modulo per la creazione di nuove tecnologie e strumenti utilizzati nei progetti.'
+                        },
+                        {
+                            src: '/img/project-management-system/technologies-list-page.png',
+                            description: 'Elenco completo di tutte le tecnologie e gli strumenti utilizzati nei progetti.'
+                        },
+                        {
+                            src: '/img/project-management-system/edit-form-for-technologies.png',
+                            description: 'Modulo di modifica delle informazioni relative a una tecnologia specifica.'
+                        },
+                        {
+                            src: '/img/project-management-system/technology-single-show.png',
+                            description: 'Visualizzazione dettagliata di una tecnologia specifica utilizzata nei progetti.'
+                        }
+                        ],
+                        slug : 'project-management-system',
+                        description : 'Gestionale per la gestione dei propri progetti Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla, praesentium qui. Assumenda deleniti perferendis consequuntur nobis ratione quibusdam aspernatur? Illo impedit libero voluptates! Earum facere omnis laboriosam iste aspernatur. Tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis obcaecati cupiditate quas, veniam qui dignissimos. At totam tempore ipsa consectetur sint, provident accusamus sequi eius unde veniam laboriosam aspernatur porro!Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, provident praesentium ratione sequi fugiat eaque porro dicta voluptate ullam, officia, modi unde enim. Mollitia, fugiat facere. Aliquid expedita deserunt autem!Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
+                    },
                     {
                         title : 'Netflix',
                         repo :  'https://github.com/danilopiccinni/vite-boolflix/tree/master',
