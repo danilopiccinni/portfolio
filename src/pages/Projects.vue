@@ -97,7 +97,80 @@
                 ],
 
                 projects : [
-                {
+                    {
+                        title : 'My Junior Portfolio',
+                        repo :  'https://github.com/danilopiccinni/vite-boolfolio',
+                        link : 'https://github.com/danilopiccinni/portfolio',
+                        type: {
+                            name: 'Front End',
+                            color: 'blue'
+                        },
+                        technologies : [
+                            {
+                                name : 'HTML',
+                                color: '#ff7500'
+                            },                      
+                            {
+                                name : 'Sass',
+                                color: '#f06292'
+                            },
+                            {
+                                name : 'JS',
+                                color: '#fcd602'
+                            },
+                            {
+                                name : 'VsCode',
+                                color: '#1c89d1'
+                            },
+                            {
+                                name : 'VueJs',
+                                color : '#81c784'
+                            },
+                            {
+                                name : 'Vite+Vue3js',
+                                color : '#f8a803',
+                            },
+
+                        ],
+                        cover : '/img/my-junior-portfolio/cover.png',
+                        images: [
+                            {
+                                src: '/img/my-junior-portfolio/nav-bar.png',
+                                description: 'Barra di navigazione per la visualizzazione dei tuoi progetti personali.'
+                            },
+                            {
+                                src: '/img/my-junior-portfolio/home-page.png',
+                                description: 'Schermata principale della dashboard dei tuoi progetti personali.'
+                            },
+                            {
+                                src: '/img/my-junior-portfolio/projects-list-on-cards.png',
+                                description: 'Elenco di tutti i progetti nella dashboard dei tuoi progetti personali.'
+                            },
+                            {
+                                src: '/img/my-junior-portfolio/projects-list-hover-effect.png',
+                                description: 'Ricerca di progetti basata sui tipi di progetti nella dashboard.'
+                            },
+                            {
+                                src: '/img/my-junior-portfolio/tutorial-full-screen-mode.png',
+                                description: 'Visualizzazione dettagliata di un singolo progetto nella dashboard.'
+                            },
+                            {
+                                src: '/img/my-junior-portfolio/full-screen-view-mode.png',
+                                description: 'Visualizzazione dettagliata di un singolo progetto nella dashboard.'
+                            },
+                            {
+                                src: '/img/my-junior-portfolio/single-project-view-page.png',
+                                description: 'Visualizzazione dettagliata di un singolo progetto nella dashboard.'
+                            },
+                            {
+                                src: '/img/my-junior-portfolio/contact-form.png',
+                                description: 'Modulo per la gestione dei contatti e le richieste relative ai tuoi progetti.'
+                            }
+                        ],
+                        slug : 'my-junior-portfolio',
+                        description : 'Questo è il mio porfolio da visita Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla, praesentium qui. Assumenda deleniti perferendis consequuntur nobis ratione quibusdam aspernatur? Illo impedit libero voluptates! Earum facere omnis laboriosam iste aspernatur. Tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis obcaecati cupiditate quas, veniam qui dignissimos. At totam tempore ipsa consectetur sint, provident accusamus sequi eius unde veniam laboriosam aspernatur porro!Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, provident praesentium ratione sequi fugiat eaque porro dicta voluptate ullam, officia, modi unde enim. Mollitia, fugiat facere. Aliquid expedita deserunt autem!Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
+                    },
+                    {
                         title : 'My Projects view',
                         repo :  'https://github.com/danilopiccinni/vite-boolfolio',
                         link : 'https://my-projects-view-danilop.netlify.app/',
