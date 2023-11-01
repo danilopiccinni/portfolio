@@ -262,9 +262,13 @@ export default {
 
                         .title {
                             font-size: 20px;
+
+                            transition: 1s;
                         }
                         .text {
                             font-size: 12px;
+
+                            transition: 1s;
                         }
 
                         &::after{
@@ -274,13 +278,18 @@ export default {
                             bottom: 0;
                             left: 100%;
                             right: 0;
-                            background-color: #f56f61;
+                            background-color: #b9b9b9;
                         
                             z-index: 0;
                             transition: 1s;
                         }
                         &:hover::after{
                         left: 0%;
+                        }
+
+                        &:hover .title,
+                        &:hover .text {
+                        color: black;
                         }
                     }
                 }

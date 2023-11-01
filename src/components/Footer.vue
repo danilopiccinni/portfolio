@@ -135,7 +135,7 @@ import { store } from '../store';
     .social-links{
 
         &:hover i {
-            color: #f56f61;
+            color: blue;
         }
     }
 
