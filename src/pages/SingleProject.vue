@@ -52,7 +52,7 @@
 
     <div :class="store.checked ? 'bg-white text-dark' : 'bg-dark text-white'" class="single-project">
         <div class="cont-project container-fluid d-flex flex-wrap">
-            <div class="ps-lg-5 ps-0 mx-auto mx-lg-0" :class="store.language == 'german' ? 'mb-3' : ''">
+            <div class="ps-lg-5 ps-0 mx-auto mx-lg-0" :class="store.language == 'german' ? 'mb-5' : ''">
                 <div class="cont-monitor mb-5">
                     <MonitorDisplay></MonitorDisplay>
                 </div>
