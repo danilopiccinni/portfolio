@@ -99,11 +99,13 @@
     }
 
    .cont-cover {
-        height: 250px;
+        height: 200px;
 
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: left;
+        background-position: top left;
+  
+
 
         position: relative;
 
