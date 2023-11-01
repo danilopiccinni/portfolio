@@ -178,7 +178,7 @@ img {
 
     .my-name {
 
-        background: linear-gradient(16deg, #300979 0%, #300979 35%, var(--theme-gradient) 100%);
+        background: linear-gradient(16deg, #300979 10%, var(--theme-gradient) 100%);
 
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
