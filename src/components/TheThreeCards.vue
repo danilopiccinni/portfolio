@@ -8,7 +8,7 @@ import { store } from '../store';
         italianCards : [
           {
             title: 'Approccio ai Progetti',
-            description: "Sono noto per il mio approccio unico nello sviluppo di progetti. Mi concentro sugli aspetti chiave della gestione dei progetti, come l'attenzione ai dettagli, il controllo della qualità e il coinvolgimento attivo del cliente. Questo mi consente di consegnare progetti ben gestiti, in tempo e che soddisfano appieno le esigenze dei clienti."
+            description : "Sono noto per il mio approccio unico nello sviluppo di progetti. Mi concentro sugli aspetti chiave della gestione dei progetti, come l'attenzione ai dettagli, il controllo della qualità e l'impegno attivo. Questo mi consente di consegnare progetti ben gestiti, in tempo e che soddisfano completamente le esigenze.",
           },
           {
             title: 'Feedback e Crescita',
@@ -23,7 +23,7 @@ import { store } from '../store';
         germanCards : [
           {
             title: 'Projektansatz',
-            description: 'Ich bin bekannt für meinen einzigartigen Ansatz in der Projektentwicklung. Ich konzentriere mich auf Schlüsselfaktoren im Projektmanagement, wie die Beachtung von Details, Qualitätskontrolle und aktive Kundenbeteiligung. Dies ermöglicht es mir, gut verwaltete Projekte termingerecht und den Kundenanforderungen entsprechend zu liefern.'
+            description : "Ich bin bekannt für meinen einzigartigen Ansatz bei der Projekterstellung. Mein Fokus liegt auf Schlüsselaspekten des Projektmanagements, wie der Detailgenauigkeit, Qualitätskontrolle und aktiver Beteiligung. Dies ermöglicht es mir, gut gemanagte Projekte pünktlich zu liefern, die die Anforderungen in vollem Umfang erfüllen.",
           },
           {
             title: 'Feedback und Wachstum',
@@ -38,7 +38,7 @@ import { store } from '../store';
         englishCards : [
           {
             title: 'Project Approach',
-            description: "I'm known for my unique approach in project development. I focus on key aspects of project management, such as attention to detail, quality control, and active client involvement. This enables me to deliver well-managed projects on time and to meet client needs."
+            description : "I'm known for my unique approach to project development. I concentrate on key aspects of project management, such as attention to detail, quality control, and active engagement. This enables me to deliver well-managed projects, on time, and fully meeting the requirements.",
           },
           {
             title: 'Feedback and Growth',
