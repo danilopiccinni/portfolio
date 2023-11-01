@@ -29,14 +29,14 @@ export default {
                 if (this.select == 'italiano') {
                     cvUrl = '/img/Danilo_Piccinni_Cv.pdf';
                 } else {
-                    cvUrl = '/public/img/Danilo_Piccinni_Lebenslauf_ (1).pdf';
+                    cvUrl = '/img/Danilo_Piccinni_Lebenslauf.pdf';
                     
                 }
                 let link = document.createElement('a');
                 link.href = cvUrl;
                 link.target = '_blank';
                 if (this.select == 'italiano') {
-                    link.download = 'Danilo_Piccinni_CVv.pdf';
+                    link.download = 'Danilo_Piccinni_CV.pdf';
                 } else {
                     link.download = 'Danilo_Piccinni_Lebenslauf.pdf';
                 }
