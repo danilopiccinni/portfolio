@@ -183,8 +183,18 @@
                 <h4 class="type" :style="{color : project.type.color}">
                     {{ project.type.name }}
                 </h4>
+
+                <div class="mb-3">
+                    <button class="details btn btn-light">
+                        <router-link :to="{ name: 'singleProject' , params : {title : project.title}}" v-on:click="selectProject(project)" class="nav-link" href="#">
+                            <span v-if="store.language == 'italian'">Apri progetto</span>
+                            <span v-if="store.language == 'german'">Projekt öffnen</span>
+                            <span v-if="store.language == 'english'">Open Project</span>
+                        </router-link>
+                    </button>
+                </div>
                 
-                <ul class="p-0 d-flex gap-3 justify-content-center flex-wrap technologies">
+                <ul class="p-0 d-flex gap-3 justify-content-center technologies flex-wrap ">
                     <li v-for="technology in project.technologies"  class="list-group-item">
                         <span class="badge rounded-pill text-dark" :style="{backgroundColor : technology.color}">
                             {{ technology.name + ' '}} 
@@ -192,31 +202,21 @@
                     </li>
                 </ul>
 
-                <div class="d-flex justify-content-center gap-3">
-                    <div class="mb-2" >
+                <div class="d-flex justify-content-center align-items-center gap-3 mb-2">
+                    <div class="" >
                         <span>Link: </span>
                         <a :href="project.repo" class="repo" target="_blank">Git-Hub</a>
                     </div>
-                    <div v-if="project.link != ''" class="mb-2" >
+                    <div v-if="project.link = ''" >
                         <span>Link: </span>
                         <a :href="project.link" class="repo" target="_blank">Web-Site</a>
                     </div>
-
                 </div>
-                
+
                 
                 <p class="description">
                     {{ project.description }}
-                </p>
-
-                <div>
-                    <button class="details btn btn-primary">
-                        <router-link :to="{ name: 'singleProject' , params : {title : project.title}}" v-on:click="selectProject(project)" class="nav-link" href="#">
-                            Apri progetto
-                        </router-link>
-                    </button>
-                </div>
-                    
+                </p>             
             </div>
             <!-- /details-project -->
 
@@ -537,7 +537,7 @@
             right: 0px;
             
             max-width: 40%;
-            max-height: 160px;
+            max-height: 180px;
 
             padding: 10px;
             padding-bottom: 50px;
