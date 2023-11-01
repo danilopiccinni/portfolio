@@ -94,7 +94,7 @@
                     <!-- understand-button -->
                     <div>
                         <button v-if="store.language == 'italian'" @click="switchTutorial()" class="btn btn-primary understand-button">Ok, ho capito</button>
-                        <button v-if="store.language == 'german'" @click="switchTutorial()" class="btn btn-primary understand-button">Okay, I understand</button>
+                        <button v-if="store.language == 'german'" @click="switchTutorial()" class="btn btn-primary understand-button">Okay, verstande</button>
                         <button v-if="store.language == 'english'" @click="switchTutorial()" class="btn btn-primary understand-button">Okay, I understand</button>
                     </div>
                     <!-- understand-button -->
