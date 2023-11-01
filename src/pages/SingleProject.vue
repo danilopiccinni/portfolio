@@ -7,12 +7,38 @@
         data() {
             return {
                 store,
-                project : {}
+
+                project : {},
+
+
+                isTruncated: true,
             }
         },
 
         components : {
             MonitorDisplay,
+        },
+
+        methods : {
+
+            expandDescription() {
+                this.isTruncated = false;
+            },
+
+            truncateDescription() {
+                this.isTruncated = true;
+            },
+        },
+
+        computed: {
+            // Calcola la descrizione troncata
+            truncatedDescription() {
+                if (this.project.description.length > 50 && this.isTruncated) {
+                    return this.project.description.slice(0, 600);
+                } else {
+                    return this.project.description;
+                }
+            },
         },
 
         created() {
@@ -64,9 +90,26 @@
     
                     </div>
                     
-                    <p class="description">
+                    <!-- <p class="description">
                         {{ project.description }}
-                    </p>
+                    </p> -->
+
+                    <div>
+                        <transition name="fade" mode="out-in">
+                            <div v-if="isTruncated" key="truncated">
+                                <p>{{ truncatedDescription }}...
+                                    <button class="btn text-primary" @click="expandDescription">Read more...</button>
+
+                                </p>
+                            </div>
+                            <div v-else key="full">
+                                <p> {{ project.description  }}
+                                
+                                    <button class="btn text-primary" @click="truncateDescription">Read Less...</button>
+                                </p>
+                            </div>
+                        </transition>
+                    </div>
                 </div>
 
                 <!-- cover -->
@@ -90,6 +133,13 @@
 </template>
 
 <style scoped lang="scss">
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
 
 .badge-dark {
     box-shadow: 0px 0px 5px 3px rgba(0,0,0,1);
