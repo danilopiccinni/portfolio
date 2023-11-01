@@ -4,7 +4,7 @@ export const store = reactive({
 
     selectedProject: JSON.parse(localStorage.getItem('selectedProject')) || {},
 
-    visual : JSON.parse(localStorage.getItem('selectedVisual')) || 2,
+    visual : JSON.parse(localStorage.getItem('selectedVisual')) || 1,
 
     checked : JSON.parse(localStorage.getItem('selectedChecked')) || false,
 
