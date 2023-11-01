@@ -237,7 +237,7 @@
 
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: top center;
+        background-position: top;
 
         position: relative;
 
