@@ -17,8 +17,8 @@ import { store } from '../store.js';
 
         methods :  {
 
-            pageControl(name) {
-                if (this.$route.name == name) {
+            pageControl(path) {
+                if (this.$route.path == path) {
                     return true
                 } else {
                     return false
@@ -71,13 +71,13 @@ import { store } from '../store.js';
             <div class="h-100">
                 <ul class="h-100 navbar-nav d-flex flex-row justify-content-center align-items-end gap-1 gap-md-3 ">
                     <li class="nav-item h-100 align-self-end">
-                        <router-link :to="{ name: 'home' }" class="nav-link text-center" @mouseover="hover = true, nameHover = 'home'" @mouseleave="hover = false, nameHover = ''" :class="pageControl('home') ? store.checked ? 'bg-light text-dark' : 'bg-dark' : '' ,  hover && nameHover == 'home' ? store.checked ? 'bg-light text-dark' : 'bg-dark' : ''">
+                        <router-link :to="{ name: 'home' }" class="nav-link text-center" @mouseover="hover = true, nameHover = 'home'" @mouseleave="hover = false, nameHover = ''" :class="pageControl('/') ? store.checked ? 'bg-light text-dark' : 'bg-dark' : '' ,  hover && nameHover == 'home' ? store.checked ? 'bg-light text-dark' : 'bg-dark' : ''">
                             <i class="fa-solid fa-house-chimney"></i>
                             <span class="d-none d-md-block">Home</span>
                         </router-link>
                     </li>
                     <li class="nav-item h-100 align-self-end cont-switcher">
-                        <router-link :to="{ name: 'projects' }" class="nav-link text-center" @mouseover="hover = true , nameHover = 'projects'" @mouseleave="hover = false , nameHover = ''" :class="pageControl('projects') ? store.checked ? 'bg-light text-dark' : 'bg-dark' : ''  ,  hover && nameHover == 'projects' ? store.checked ? 'bg-light text-dark' : 'bg-dark' : ''">
+                        <router-link :to="{ name: 'projects' }" class="nav-link text-center" @mouseover="hover = true , nameHover = 'projects'" @mouseleave="hover = false , nameHover = ''" :class="pageControl('/projects') ? store.checked ? 'bg-light text-dark' : 'bg-dark' : ''  ,  hover && nameHover == 'projects' ? store.checked ? 'bg-light text-dark' : 'bg-dark' : ''">
                             <i class="fa-solid fa-diagram-project"></i>
                             <span v-if="store.language == 'italian'" class="d-none d-md-block">Progetti</span>
                             <span v-if="store.language == 'german'" class="d-none d-md-block">Projekte</span>
@@ -86,7 +86,7 @@ import { store } from '../store.js';
                         </router-link>
                     </li>
                     <li class="nav-item h-100 align-self-end">
-                        <router-link :to="{ name: 'contact' }" class="nav-link text-center" @mouseover="hover = true , nameHover = 'contact'" @mouseleave="hover = false , nameHover = ''" :class="pageControl('contact')  ? store.checked ? 'bg-light text-dark' : 'bg-dark' : ''  ,  hover && nameHover == 'contact' ? store.checked ? 'bg-light text-dark' : 'bg-dark' : ''">
+                        <router-link :to="{ name: 'contact' }" class="nav-link text-center" @mouseover="hover = true , nameHover = 'contact'" @mouseleave="hover = false , nameHover = ''" :class="pageControl('/contact')  ? store.checked ? 'bg-light text-dark' : 'bg-dark' : ''  ,  hover && nameHover == 'contact' ? store.checked ? 'bg-light text-dark' : 'bg-dark' : ''">
                             <i class="fa-regular fa-comments"></i>
                             <span v-if="store.language == 'italian'" class="d-none d-md-block">Contatto</span>
                             <span v-if="store.language == 'german'" class="d-none d-md-block">Kontakt</span>
